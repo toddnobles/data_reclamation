@@ -1,0 +1,1467 @@
+[
+  {
+    "name": "NARA_1324_v1_p184-185_1_0",
+    "pdf": "examples/NARA_1324_v1_p184-185_1_0.pdf",
+    "md": "test_batch_workspace/markdown/NARA_1324_v1_p184-185_1_0.md"
+  },
+  {
+    "name": "NARA_1327_b001_f005",
+    "pdf": "examples/NARA_1327_b001_f005.pdf",
+    "md": "test_batch_workspace/markdown/NARA_1327_b001_f005.md"
+  },
+  {
+    "name": "NARA_1327_b002_f0048_0",
+    "pdf": "examples/NARA_1327_b002_f0048_0.pdf",
+    "md": "test_batch_workspace/markdown/NARA_1327_b002_f0048_0.md"
+  },
+  {
+    "name": "NARA_1327_b013_f0597_0",
+    "pdf": "examples/NARA_1327_b013_f0597_0.pdf",
+    "md": "test_batch_workspace/markdown/NARA_1327_b013_f0597_0.md"
+  },
+  {
+    "name": "NARA_1327_b031_f1511_0",
+    "pdf": "examples/NARA_1327_b031_f1511_0.pdf",
+    "md": "test_batch_workspace/markdown/NARA_1327_b031_f1511_0.md"
+  },
+  {
+    "name": "NARA_1327_b032_f1512",
+    "pdf": "examples/NARA_1327_b032_f1512.pdf",
+    "md": "test_batch_workspace/markdown/NARA_1327_b032_f1512.md"
+  },
+  {
+    "name": "NARA_1327_b032_f1513",
+    "pdf": "examples/NARA_1327_b032_f1513.pdf",
+    "md": "test_batch_workspace/markdown/NARA_1327_b032_f1513.md"
+  },
+  {
+    "name": "NARA_1327_b032_f1514",
+    "pdf": "examples/NARA_1327_b032_f1514.pdf",
+    "md": "test_batch_workspace/markdown/NARA_1327_b032_f1514.md"
+  },
+  {
+    "name": "NARA_1327_b032_f1515",
+    "pdf": "examples/NARA_1327_b032_f1515.pdf",
+    "md": "test_batch_workspace/markdown/NARA_1327_b032_f1515.md"
+  },
+  {
+    "name": "NARA_1327_b032_f1516",
+    "pdf": "examples/NARA_1327_b032_f1516.pdf",
+    "md": "test_batch_workspace/markdown/NARA_1327_b032_f1516.md"
+  },
+  {
+    "name": "NARA_1327_b059_f2943",
+    "pdf": "examples/NARA_1327_b059_f2943.pdf",
+    "md": "test_batch_workspace/markdown/NARA_1327_b059_f2943.md"
+  },
+  {
+    "name": "NARA_1327_b059_f2944",
+    "pdf": "examples/NARA_1327_b059_f2944.pdf",
+    "md": "test_batch_workspace/markdown/NARA_1327_b059_f2944.md"
+  },
+  {
+    "name": "NARA_1327_b135_f5308",
+    "pdf": "examples/NARA_1327_b135_f5308.pdf",
+    "md": "test_batch_workspace/markdown/NARA_1327_b135_f5308.md"
+  },
+  {
+    "name": "NARA_1327_b136_f5360",
+    "pdf": "examples/NARA_1327_b136_f5360.pdf",
+    "md": "test_batch_workspace/markdown/NARA_1327_b136_f5360.md"
+  },
+  {
+    "name": "NARA_1327_b137_f5385_0",
+    "pdf": "examples/NARA_1327_b137_f5385_0.pdf",
+    "md": "test_batch_workspace/markdown/NARA_1327_b137_f5385_0.md"
+  },
+  {
+    "name": "NARA_1327_b138_f5450",
+    "pdf": "examples/NARA_1327_b138_f5450.pdf",
+    "md": "test_batch_workspace/markdown/NARA_1327_b138_f5450.md"
+  },
+  {
+    "name": "NARA_1327_b139_f5487",
+    "pdf": "examples/NARA_1327_b139_f5487.pdf",
+    "md": "test_batch_workspace/markdown/NARA_1327_b139_f5487.md"
+  },
+  {
+    "name": "NARA_1328_b001_c00b_0019",
+    "pdf": "examples/NARA_1328_b001_c00b_0019.pdf",
+    "md": "test_batch_workspace/markdown/NARA_1328_b001_c00b_0019.md"
+  },
+  {
+    "name": "NARA_1328_b003_c00s_0145",
+    "pdf": "examples/NARA_1328_b003_c00s_0145.pdf",
+    "md": "test_batch_workspace/markdown/NARA_1328_b003_c00s_0145.md"
+  },
+  {
+    "name": "NARA_1328_b005_c00h_0009",
+    "pdf": "examples/NARA_1328_b005_c00h_0009.pdf",
+    "md": "test_batch_workspace/markdown/NARA_1328_b005_c00h_0009.md"
+  },
+  {
+    "name": "NARA_1328_b006_c00n_0008",
+    "pdf": "examples/NARA_1328_b006_c00n_0008.pdf",
+    "md": "test_batch_workspace/markdown/NARA_1328_b006_c00n_0008.md"
+  },
+  {
+    "name": "NARA_1328_b006_c00o_0001",
+    "pdf": "examples/NARA_1328_b006_c00o_0001.pdf",
+    "md": "test_batch_workspace/markdown/NARA_1328_b006_c00o_0001.md"
+  },
+  {
+    "name": "NARA_1329_b001_c00b_0017",
+    "pdf": "examples/NARA_1329_b001_c00b_0017.pdf",
+    "md": "test_batch_workspace/markdown/NARA_1329_b001_c00b_0017.md"
+  },
+  {
+    "name": "NARA_1329_b001_c00l_0032",
+    "pdf": "examples/NARA_1329_b001_c00l_0032.pdf",
+    "md": "test_batch_workspace/markdown/NARA_1329_b001_c00l_0032.md"
+  },
+  {
+    "name": "NARA_1329_b002_c00w_0080_0",
+    "pdf": "examples/NARA_1329_b002_c00w_0080_0.pdf",
+    "md": "test_batch_workspace/markdown/NARA_1329_b002_c00w_0080_0.md"
+  },
+  {
+    "name": "NARA_1329_b003_c00o_0001_0",
+    "pdf": "examples/NARA_1329_b003_c00o_0001_0.pdf",
+    "md": "test_batch_workspace/markdown/NARA_1329_b003_c00o_0001_0.md"
+  },
+  {
+    "name": "NARA_1329_b003_c00s_0007",
+    "pdf": "examples/NARA_1329_b003_c00s_0007.pdf",
+    "md": "test_batch_workspace/markdown/NARA_1329_b003_c00s_0007.md"
+  },
+  {
+    "name": "NARA_1329_b004_c00h_0013",
+    "pdf": "examples/NARA_1329_b004_c00h_0013.pdf",
+    "md": "test_batch_workspace/markdown/NARA_1329_b004_c00h_0013.md"
+  },
+  {
+    "name": "NARA_1329_b004_c00n_0005",
+    "pdf": "examples/NARA_1329_b004_c00n_0005.pdf",
+    "md": "test_batch_workspace/markdown/NARA_1329_b004_c00n_0005.md"
+  },
+  {
+    "name": "NARA_1329_b006_c00a_0073",
+    "pdf": "examples/NARA_1329_b006_c00a_0073.pdf",
+    "md": "test_batch_workspace/markdown/NARA_1329_b006_c00a_0073.md"
+  },
+  {
+    "name": "NARA_1329_b008_c00r_0093",
+    "pdf": "examples/NARA_1329_b008_c00r_0093.pdf",
+    "md": "test_batch_workspace/markdown/NARA_1329_b008_c00r_0093.md"
+  },
+  {
+    "name": "NARA_1329_b009_c00_0029",
+    "pdf": "examples/NARA_1329_b009_c00_0029.pdf",
+    "md": "test_batch_workspace/markdown/NARA_1329_b009_c00_0029.md"
+  },
+  {
+    "name": "NARA_1329_b011_c00_0052",
+    "pdf": "examples/NARA_1329_b011_c00_0052.pdf",
+    "md": "test_batch_workspace/markdown/NARA_1329_b011_c00_0052.md"
+  },
+  {
+    "name": "NARA_1329_b011_c00_0087",
+    "pdf": "examples/NARA_1329_b011_c00_0087.pdf",
+    "md": "test_batch_workspace/markdown/NARA_1329_b011_c00_0087.md"
+  },
+  {
+    "name": "NARA_1329_b011_c00_0088",
+    "pdf": "examples/NARA_1329_b011_c00_0088.pdf",
+    "md": "test_batch_workspace/markdown/NARA_1329_b011_c00_0088.md"
+  },
+  {
+    "name": "NARA_1329_b011_c00_0585",
+    "pdf": "examples/NARA_1329_b011_c00_0585.pdf",
+    "md": "test_batch_workspace/markdown/NARA_1329_b011_c00_0585.md"
+  },
+  {
+    "name": "NARA_1329_b011_c00_0633",
+    "pdf": "examples/NARA_1329_b011_c00_0633.pdf",
+    "md": "test_batch_workspace/markdown/NARA_1329_b011_c00_0633.md"
+  },
+  {
+    "name": "NARA_1329_b014_c00_0440",
+    "pdf": "examples/NARA_1329_b014_c00_0440.pdf",
+    "md": "test_batch_workspace/markdown/NARA_1329_b014_c00_0440.md"
+  },
+  {
+    "name": "NARA_1329_b014_c00_0608",
+    "pdf": "examples/NARA_1329_b014_c00_0608.pdf",
+    "md": "test_batch_workspace/markdown/NARA_1329_b014_c00_0608.md"
+  },
+  {
+    "name": "NARA_1344B_graduatelist",
+    "pdf": "examples/NARA_1344B_graduatelist.pdf",
+    "md": "test_batch_workspace/markdown/NARA_1344B_graduatelist.md"
+  },
+  {
+    "name": "NARA_RG75_91_b1117_33364",
+    "pdf": "examples/NARA_RG75_91_b1117_33364.pdf",
+    "md": "test_batch_workspace/markdown/NARA_RG75_91_b1117_33364.md"
+  },
+  {
+    "name": "NARA_RG75_91_b1756_09452",
+    "pdf": "examples/NARA_RG75_91_b1756_09452.pdf",
+    "md": "test_batch_workspace/markdown/NARA_RG75_91_b1756_09452.md"
+  },
+  {
+    "name": "NARA_RG75_91_b1996_59565",
+    "pdf": "examples/NARA_RG75_91_b1996_59565.pdf",
+    "md": "test_batch_workspace/markdown/NARA_RG75_91_b1996_59565.md"
+  },
+  {
+    "name": "WA_Cush_NARA_2645372_Attendance_1920_PG_JT_Redacted_shrunk_pdf",
+    "pdf": "examples/WA_Cush_NARA_2645372_Attendance_1920_PG_JT_Redacted_shrunk_pdf.pdf",
+    "md": "test_batch_workspace/markdown/WA_Cush_NARA_2645372_Attendance_1920_PG_JT_Redacted_shrunk_pdf.md"
+  },
+  {
+    "name": "WA_Cush_NARA_2645372_PupilList_1917_1918_2_shrunk_pdf",
+    "pdf": "examples/WA_Cush_NARA_2645372_PupilList_1917_1918_2_shrunk_pdf.pdf",
+    "md": "test_batch_workspace/markdown/WA_Cush_NARA_2645372_PupilList_1917_1918_2_shrunk_pdf.md"
+  },
+  {
+    "name": "WA_Cush_NARA_2645372_Pupil_Lists_1917_1918_shrunk_pdf",
+    "pdf": "examples/WA_Cush_NARA_2645372_Pupil_Lists_1917_1918_shrunk_pdf.pdf",
+    "md": "test_batch_workspace/markdown/WA_Cush_NARA_2645372_Pupil_Lists_1917_1918_shrunk_pdf.md"
+  },
+  {
+    "name": "WA_Cush_NARA_2645385_Abbott_John_1919_Redacted_shrunk_pdf",
+    "pdf": "examples/WA_Cush_NARA_2645385_Abbott_John_1919_Redacted_shrunk_pdf.pdf",
+    "md": "test_batch_workspace/markdown/WA_Cush_NARA_2645385_Abbott_John_1919_Redacted_shrunk_pdf.md"
+  },
+  {
+    "name": "WA_Cush_NARA_2645385_Adams_Caleb_1919_Redacted_shrunk_pdf",
+    "pdf": "examples/WA_Cush_NARA_2645385_Adams_Caleb_1919_Redacted_shrunk_pdf.pdf",
+    "md": "test_batch_workspace/markdown/WA_Cush_NARA_2645385_Adams_Caleb_1919_Redacted_shrunk_pdf.md"
+  },
+  {
+    "name": "WA_Cush_NARA_2645385_Agapith_Johnnie_Redacted_shrunk_pdf",
+    "pdf": "examples/WA_Cush_NARA_2645385_Agapith_Johnnie_Redacted_shrunk_pdf.pdf",
+    "md": "test_batch_workspace/markdown/WA_Cush_NARA_2645385_Agapith_Johnnie_Redacted_shrunk_pdf.md"
+  },
+  {
+    "name": "WA_Cush_NARA_2645385_Allen_Abraham_1919_Redacted_shrunk_pdf",
+    "pdf": "examples/WA_Cush_NARA_2645385_Allen_Abraham_1919_Redacted_shrunk_pdf.pdf",
+    "md": "test_batch_workspace/markdown/WA_Cush_NARA_2645385_Allen_Abraham_1919_Redacted_shrunk_pdf.md"
+  },
+  {
+    "name": "WA_Cush_NARA_2645385_Allen_Alice_1917_Redacted_shrunk_pdf",
+    "pdf": "examples/WA_Cush_NARA_2645385_Allen_Alice_1917_Redacted_shrunk_pdf.pdf",
+    "md": "test_batch_workspace/markdown/WA_Cush_NARA_2645385_Allen_Alice_1917_Redacted_shrunk_pdf.md"
+  },
+  {
+    "name": "WA_Cush_NARA_2645385_Allen_Bertha_1917_Redacted_shrunk_pdf",
+    "pdf": "examples/WA_Cush_NARA_2645385_Allen_Bertha_1917_Redacted_shrunk_pdf.pdf",
+    "md": "test_batch_workspace/markdown/WA_Cush_NARA_2645385_Allen_Bertha_1917_Redacted_shrunk_pdf.md"
+  },
+  {
+    "name": "WA_Cush_NARA_2645385_Allen_Fray_Redacted_shrunk_pdf",
+    "pdf": "examples/WA_Cush_NARA_2645385_Allen_Fray_Redacted_shrunk_pdf.pdf",
+    "md": "test_batch_workspace/markdown/WA_Cush_NARA_2645385_Allen_Fray_Redacted_shrunk_pdf.md"
+  },
+  {
+    "name": "WA_Cush_NARA_2645385_Anderson_James_1919",
+    "pdf": "examples/WA_Cush_NARA_2645385_Anderson_James_1919.pdf",
+    "md": "test_batch_workspace/markdown/WA_Cush_NARA_2645385_Anderson_James_1919.md"
+  },
+  {
+    "name": "WA_Cush_NARA_2645385_Anderson_James_1919_shrunk_pdf",
+    "pdf": "examples/WA_Cush_NARA_2645385_Anderson_James_1919_shrunk_pdf.pdf",
+    "md": "test_batch_workspace/markdown/WA_Cush_NARA_2645385_Anderson_James_1919_shrunk_pdf.md"
+  },
+  {
+    "name": "WA_Cush_NARA_2645385_Andrews_Christine_Redacted_shrunk_pdf",
+    "pdf": "examples/WA_Cush_NARA_2645385_Andrews_Christine_Redacted_shrunk_pdf.pdf",
+    "md": "test_batch_workspace/markdown/WA_Cush_NARA_2645385_Andrews_Christine_Redacted_shrunk_pdf.md"
+  },
+  {
+    "name": "WA_Cush_NARA_2645385_Andy_Amos_Redacted_shrunk_pdf",
+    "pdf": "examples/WA_Cush_NARA_2645385_Andy_Amos_Redacted_shrunk_pdf.pdf",
+    "md": "test_batch_workspace/markdown/WA_Cush_NARA_2645385_Andy_Amos_Redacted_shrunk_pdf.md"
+  },
+  {
+    "name": "WA_Cush_NARA_2645385_Arquette_Donald_Redacted_shrunk_pdf",
+    "pdf": "examples/WA_Cush_NARA_2645385_Arquette_Donald_Redacted_shrunk_pdf.pdf",
+    "md": "test_batch_workspace/markdown/WA_Cush_NARA_2645385_Arquette_Donald_Redacted_shrunk_pdf.md"
+  },
+  {
+    "name": "WA_Cush_NARA_2645385_Arquette_Gordon_Redacted_shrunk_pdf",
+    "pdf": "examples/WA_Cush_NARA_2645385_Arquette_Gordon_Redacted_shrunk_pdf.pdf",
+    "md": "test_batch_workspace/markdown/WA_Cush_NARA_2645385_Arquette_Gordon_Redacted_shrunk_pdf.md"
+  },
+  {
+    "name": "WA_Cush_NARA_2645385_Arquette_Naomi_Redacted_shrunk_pdf",
+    "pdf": "examples/WA_Cush_NARA_2645385_Arquette_Naomi_Redacted_shrunk_pdf.pdf",
+    "md": "test_batch_workspace/markdown/WA_Cush_NARA_2645385_Arquette_Naomi_Redacted_shrunk_pdf.md"
+  },
+  {
+    "name": "WA_Cush_NARA_2645385_Atkins_Jacob_Redacted_shrunk_pdf",
+    "pdf": "examples/WA_Cush_NARA_2645385_Atkins_Jacob_Redacted_shrunk_pdf.pdf",
+    "md": "test_batch_workspace/markdown/WA_Cush_NARA_2645385_Atkins_Jacob_Redacted_shrunk_pdf.md"
+  },
+  {
+    "name": "WA_Cush_NARA_2645385_Atkins_Joseph_Redacted_shrunk_pdf",
+    "pdf": "examples/WA_Cush_NARA_2645385_Atkins_Joseph_Redacted_shrunk_pdf.pdf",
+    "md": "test_batch_workspace/markdown/WA_Cush_NARA_2645385_Atkins_Joseph_Redacted_shrunk_pdf.md"
+  },
+  {
+    "name": "WA_Cush_NARA_2645385_Ayaganak_Bessie_shrunk_pdf",
+    "pdf": "examples/WA_Cush_NARA_2645385_Ayaganak_Bessie_shrunk_pdf.pdf",
+    "md": "test_batch_workspace/markdown/WA_Cush_NARA_2645385_Ayaganak_Bessie_shrunk_pdf.md"
+  },
+  {
+    "name": "WA_Cush_NARA_2645385_Ayaganak_Bessie_shrunk_pdf (1)",
+    "pdf": "examples/WA_Cush_NARA_2645385_Ayaganak_Bessie_shrunk_pdf (1).pdf",
+    "md": "test_batch_workspace/markdown/WA_Cush_NARA_2645385_Ayaganak_Bessie_shrunk_pdf (1).md"
+  },
+  {
+    "name": "WA_Cush_NARA_2645385_Beauvais_Alex_Redacted_shrunk_pdf",
+    "pdf": "examples/WA_Cush_NARA_2645385_Beauvais_Alex_Redacted_shrunk_pdf.pdf",
+    "md": "test_batch_workspace/markdown/WA_Cush_NARA_2645385_Beauvais_Alex_Redacted_shrunk_pdf.md"
+  },
+  {
+    "name": "WA_Cush_NARA_2645385_Bennett_Barton_shrunk_pdf",
+    "pdf": "examples/WA_Cush_NARA_2645385_Bennett_Barton_shrunk_pdf.pdf",
+    "md": "test_batch_workspace/markdown/WA_Cush_NARA_2645385_Bennett_Barton_shrunk_pdf.md"
+  },
+  {
+    "name": "WA_Cush_NARA_2645385_Bennett_Clara_Redacted_shrunk_pdf",
+    "pdf": "examples/WA_Cush_NARA_2645385_Bennett_Clara_Redacted_shrunk_pdf.pdf",
+    "md": "test_batch_workspace/markdown/WA_Cush_NARA_2645385_Bennett_Clara_Redacted_shrunk_pdf.md"
+  },
+  {
+    "name": "WA_Cush_NARA_2645385_Benson_Elsie_Redacted_shrunk_pdf",
+    "pdf": "examples/WA_Cush_NARA_2645385_Benson_Elsie_Redacted_shrunk_pdf.pdf",
+    "md": "test_batch_workspace/markdown/WA_Cush_NARA_2645385_Benson_Elsie_Redacted_shrunk_pdf.md"
+  },
+  {
+    "name": "WA_Cush_NARA_2645385_Benson_Horsley_Redacted_shrunk_pdf",
+    "pdf": "examples/WA_Cush_NARA_2645385_Benson_Horsley_Redacted_shrunk_pdf.pdf",
+    "md": "test_batch_workspace/markdown/WA_Cush_NARA_2645385_Benson_Horsley_Redacted_shrunk_pdf.md"
+  },
+  {
+    "name": "WA_Cush_NARA_2645385_Benson_Kelly_Redacted_shrunk_pdf",
+    "pdf": "examples/WA_Cush_NARA_2645385_Benson_Kelly_Redacted_shrunk_pdf.pdf",
+    "md": "test_batch_workspace/markdown/WA_Cush_NARA_2645385_Benson_Kelly_Redacted_shrunk_pdf.md"
+  },
+  {
+    "name": "WA_Cush_NARA_2645385_Bercie_Isabel_Redacted_shrunk_pdf",
+    "pdf": "examples/WA_Cush_NARA_2645385_Bercie_Isabel_Redacted_shrunk_pdf.pdf",
+    "md": "test_batch_workspace/markdown/WA_Cush_NARA_2645385_Bercie_Isabel_Redacted_shrunk_pdf.md"
+  },
+  {
+    "name": "WA_Cush_NARA_2645385_Bercie_Vera_Redacted_shrunk_pdf",
+    "pdf": "examples/WA_Cush_NARA_2645385_Bercie_Vera_Redacted_shrunk_pdf.pdf",
+    "md": "test_batch_workspace/markdown/WA_Cush_NARA_2645385_Bercie_Vera_Redacted_shrunk_pdf.md"
+  },
+  {
+    "name": "WA_Cush_NARA_2645385_Bernard_Alfred_shrunk_pdf",
+    "pdf": "examples/WA_Cush_NARA_2645385_Bernard_Alfred_shrunk_pdf.pdf",
+    "md": "test_batch_workspace/markdown/WA_Cush_NARA_2645385_Bernard_Alfred_shrunk_pdf.md"
+  },
+  {
+    "name": "WA_Cush_NARA_2645385_Bernard_Isabel_shrunk_pdf",
+    "pdf": "examples/WA_Cush_NARA_2645385_Bernard_Isabel_shrunk_pdf.pdf",
+    "md": "test_batch_workspace/markdown/WA_Cush_NARA_2645385_Bernard_Isabel_shrunk_pdf.md"
+  },
+  {
+    "name": "WA_Cush_NARA_2645385_Bernard_Mary_shrunk_pdf",
+    "pdf": "examples/WA_Cush_NARA_2645385_Bernard_Mary_shrunk_pdf.pdf",
+    "md": "test_batch_workspace/markdown/WA_Cush_NARA_2645385_Bernard_Mary_shrunk_pdf.md"
+  },
+  {
+    "name": "WA_Cush_NARA_2645385_Bernard_Theodolina",
+    "pdf": "examples/WA_Cush_NARA_2645385_Bernard_Theodolina.pdf",
+    "md": "test_batch_workspace/markdown/WA_Cush_NARA_2645385_Bernard_Theodolina.md"
+  },
+  {
+    "name": "WA_Cush_NARA_2645385_Bernard_Theodolina_shrunk_pdf",
+    "pdf": "examples/WA_Cush_NARA_2645385_Bernard_Theodolina_shrunk_pdf.pdf",
+    "md": "test_batch_workspace/markdown/WA_Cush_NARA_2645385_Bernard_Theodolina_shrunk_pdf.md"
+  },
+  {
+    "name": "WA_Cush_NARA_2645385_Bernard_Theresa_Redacted_shrunk_pdf",
+    "pdf": "examples/WA_Cush_NARA_2645385_Bernard_Theresa_Redacted_shrunk_pdf.pdf",
+    "md": "test_batch_workspace/markdown/WA_Cush_NARA_2645385_Bernard_Theresa_Redacted_shrunk_pdf.md"
+  },
+  {
+    "name": "WA_Cush_NARA_2645385_Bill_Raymond_Redacted_shrunk_pdf",
+    "pdf": "examples/WA_Cush_NARA_2645385_Bill_Raymond_Redacted_shrunk_pdf.pdf",
+    "md": "test_batch_workspace/markdown/WA_Cush_NARA_2645385_Bill_Raymond_Redacted_shrunk_pdf.md"
+  },
+  {
+    "name": "WA_Cush_NARA_2645385_Blair_George_Redacted_shrunk_pdf",
+    "pdf": "examples/WA_Cush_NARA_2645385_Blair_George_Redacted_shrunk_pdf.pdf",
+    "md": "test_batch_workspace/markdown/WA_Cush_NARA_2645385_Blair_George_Redacted_shrunk_pdf.md"
+  },
+  {
+    "name": "WA_Cush_NARA_2645385_Blair_Harry_Redacted_shrunk_pdf",
+    "pdf": "examples/WA_Cush_NARA_2645385_Blair_Harry_Redacted_shrunk_pdf.pdf",
+    "md": "test_batch_workspace/markdown/WA_Cush_NARA_2645385_Blair_Harry_Redacted_shrunk_pdf.md"
+  },
+  {
+    "name": "WA_Cush_NARA_2645385_Blair_Lily_Redacted_shrunk_pdf",
+    "pdf": "examples/WA_Cush_NARA_2645385_Blair_Lily_Redacted_shrunk_pdf.pdf",
+    "md": "test_batch_workspace/markdown/WA_Cush_NARA_2645385_Blair_Lily_Redacted_shrunk_pdf.md"
+  },
+  {
+    "name": "WA_Cush_NARA_2645385_Boyd_Hazel_Redacted_shrunk_pdf",
+    "pdf": "examples/WA_Cush_NARA_2645385_Boyd_Hazel_Redacted_shrunk_pdf.pdf",
+    "md": "test_batch_workspace/markdown/WA_Cush_NARA_2645385_Boyd_Hazel_Redacted_shrunk_pdf.md"
+  },
+  {
+    "name": "WA_Cush_NARA_2645385_Boyd_Juanita_Redacted_shrunk_pdf",
+    "pdf": "examples/WA_Cush_NARA_2645385_Boyd_Juanita_Redacted_shrunk_pdf.pdf",
+    "md": "test_batch_workspace/markdown/WA_Cush_NARA_2645385_Boyd_Juanita_Redacted_shrunk_pdf.md"
+  },
+  {
+    "name": "WA_Cush_NARA_2645385_Boyd_Norman_Redacted_shrunk_pdf",
+    "pdf": "examples/WA_Cush_NARA_2645385_Boyd_Norman_Redacted_shrunk_pdf.pdf",
+    "md": "test_batch_workspace/markdown/WA_Cush_NARA_2645385_Boyd_Norman_Redacted_shrunk_pdf.md"
+  },
+  {
+    "name": "WA_Cush_NARA_2645385_Boyd_Samuel_Redacted_shrunk_pdf",
+    "pdf": "examples/WA_Cush_NARA_2645385_Boyd_Samuel_Redacted_shrunk_pdf.pdf",
+    "md": "test_batch_workspace/markdown/WA_Cush_NARA_2645385_Boyd_Samuel_Redacted_shrunk_pdf.md"
+  },
+  {
+    "name": "WA_Cush_NARA_2645385_Brooks_Dick_Simon_Redacted_shrunk_pdf",
+    "pdf": "examples/WA_Cush_NARA_2645385_Brooks_Dick_Simon_Redacted_shrunk_pdf.pdf",
+    "md": "test_batch_workspace/markdown/WA_Cush_NARA_2645385_Brooks_Dick_Simon_Redacted_shrunk_pdf.md"
+  },
+  {
+    "name": "WA_Cush_NARA_2645385_Brown_Elsie_Redacted_shrunk_pdf",
+    "pdf": "examples/WA_Cush_NARA_2645385_Brown_Elsie_Redacted_shrunk_pdf.pdf",
+    "md": "test_batch_workspace/markdown/WA_Cush_NARA_2645385_Brown_Elsie_Redacted_shrunk_pdf.md"
+  },
+  {
+    "name": "WA_Cush_NARA_2645385_Brown_James_Redacted_shrunk_pdf",
+    "pdf": "examples/WA_Cush_NARA_2645385_Brown_James_Redacted_shrunk_pdf.pdf",
+    "md": "test_batch_workspace/markdown/WA_Cush_NARA_2645385_Brown_James_Redacted_shrunk_pdf.md"
+  },
+  {
+    "name": "WA_Cush_NARA_2645385_Brown_Lizzie_Redacted_shrunk_pdf",
+    "pdf": "examples/WA_Cush_NARA_2645385_Brown_Lizzie_Redacted_shrunk_pdf.pdf",
+    "md": "test_batch_workspace/markdown/WA_Cush_NARA_2645385_Brown_Lizzie_Redacted_shrunk_pdf.md"
+  },
+  {
+    "name": "WA_Cush_NARA_2645385_Burnard_Alex_Redacted_shrunk_pdf",
+    "pdf": "examples/WA_Cush_NARA_2645385_Burnard_Alex_Redacted_shrunk_pdf.pdf",
+    "md": "test_batch_workspace/markdown/WA_Cush_NARA_2645385_Burnard_Alex_Redacted_shrunk_pdf.md"
+  },
+  {
+    "name": "WA_Cush_NARA_2645385_Caisse_Byron_Redacted_shrunk_pdf",
+    "pdf": "examples/WA_Cush_NARA_2645385_Caisse_Byron_Redacted_shrunk_pdf.pdf",
+    "md": "test_batch_workspace/markdown/WA_Cush_NARA_2645385_Caisse_Byron_Redacted_shrunk_pdf.md"
+  },
+  {
+    "name": "WA_Cush_NARA_2645385_Caisse_Constance_shrunk_pdf",
+    "pdf": "examples/WA_Cush_NARA_2645385_Caisse_Constance_shrunk_pdf.pdf",
+    "md": "test_batch_workspace/markdown/WA_Cush_NARA_2645385_Caisse_Constance_shrunk_pdf.md"
+  },
+  {
+    "name": "WA_Cush_NARA_2645385_Caisse_Gertrude_shrunk_pdf",
+    "pdf": "examples/WA_Cush_NARA_2645385_Caisse_Gertrude_shrunk_pdf.pdf",
+    "md": "test_batch_workspace/markdown/WA_Cush_NARA_2645385_Caisse_Gertrude_shrunk_pdf.md"
+  },
+  {
+    "name": "WA_Cush_NARA_2645385_Caisse_Theodore_Redacted_shrunk_pdf",
+    "pdf": "examples/WA_Cush_NARA_2645385_Caisse_Theodore_Redacted_shrunk_pdf.pdf",
+    "md": "test_batch_workspace/markdown/WA_Cush_NARA_2645385_Caisse_Theodore_Redacted_shrunk_pdf.md"
+  },
+  {
+    "name": "WA_Cush_NARA_2645385_Carpenter_Rebecca_Redacted_shrunk_pdf",
+    "pdf": "examples/WA_Cush_NARA_2645385_Carpenter_Rebecca_Redacted_shrunk_pdf.pdf",
+    "md": "test_batch_workspace/markdown/WA_Cush_NARA_2645385_Carpenter_Rebecca_Redacted_shrunk_pdf.md"
+  },
+  {
+    "name": "WA_Cush_NARA_2645385_Cawker_Allen_Redacted_shrunk_pdf",
+    "pdf": "examples/WA_Cush_NARA_2645385_Cawker_Allen_Redacted_shrunk_pdf.pdf",
+    "md": "test_batch_workspace/markdown/WA_Cush_NARA_2645385_Cawker_Allen_Redacted_shrunk_pdf.md"
+  },
+  {
+    "name": "WA_Cush_NARA_2645385_Chamberlain_Carmen_shrunk_pdf",
+    "pdf": "examples/WA_Cush_NARA_2645385_Chamberlain_Carmen_shrunk_pdf.pdf",
+    "md": "test_batch_workspace/markdown/WA_Cush_NARA_2645385_Chamberlain_Carmen_shrunk_pdf.md"
+  },
+  {
+    "name": "WA_Cush_NARA_2645385_Chamberlain_Wallace",
+    "pdf": "examples/WA_Cush_NARA_2645385_Chamberlain_Wallace.pdf",
+    "md": "test_batch_workspace/markdown/WA_Cush_NARA_2645385_Chamberlain_Wallace.md"
+  },
+  {
+    "name": "WA_Cush_NARA_2645385_Chamberlain_Wallace_shrunk_pdf",
+    "pdf": "examples/WA_Cush_NARA_2645385_Chamberlain_Wallace_shrunk_pdf.pdf",
+    "md": "test_batch_workspace/markdown/WA_Cush_NARA_2645385_Chamberlain_Wallace_shrunk_pdf.md"
+  },
+  {
+    "name": "WA_Cush_NARA_2645385_Chamberlain__Percy_shrunk_pdf",
+    "pdf": "examples/WA_Cush_NARA_2645385_Chamberlain__Percy_shrunk_pdf.pdf",
+    "md": "test_batch_workspace/markdown/WA_Cush_NARA_2645385_Chamberlain__Percy_shrunk_pdf.md"
+  },
+  {
+    "name": "WA_Cush_NARA_2645385_Charley_Benjamin_Redacted_shrunk_pdf",
+    "pdf": "examples/WA_Cush_NARA_2645385_Charley_Benjamin_Redacted_shrunk_pdf.pdf",
+    "md": "test_batch_workspace/markdown/WA_Cush_NARA_2645385_Charley_Benjamin_Redacted_shrunk_pdf.md"
+  },
+  {
+    "name": "WA_Cush_NARA_2645385_Charley_Edith_Redacted_shrunk_pdf",
+    "pdf": "examples/WA_Cush_NARA_2645385_Charley_Edith_Redacted_shrunk_pdf.pdf",
+    "md": "test_batch_workspace/markdown/WA_Cush_NARA_2645385_Charley_Edith_Redacted_shrunk_pdf.md"
+  },
+  {
+    "name": "WA_Cush_NARA_2645385_Charley_Grace_Redacted_shrunk_pdf",
+    "pdf": "examples/WA_Cush_NARA_2645385_Charley_Grace_Redacted_shrunk_pdf.pdf",
+    "md": "test_batch_workspace/markdown/WA_Cush_NARA_2645385_Charley_Grace_Redacted_shrunk_pdf.md"
+  },
+  {
+    "name": "WA_Cush_NARA_2645385_Charley_Josephine_Redacted_shrunk_pdf",
+    "pdf": "examples/WA_Cush_NARA_2645385_Charley_Josephine_Redacted_shrunk_pdf.pdf",
+    "md": "test_batch_workspace/markdown/WA_Cush_NARA_2645385_Charley_Josephine_Redacted_shrunk_pdf.md"
+  },
+  {
+    "name": "WA_Cush_NARA_2645385_Chenois_Rose_Redacted_shrunk_pdf",
+    "pdf": "examples/WA_Cush_NARA_2645385_Chenois_Rose_Redacted_shrunk_pdf.pdf",
+    "md": "test_batch_workspace/markdown/WA_Cush_NARA_2645385_Chenois_Rose_Redacted_shrunk_pdf.md"
+  },
+  {
+    "name": "WA_Cush_NARA_2645385_Clark_Andrew",
+    "pdf": "examples/WA_Cush_NARA_2645385_Clark_Andrew.pdf",
+    "md": "test_batch_workspace/markdown/WA_Cush_NARA_2645385_Clark_Andrew.md"
+  },
+  {
+    "name": "WA_Cush_NARA_2645385_Clark_Andrew_shrunk_pdf",
+    "pdf": "examples/WA_Cush_NARA_2645385_Clark_Andrew_shrunk_pdf.pdf",
+    "md": "test_batch_workspace/markdown/WA_Cush_NARA_2645385_Clark_Andrew_shrunk_pdf.md"
+  },
+  {
+    "name": "WA_Cush_NARA_2645385_Clark_Emma_shrunk_pdf",
+    "pdf": "examples/WA_Cush_NARA_2645385_Clark_Emma_shrunk_pdf.pdf",
+    "md": "test_batch_workspace/markdown/WA_Cush_NARA_2645385_Clark_Emma_shrunk_pdf.md"
+  },
+  {
+    "name": "WA_Cush_NARA_2645385_Clark_Faustine",
+    "pdf": "examples/WA_Cush_NARA_2645385_Clark_Faustine.pdf",
+    "md": "test_batch_workspace/markdown/WA_Cush_NARA_2645385_Clark_Faustine.md"
+  },
+  {
+    "name": "WA_Cush_NARA_2645385_Clark_Faustine_shrunk_pdf",
+    "pdf": "examples/WA_Cush_NARA_2645385_Clark_Faustine_shrunk_pdf.pdf",
+    "md": "test_batch_workspace/markdown/WA_Cush_NARA_2645385_Clark_Faustine_shrunk_pdf.md"
+  },
+  {
+    "name": "WA_Cush_NARA_2645385_Cornoyer_DeLorme_Redacted_shrunk_pdf",
+    "pdf": "examples/WA_Cush_NARA_2645385_Cornoyer_DeLorme_Redacted_shrunk_pdf.pdf",
+    "md": "test_batch_workspace/markdown/WA_Cush_NARA_2645385_Cornoyer_DeLorme_Redacted_shrunk_pdf.md"
+  },
+  {
+    "name": "WA_Cush_NARA_2645385_Cornoyer_Eugene_Redacted_shrunk_pdf",
+    "pdf": "examples/WA_Cush_NARA_2645385_Cornoyer_Eugene_Redacted_shrunk_pdf.pdf",
+    "md": "test_batch_workspace/markdown/WA_Cush_NARA_2645385_Cornoyer_Eugene_Redacted_shrunk_pdf.md"
+  },
+  {
+    "name": "WA_Cush_NARA_2645385_Cornoyer_George_Redacted_shrunk_pdf",
+    "pdf": "examples/WA_Cush_NARA_2645385_Cornoyer_George_Redacted_shrunk_pdf.pdf",
+    "md": "test_batch_workspace/markdown/WA_Cush_NARA_2645385_Cornoyer_George_Redacted_shrunk_pdf.md"
+  },
+  {
+    "name": "WA_Cush_NARA_2645385_Cornoyer_Gus_shrunk_pdf",
+    "pdf": "examples/WA_Cush_NARA_2645385_Cornoyer_Gus_shrunk_pdf.pdf",
+    "md": "test_batch_workspace/markdown/WA_Cush_NARA_2645385_Cornoyer_Gus_shrunk_pdf.md"
+  },
+  {
+    "name": "WA_Cush_NARA_2645385_Cornoyer_Leona_Redacted_shrunk_pdf",
+    "pdf": "examples/WA_Cush_NARA_2645385_Cornoyer_Leona_Redacted_shrunk_pdf.pdf",
+    "md": "test_batch_workspace/markdown/WA_Cush_NARA_2645385_Cornoyer_Leona_Redacted_shrunk_pdf.md"
+  },
+  {
+    "name": "WA_Cush_NARA_2645385_Covington_Lawrence_Redacted_shrunk_pdf",
+    "pdf": "examples/WA_Cush_NARA_2645385_Covington_Lawrence_Redacted_shrunk_pdf.pdf",
+    "md": "test_batch_workspace/markdown/WA_Cush_NARA_2645385_Covington_Lawrence_Redacted_shrunk_pdf.md"
+  },
+  {
+    "name": "WA_Cush_NARA_2645385_Crofoot_Earl_Redacted_shrunk_pdf",
+    "pdf": "examples/WA_Cush_NARA_2645385_Crofoot_Earl_Redacted_shrunk_pdf.pdf",
+    "md": "test_batch_workspace/markdown/WA_Cush_NARA_2645385_Crofoot_Earl_Redacted_shrunk_pdf.md"
+  },
+  {
+    "name": "WA_Cush_NARA_2645385_Crofoot_Edna_Redacted_shrunk_pdf",
+    "pdf": "examples/WA_Cush_NARA_2645385_Crofoot_Edna_Redacted_shrunk_pdf.pdf",
+    "md": "test_batch_workspace/markdown/WA_Cush_NARA_2645385_Crofoot_Edna_Redacted_shrunk_pdf.md"
+  },
+  {
+    "name": "WA_Cush_NARA_2645385_Crofoot_Lawrence_Redacted_shrunk_pdf",
+    "pdf": "examples/WA_Cush_NARA_2645385_Crofoot_Lawrence_Redacted_shrunk_pdf.pdf",
+    "md": "test_batch_workspace/markdown/WA_Cush_NARA_2645385_Crofoot_Lawrence_Redacted_shrunk_pdf.md"
+  },
+  {
+    "name": "WA_Cush_NARA_2645385_Crofoot_Lila_Redacted_shrunk_pdf",
+    "pdf": "examples/WA_Cush_NARA_2645385_Crofoot_Lila_Redacted_shrunk_pdf.pdf",
+    "md": "test_batch_workspace/markdown/WA_Cush_NARA_2645385_Crofoot_Lila_Redacted_shrunk_pdf.md"
+  },
+  {
+    "name": "WA_Cush_NARA_2645385_Crow_David_Redacted_shrunk_pdf",
+    "pdf": "examples/WA_Cush_NARA_2645385_Crow_David_Redacted_shrunk_pdf.pdf",
+    "md": "test_batch_workspace/markdown/WA_Cush_NARA_2645385_Crow_David_Redacted_shrunk_pdf.md"
+  },
+  {
+    "name": "WA_Cush_NARA_2645385_Dave_Willie_Redacted_shrunk_pdf",
+    "pdf": "examples/WA_Cush_NARA_2645385_Dave_Willie_Redacted_shrunk_pdf.pdf",
+    "md": "test_batch_workspace/markdown/WA_Cush_NARA_2645385_Dave_Willie_Redacted_shrunk_pdf.md"
+  },
+  {
+    "name": "WA_Cush_NARA_2645385_Davis_Willie_Redacted_shrunk_pdf",
+    "pdf": "examples/WA_Cush_NARA_2645385_Davis_Willie_Redacted_shrunk_pdf.pdf",
+    "md": "test_batch_workspace/markdown/WA_Cush_NARA_2645385_Davis_Willie_Redacted_shrunk_pdf.md"
+  },
+  {
+    "name": "WA_Cush_NARA_2645385_Desauntel_Mabel_shrunk_pdf",
+    "pdf": "examples/WA_Cush_NARA_2645385_Desauntel_Mabel_shrunk_pdf.pdf",
+    "md": "test_batch_workspace/markdown/WA_Cush_NARA_2645385_Desauntel_Mabel_shrunk_pdf.md"
+  },
+  {
+    "name": "WA_Cush_NARA_2645385_Dick_Ernest_Redacted_shrunk_pdf",
+    "pdf": "examples/WA_Cush_NARA_2645385_Dick_Ernest_Redacted_shrunk_pdf.pdf",
+    "md": "test_batch_workspace/markdown/WA_Cush_NARA_2645385_Dick_Ernest_Redacted_shrunk_pdf.md"
+  },
+  {
+    "name": "WA_Cush_NARA_2645385_Dominic_Lawrence_Redacted_shrunk_pdf",
+    "pdf": "examples/WA_Cush_NARA_2645385_Dominic_Lawrence_Redacted_shrunk_pdf.pdf",
+    "md": "test_batch_workspace/markdown/WA_Cush_NARA_2645385_Dominic_Lawrence_Redacted_shrunk_pdf.md"
+  },
+  {
+    "name": "WA_Cush_NARA_2645385_Doyle_Dorris_Redacted_shrunk_pdf",
+    "pdf": "examples/WA_Cush_NARA_2645385_Doyle_Dorris_Redacted_shrunk_pdf.pdf",
+    "md": "test_batch_workspace/markdown/WA_Cush_NARA_2645385_Doyle_Dorris_Redacted_shrunk_pdf.md"
+  },
+  {
+    "name": "WA_Cush_NARA_2645385_Doyle_William_Redacted_shrunk_pdf",
+    "pdf": "examples/WA_Cush_NARA_2645385_Doyle_William_Redacted_shrunk_pdf.pdf",
+    "md": "test_batch_workspace/markdown/WA_Cush_NARA_2645385_Doyle_William_Redacted_shrunk_pdf.md"
+  },
+  {
+    "name": "WA_Cush_NARA_2645385_Dupuis_Bert",
+    "pdf": "examples/WA_Cush_NARA_2645385_Dupuis_Bert.pdf",
+    "md": "test_batch_workspace/markdown/WA_Cush_NARA_2645385_Dupuis_Bert.md"
+  },
+  {
+    "name": "WA_Cush_NARA_2645385_Dupuis_Bert_shrunk_pdf",
+    "pdf": "examples/WA_Cush_NARA_2645385_Dupuis_Bert_shrunk_pdf.pdf",
+    "md": "test_batch_workspace/markdown/WA_Cush_NARA_2645385_Dupuis_Bert_shrunk_pdf.md"
+  },
+  {
+    "name": "WA_Cush_NARA_2645385_Edwards_Harry_Redacted_shrunk_pdf",
+    "pdf": "examples/WA_Cush_NARA_2645385_Edwards_Harry_Redacted_shrunk_pdf.pdf",
+    "md": "test_batch_workspace/markdown/WA_Cush_NARA_2645385_Edwards_Harry_Redacted_shrunk_pdf.md"
+  },
+  {
+    "name": "WA_Cush_NARA_2645385_Ellenwood_James_Redacted_shrunk_pdf",
+    "pdf": "examples/WA_Cush_NARA_2645385_Ellenwood_James_Redacted_shrunk_pdf.pdf",
+    "md": "test_batch_workspace/markdown/WA_Cush_NARA_2645385_Ellenwood_James_Redacted_shrunk_pdf.md"
+  },
+  {
+    "name": "WA_Cush_NARA_2645385_Erick_Annie_shrunk_pdf",
+    "pdf": "examples/WA_Cush_NARA_2645385_Erick_Annie_shrunk_pdf.pdf",
+    "md": "test_batch_workspace/markdown/WA_Cush_NARA_2645385_Erick_Annie_shrunk_pdf.md"
+  },
+  {
+    "name": "WA_Cush_NARA_2645385_Evans_Charles_Redacted_shrunk_pdf",
+    "pdf": "examples/WA_Cush_NARA_2645385_Evans_Charles_Redacted_shrunk_pdf.pdf",
+    "md": "test_batch_workspace/markdown/WA_Cush_NARA_2645385_Evans_Charles_Redacted_shrunk_pdf.md"
+  },
+  {
+    "name": "WA_Cush_NARA_2645385_Evans_Richard_Redacted_shrunk_pdf",
+    "pdf": "examples/WA_Cush_NARA_2645385_Evans_Richard_Redacted_shrunk_pdf.pdf",
+    "md": "test_batch_workspace/markdown/WA_Cush_NARA_2645385_Evans_Richard_Redacted_shrunk_pdf.md"
+  },
+  {
+    "name": "WA_Cush_NARA_2645385_Evans_Wilfred_Redacted_shrunk_pdf",
+    "pdf": "examples/WA_Cush_NARA_2645385_Evans_Wilfred_Redacted_shrunk_pdf.pdf",
+    "md": "test_batch_workspace/markdown/WA_Cush_NARA_2645385_Evans_Wilfred_Redacted_shrunk_pdf.md"
+  },
+  {
+    "name": "WA_Cush_NARA_2645385_Frank_Annie_Redacted_shrunk_pdf",
+    "pdf": "examples/WA_Cush_NARA_2645385_Frank_Annie_Redacted_shrunk_pdf.pdf",
+    "md": "test_batch_workspace/markdown/WA_Cush_NARA_2645385_Frank_Annie_Redacted_shrunk_pdf.md"
+  },
+  {
+    "name": "WA_Cush_NARA_2645385_Frank_Margaret_Redacted_shrunk_pdf",
+    "pdf": "examples/WA_Cush_NARA_2645385_Frank_Margaret_Redacted_shrunk_pdf.pdf",
+    "md": "test_batch_workspace/markdown/WA_Cush_NARA_2645385_Frank_Margaret_Redacted_shrunk_pdf.md"
+  },
+  {
+    "name": "WA_Cush_NARA_2645385_Freidlauder_George_Redacted_shrunk_pdf",
+    "pdf": "examples/WA_Cush_NARA_2645385_Freidlauder_George_Redacted_shrunk_pdf.pdf",
+    "md": "test_batch_workspace/markdown/WA_Cush_NARA_2645385_Freidlauder_George_Redacted_shrunk_pdf.md"
+  },
+  {
+    "name": "WA_Cush_NARA_2645385_Freidlauder_Josie_Redacted_shrunk_pdf",
+    "pdf": "examples/WA_Cush_NARA_2645385_Freidlauder_Josie_Redacted_shrunk_pdf.pdf",
+    "md": "test_batch_workspace/markdown/WA_Cush_NARA_2645385_Freidlauder_Josie_Redacted_shrunk_pdf.md"
+  },
+  {
+    "name": "WA_Cush_NARA_2645385_Friedlauder_Emily_Redacted_shrunk_pdf",
+    "pdf": "examples/WA_Cush_NARA_2645385_Friedlauder_Emily_Redacted_shrunk_pdf.pdf",
+    "md": "test_batch_workspace/markdown/WA_Cush_NARA_2645385_Friedlauder_Emily_Redacted_shrunk_pdf.md"
+  },
+  {
+    "name": "WA_Cush_NARA_2645385_Garrison_Raymond_Redacted_shrunk_pdf",
+    "pdf": "examples/WA_Cush_NARA_2645385_Garrison_Raymond_Redacted_shrunk_pdf.pdf",
+    "md": "test_batch_workspace/markdown/WA_Cush_NARA_2645385_Garrison_Raymond_Redacted_shrunk_pdf.md"
+  },
+  {
+    "name": "WA_Cush_NARA_2645385_George_Clara_Redacted_shrunk_pdf",
+    "pdf": "examples/WA_Cush_NARA_2645385_George_Clara_Redacted_shrunk_pdf.pdf",
+    "md": "test_batch_workspace/markdown/WA_Cush_NARA_2645385_George_Clara_Redacted_shrunk_pdf.md"
+  },
+  {
+    "name": "WA_Cush_NARA_2645385_George_Jennie_Redacted_shrunk_pdf",
+    "pdf": "examples/WA_Cush_NARA_2645385_George_Jennie_Redacted_shrunk_pdf.pdf",
+    "md": "test_batch_workspace/markdown/WA_Cush_NARA_2645385_George_Jennie_Redacted_shrunk_pdf.md"
+  },
+  {
+    "name": "WA_Cush_NARA_2645385_Gobin_Joseph_shrunk_pdf",
+    "pdf": "examples/WA_Cush_NARA_2645385_Gobin_Joseph_shrunk_pdf.pdf",
+    "md": "test_batch_workspace/markdown/WA_Cush_NARA_2645385_Gobin_Joseph_shrunk_pdf.md"
+  },
+  {
+    "name": "WA_Cush_NARA_2645385_Goodman_Alfred_Redacted_shrunk_pdf",
+    "pdf": "examples/WA_Cush_NARA_2645385_Goodman_Alfred_Redacted_shrunk_pdf.pdf",
+    "md": "test_batch_workspace/markdown/WA_Cush_NARA_2645385_Goodman_Alfred_Redacted_shrunk_pdf.md"
+  },
+  {
+    "name": "WA_Cush_NARA_2645385_Goodman_Gladys_Redacted_shrunk_pdf",
+    "pdf": "examples/WA_Cush_NARA_2645385_Goodman_Gladys_Redacted_shrunk_pdf.pdf",
+    "md": "test_batch_workspace/markdown/WA_Cush_NARA_2645385_Goodman_Gladys_Redacted_shrunk_pdf.md"
+  },
+  {
+    "name": "WA_Cush_NARA_2645385_Goodman_Reginald_Redacted_shrunk_pdf",
+    "pdf": "examples/WA_Cush_NARA_2645385_Goodman_Reginald_Redacted_shrunk_pdf.pdf",
+    "md": "test_batch_workspace/markdown/WA_Cush_NARA_2645385_Goodman_Reginald_Redacted_shrunk_pdf.md"
+  },
+  {
+    "name": "WA_Cush_NARA_2645385_Gordon_Eleanor_Redacted_shrunk_pdf",
+    "pdf": "examples/WA_Cush_NARA_2645385_Gordon_Eleanor_Redacted_shrunk_pdf.pdf",
+    "md": "test_batch_workspace/markdown/WA_Cush_NARA_2645385_Gordon_Eleanor_Redacted_shrunk_pdf.md"
+  },
+  {
+    "name": "WA_Cush_NARA_2645385_Goudy_Thomas_Redacted_shrunk_pdf",
+    "pdf": "examples/WA_Cush_NARA_2645385_Goudy_Thomas_Redacted_shrunk_pdf.pdf",
+    "md": "test_batch_workspace/markdown/WA_Cush_NARA_2645385_Goudy_Thomas_Redacted_shrunk_pdf.md"
+  },
+  {
+    "name": "WA_Cush_NARA_2645385_Gunnier_Bessie",
+    "pdf": "examples/WA_Cush_NARA_2645385_Gunnier_Bessie.pdf",
+    "md": "test_batch_workspace/markdown/WA_Cush_NARA_2645385_Gunnier_Bessie.md"
+  },
+  {
+    "name": "WA_Cush_NARA_2645385_Gunnier_Bessie_shrunk_pdf",
+    "pdf": "examples/WA_Cush_NARA_2645385_Gunnier_Bessie_shrunk_pdf.pdf",
+    "md": "test_batch_workspace/markdown/WA_Cush_NARA_2645385_Gunnier_Bessie_shrunk_pdf.md"
+  },
+  {
+    "name": "WA_Cush_NARA_2645385_Hall_Charles_Albert_shrunk_pdf",
+    "pdf": "examples/WA_Cush_NARA_2645385_Hall_Charles_Albert_shrunk_pdf.pdf",
+    "md": "test_batch_workspace/markdown/WA_Cush_NARA_2645385_Hall_Charles_Albert_shrunk_pdf.md"
+  },
+  {
+    "name": "WA_Cush_NARA_2645385_Hall_Helen_Redacted_shrunk_pdf",
+    "pdf": "examples/WA_Cush_NARA_2645385_Hall_Helen_Redacted_shrunk_pdf.pdf",
+    "md": "test_batch_workspace/markdown/WA_Cush_NARA_2645385_Hall_Helen_Redacted_shrunk_pdf.md"
+  },
+  {
+    "name": "WA_Cush_NARA_2645385_Hall_Peter_Redacted_shrunk_pdf",
+    "pdf": "examples/WA_Cush_NARA_2645385_Hall_Peter_Redacted_shrunk_pdf.pdf",
+    "md": "test_batch_workspace/markdown/WA_Cush_NARA_2645385_Hall_Peter_Redacted_shrunk_pdf.md"
+  },
+  {
+    "name": "WA_Cush_NARA_2645385_Hall_Thomas_Edward",
+    "pdf": "examples/WA_Cush_NARA_2645385_Hall_Thomas_Edward.pdf",
+    "md": "test_batch_workspace/markdown/WA_Cush_NARA_2645385_Hall_Thomas_Edward.md"
+  },
+  {
+    "name": "WA_Cush_NARA_2645385_Hall_Thomas_Edward_shrunk_pdf",
+    "pdf": "examples/WA_Cush_NARA_2645385_Hall_Thomas_Edward_shrunk_pdf.pdf",
+    "md": "test_batch_workspace/markdown/WA_Cush_NARA_2645385_Hall_Thomas_Edward_shrunk_pdf.md"
+  },
+  {
+    "name": "WA_Cush_NARA_2645385_Hammer_Leo_Paul_Redacted_shrunk_pdf",
+    "pdf": "examples/WA_Cush_NARA_2645385_Hammer_Leo_Paul_Redacted_shrunk_pdf.pdf",
+    "md": "test_batch_workspace/markdown/WA_Cush_NARA_2645385_Hammer_Leo_Paul_Redacted_shrunk_pdf.md"
+  },
+  {
+    "name": "WA_Cush_NARA_2645385_Hanakek_Marmasena_Redacted_shrunk_pdf",
+    "pdf": "examples/WA_Cush_NARA_2645385_Hanakek_Marmasena_Redacted_shrunk_pdf.pdf",
+    "md": "test_batch_workspace/markdown/WA_Cush_NARA_2645385_Hanakek_Marmasena_Redacted_shrunk_pdf.md"
+  },
+  {
+    "name": "WA_Cush_NARA_2645385_Hansen_Alice_shrunk_pdf",
+    "pdf": "examples/WA_Cush_NARA_2645385_Hansen_Alice_shrunk_pdf.pdf",
+    "md": "test_batch_workspace/markdown/WA_Cush_NARA_2645385_Hansen_Alice_shrunk_pdf.md"
+  },
+  {
+    "name": "WA_Cush_NARA_2645385_Hansen_Andrew_Redacted_shrunk_pdf",
+    "pdf": "examples/WA_Cush_NARA_2645385_Hansen_Andrew_Redacted_shrunk_pdf.pdf",
+    "md": "test_batch_workspace/markdown/WA_Cush_NARA_2645385_Hansen_Andrew_Redacted_shrunk_pdf.md"
+  },
+  {
+    "name": "WA_Cush_NARA_2645385_Hansen_Freddie_shrunk_pdf",
+    "pdf": "examples/WA_Cush_NARA_2645385_Hansen_Freddie_shrunk_pdf.pdf",
+    "md": "test_batch_workspace/markdown/WA_Cush_NARA_2645385_Hansen_Freddie_shrunk_pdf.md"
+  },
+  {
+    "name": "WA_Cush_NARA_2645385_Hansen_Michael_Redacted_shrunk_pdf",
+    "pdf": "examples/WA_Cush_NARA_2645385_Hansen_Michael_Redacted_shrunk_pdf.pdf",
+    "md": "test_batch_workspace/markdown/WA_Cush_NARA_2645385_Hansen_Michael_Redacted_shrunk_pdf.md"
+  },
+  {
+    "name": "WA_Cush_NARA_2645385_Hawk_Catherine_Redacted_shrunk_pdf",
+    "pdf": "examples/WA_Cush_NARA_2645385_Hawk_Catherine_Redacted_shrunk_pdf.pdf",
+    "md": "test_batch_workspace/markdown/WA_Cush_NARA_2645385_Hawk_Catherine_Redacted_shrunk_pdf.md"
+  },
+  {
+    "name": "WA_Cush_NARA_2645385_Henry_Ethel_E_Redacted_shrunk_pdf",
+    "pdf": "examples/WA_Cush_NARA_2645385_Henry_Ethel_E_Redacted_shrunk_pdf.pdf",
+    "md": "test_batch_workspace/markdown/WA_Cush_NARA_2645385_Henry_Ethel_E_Redacted_shrunk_pdf.md"
+  },
+  {
+    "name": "WA_Cush_NARA_2645385_Henry_Hauford",
+    "pdf": "examples/WA_Cush_NARA_2645385_Henry_Hauford.pdf",
+    "md": "test_batch_workspace/markdown/WA_Cush_NARA_2645385_Henry_Hauford.md"
+  },
+  {
+    "name": "WA_Cush_NARA_2645385_Henry_Hauford_shrunk_pdf",
+    "pdf": "examples/WA_Cush_NARA_2645385_Henry_Hauford_shrunk_pdf.pdf",
+    "md": "test_batch_workspace/markdown/WA_Cush_NARA_2645385_Henry_Hauford_shrunk_pdf.md"
+  },
+  {
+    "name": "WA_Cush_NARA_2645385_Henry_Ione_Redacted_shrunk_pdf",
+    "pdf": "examples/WA_Cush_NARA_2645385_Henry_Ione_Redacted_shrunk_pdf.pdf",
+    "md": "test_batch_workspace/markdown/WA_Cush_NARA_2645385_Henry_Ione_Redacted_shrunk_pdf.md"
+  },
+  {
+    "name": "WA_Cush_NARA_2645385_Henry_Jane",
+    "pdf": "examples/WA_Cush_NARA_2645385_Henry_Jane.pdf",
+    "md": "test_batch_workspace/markdown/WA_Cush_NARA_2645385_Henry_Jane.md"
+  },
+  {
+    "name": "WA_Cush_NARA_2645385_Henry_Jane_shrunk_pdf",
+    "pdf": "examples/WA_Cush_NARA_2645385_Henry_Jane_shrunk_pdf.pdf",
+    "md": "test_batch_workspace/markdown/WA_Cush_NARA_2645385_Henry_Jane_shrunk_pdf.md"
+  },
+  {
+    "name": "WA_Cush_NARA_2645385_Henry_John_Redacted_shrunk_pdf",
+    "pdf": "examples/WA_Cush_NARA_2645385_Henry_John_Redacted_shrunk_pdf.pdf",
+    "md": "test_batch_workspace/markdown/WA_Cush_NARA_2645385_Henry_John_Redacted_shrunk_pdf.md"
+  },
+  {
+    "name": "WA_Cush_NARA_2645385_Henry_Roy",
+    "pdf": "examples/WA_Cush_NARA_2645385_Henry_Roy.pdf",
+    "md": "test_batch_workspace/markdown/WA_Cush_NARA_2645385_Henry_Roy.md"
+  },
+  {
+    "name": "WA_Cush_NARA_2645385_Henry_Roy_shrunk_pdf",
+    "pdf": "examples/WA_Cush_NARA_2645385_Henry_Roy_shrunk_pdf.pdf",
+    "md": "test_batch_workspace/markdown/WA_Cush_NARA_2645385_Henry_Roy_shrunk_pdf.md"
+  },
+  {
+    "name": "WA_Cush_NARA_2645385_Herron_Mary_Redacted_shrunk_pdf",
+    "pdf": "examples/WA_Cush_NARA_2645385_Herron_Mary_Redacted_shrunk_pdf.pdf",
+    "md": "test_batch_workspace/markdown/WA_Cush_NARA_2645385_Herron_Mary_Redacted_shrunk_pdf.md"
+  },
+  {
+    "name": "WA_Cush_NARA_2645385_Horn_Adeline_Redacted_shrunk_pdf",
+    "pdf": "examples/WA_Cush_NARA_2645385_Horn_Adeline_Redacted_shrunk_pdf.pdf",
+    "md": "test_batch_workspace/markdown/WA_Cush_NARA_2645385_Horn_Adeline_Redacted_shrunk_pdf.md"
+  },
+  {
+    "name": "WA_Cush_NARA_2645385_Hunt_William_Redacted_shrunk_pdf",
+    "pdf": "examples/WA_Cush_NARA_2645385_Hunt_William_Redacted_shrunk_pdf.pdf",
+    "md": "test_batch_workspace/markdown/WA_Cush_NARA_2645385_Hunt_William_Redacted_shrunk_pdf.md"
+  },
+  {
+    "name": "WA_Cush_NARA_2645385_Hunter_Irene",
+    "pdf": "examples/WA_Cush_NARA_2645385_Hunter_Irene.pdf",
+    "md": "test_batch_workspace/markdown/WA_Cush_NARA_2645385_Hunter_Irene.md"
+  },
+  {
+    "name": "WA_Cush_NARA_2645385_Hunter_Irene_shrunk_pdf",
+    "pdf": "examples/WA_Cush_NARA_2645385_Hunter_Irene_shrunk_pdf.pdf",
+    "md": "test_batch_workspace/markdown/WA_Cush_NARA_2645385_Hunter_Irene_shrunk_pdf.md"
+  },
+  {
+    "name": "WA_Cush_NARA_2645385_Hunter_Josepha_Redacted_shrunk_pdf",
+    "pdf": "examples/WA_Cush_NARA_2645385_Hunter_Josepha_Redacted_shrunk_pdf.pdf",
+    "md": "test_batch_workspace/markdown/WA_Cush_NARA_2645385_Hunter_Josepha_Redacted_shrunk_pdf.md"
+  },
+  {
+    "name": "WA_Cush_NARA_2645385_Irving_Martha_Redacted_shrunk_pdf",
+    "pdf": "examples/WA_Cush_NARA_2645385_Irving_Martha_Redacted_shrunk_pdf.pdf",
+    "md": "test_batch_workspace/markdown/WA_Cush_NARA_2645385_Irving_Martha_Redacted_shrunk_pdf.md"
+  },
+  {
+    "name": "WA_Cush_NARA_2645385_Jack_Griffin_Redacted_shrunk_pdf",
+    "pdf": "examples/WA_Cush_NARA_2645385_Jack_Griffin_Redacted_shrunk_pdf.pdf",
+    "md": "test_batch_workspace/markdown/WA_Cush_NARA_2645385_Jack_Griffin_Redacted_shrunk_pdf.md"
+  },
+  {
+    "name": "WA_Cush_NARA_2645385_Jackson_Amy_Redacted_shrunk_pdf",
+    "pdf": "examples/WA_Cush_NARA_2645385_Jackson_Amy_Redacted_shrunk_pdf.pdf",
+    "md": "test_batch_workspace/markdown/WA_Cush_NARA_2645385_Jackson_Amy_Redacted_shrunk_pdf.md"
+  },
+  {
+    "name": "WA_Cush_NARA_2645385_Jackson_Lois_shrunk_pdf",
+    "pdf": "examples/WA_Cush_NARA_2645385_Jackson_Lois_shrunk_pdf.pdf",
+    "md": "test_batch_workspace/markdown/WA_Cush_NARA_2645385_Jackson_Lois_shrunk_pdf.md"
+  },
+  {
+    "name": "WA_Cush_NARA_2645385_James_Benjamin_E_Redacted_shrunk_pdf",
+    "pdf": "examples/WA_Cush_NARA_2645385_James_Benjamin_E_Redacted_shrunk_pdf.pdf",
+    "md": "test_batch_workspace/markdown/WA_Cush_NARA_2645385_James_Benjamin_E_Redacted_shrunk_pdf.md"
+  },
+  {
+    "name": "WA_Cush_NARA_2645385_James_Julius_Redacted_shrunk_pdf",
+    "pdf": "examples/WA_Cush_NARA_2645385_James_Julius_Redacted_shrunk_pdf.pdf",
+    "md": "test_batch_workspace/markdown/WA_Cush_NARA_2645385_James_Julius_Redacted_shrunk_pdf.md"
+  },
+  {
+    "name": "WA_Cush_NARA_2645385_James_Mary_Redacted_shrunk_pdf",
+    "pdf": "examples/WA_Cush_NARA_2645385_James_Mary_Redacted_shrunk_pdf.pdf",
+    "md": "test_batch_workspace/markdown/WA_Cush_NARA_2645385_James_Mary_Redacted_shrunk_pdf.md"
+  },
+  {
+    "name": "WA_Cush_NARA_2645385_James_Nancy_Redacted_shrunk_pdf",
+    "pdf": "examples/WA_Cush_NARA_2645385_James_Nancy_Redacted_shrunk_pdf.pdf",
+    "md": "test_batch_workspace/markdown/WA_Cush_NARA_2645385_James_Nancy_Redacted_shrunk_pdf.md"
+  },
+  {
+    "name": "WA_Cush_NARA_2645385_James_Walter_C_Redacted_shrunk_pdf",
+    "pdf": "examples/WA_Cush_NARA_2645385_James_Walter_C_Redacted_shrunk_pdf.pdf",
+    "md": "test_batch_workspace/markdown/WA_Cush_NARA_2645385_James_Walter_C_Redacted_shrunk_pdf.md"
+  },
+  {
+    "name": "WA_Cush_NARA_2645385_Jerry_Agatha_Redacted_shrunk_pdf",
+    "pdf": "examples/WA_Cush_NARA_2645385_Jerry_Agatha_Redacted_shrunk_pdf.pdf",
+    "md": "test_batch_workspace/markdown/WA_Cush_NARA_2645385_Jerry_Agatha_Redacted_shrunk_pdf.md"
+  },
+  {
+    "name": "WA_Cush_NARA_2645385_Jerry_Emily_Redacted_shrunk_pdf",
+    "pdf": "examples/WA_Cush_NARA_2645385_Jerry_Emily_Redacted_shrunk_pdf.pdf",
+    "md": "test_batch_workspace/markdown/WA_Cush_NARA_2645385_Jerry_Emily_Redacted_shrunk_pdf.md"
+  },
+  {
+    "name": "WA_Cush_NARA_2645385_Jimmicum_May_shrunk_pdf",
+    "pdf": "examples/WA_Cush_NARA_2645385_Jimmicum_May_shrunk_pdf.pdf",
+    "md": "test_batch_workspace/markdown/WA_Cush_NARA_2645385_Jimmicum_May_shrunk_pdf.md"
+  },
+  {
+    "name": "WA_Cush_NARA_2645385_John_Joseph_Redacted_shrunk_pdf",
+    "pdf": "examples/WA_Cush_NARA_2645385_John_Joseph_Redacted_shrunk_pdf.pdf",
+    "md": "test_batch_workspace/markdown/WA_Cush_NARA_2645385_John_Joseph_Redacted_shrunk_pdf.md"
+  },
+  {
+    "name": "WA_Cush_NARA_2645385_Johnson_Daniel_Redacted_shrunk_pdf",
+    "pdf": "examples/WA_Cush_NARA_2645385_Johnson_Daniel_Redacted_shrunk_pdf.pdf",
+    "md": "test_batch_workspace/markdown/WA_Cush_NARA_2645385_Johnson_Daniel_Redacted_shrunk_pdf.md"
+  },
+  {
+    "name": "WA_Cush_NARA_2645385_Johnson_Lena_shrunk_pdf",
+    "pdf": "examples/WA_Cush_NARA_2645385_Johnson_Lena_shrunk_pdf.pdf",
+    "md": "test_batch_workspace/markdown/WA_Cush_NARA_2645385_Johnson_Lena_shrunk_pdf.md"
+  },
+  {
+    "name": "WA_Cush_NARA_2645385_Johnson_Selma",
+    "pdf": "examples/WA_Cush_NARA_2645385_Johnson_Selma.pdf",
+    "md": "test_batch_workspace/markdown/WA_Cush_NARA_2645385_Johnson_Selma.md"
+  },
+  {
+    "name": "WA_Cush_NARA_2645385_Johnson_Selma_shrunk_pdf",
+    "pdf": "examples/WA_Cush_NARA_2645385_Johnson_Selma_shrunk_pdf.pdf",
+    "md": "test_batch_workspace/markdown/WA_Cush_NARA_2645385_Johnson_Selma_shrunk_pdf.md"
+  },
+  {
+    "name": "WA_Cush_NARA_2645385_Jones_Thomas_Redacted_shrunk_pdf",
+    "pdf": "examples/WA_Cush_NARA_2645385_Jones_Thomas_Redacted_shrunk_pdf.pdf",
+    "md": "test_batch_workspace/markdown/WA_Cush_NARA_2645385_Jones_Thomas_Redacted_shrunk_pdf.md"
+  },
+  {
+    "name": "WA_Cush_NARA_2645385_Jones_Wells_Redacted_shrunk_pdf",
+    "pdf": "examples/WA_Cush_NARA_2645385_Jones_Wells_Redacted_shrunk_pdf.pdf",
+    "md": "test_batch_workspace/markdown/WA_Cush_NARA_2645385_Jones_Wells_Redacted_shrunk_pdf.md"
+  },
+  {
+    "name": "WA_Cush_NARA_2645385_Joseph_Joseph_Redacted_shrunk_pdf",
+    "pdf": "examples/WA_Cush_NARA_2645385_Joseph_Joseph_Redacted_shrunk_pdf.pdf",
+    "md": "test_batch_workspace/markdown/WA_Cush_NARA_2645385_Joseph_Joseph_Redacted_shrunk_pdf.md"
+  },
+  {
+    "name": "WA_Cush_NARA_2645385_Kahama_Gertrude_Redacted_shrunk_pdf",
+    "pdf": "examples/WA_Cush_NARA_2645385_Kahama_Gertrude_Redacted_shrunk_pdf.pdf",
+    "md": "test_batch_workspace/markdown/WA_Cush_NARA_2645385_Kahama_Gertrude_Redacted_shrunk_pdf.md"
+  },
+  {
+    "name": "WA_Cush_NARA_2645385_Kalama_Gilbert_Redacted_shrunk_pdf",
+    "pdf": "examples/WA_Cush_NARA_2645385_Kalama_Gilbert_Redacted_shrunk_pdf.pdf",
+    "md": "test_batch_workspace/markdown/WA_Cush_NARA_2645385_Kalama_Gilbert_Redacted_shrunk_pdf.md"
+  },
+  {
+    "name": "WA_Cush_NARA_2645385_Kalama_Irene_Redacted_shrunk_pdf",
+    "pdf": "examples/WA_Cush_NARA_2645385_Kalama_Irene_Redacted_shrunk_pdf.pdf",
+    "md": "test_batch_workspace/markdown/WA_Cush_NARA_2645385_Kalama_Irene_Redacted_shrunk_pdf.md"
+  },
+  {
+    "name": "WA_Cush_NARA_2645385_Kamhout_Cecelia_Redacted_shrunk_pdf",
+    "pdf": "examples/WA_Cush_NARA_2645385_Kamhout_Cecelia_Redacted_shrunk_pdf.pdf",
+    "md": "test_batch_workspace/markdown/WA_Cush_NARA_2645385_Kamhout_Cecelia_Redacted_shrunk_pdf.md"
+  },
+  {
+    "name": "WA_Cush_NARA_2645385_Kautz_Aida_Redacted_shrunk_pdf",
+    "pdf": "examples/WA_Cush_NARA_2645385_Kautz_Aida_Redacted_shrunk_pdf.pdf",
+    "md": "test_batch_workspace/markdown/WA_Cush_NARA_2645385_Kautz_Aida_Redacted_shrunk_pdf.md"
+  },
+  {
+    "name": "WA_Cush_NARA_2645385_KingGeoge_Lavina_Redacted_shrunk_pdf",
+    "pdf": "examples/WA_Cush_NARA_2645385_KingGeoge_Lavina_Redacted_shrunk_pdf.pdf",
+    "md": "test_batch_workspace/markdown/WA_Cush_NARA_2645385_KingGeoge_Lavina_Redacted_shrunk_pdf.md"
+  },
+  {
+    "name": "WA_Cush_NARA_2645385_KingGeorge_Anita_Redacted_shrunk_pdf",
+    "pdf": "examples/WA_Cush_NARA_2645385_KingGeorge_Anita_Redacted_shrunk_pdf.pdf",
+    "md": "test_batch_workspace/markdown/WA_Cush_NARA_2645385_KingGeorge_Anita_Redacted_shrunk_pdf.md"
+  },
+  {
+    "name": "WA_Cush_NARA_2645385_Kinseh_John_Redacted_shrunk_pdf",
+    "pdf": "examples/WA_Cush_NARA_2645385_Kinseh_John_Redacted_shrunk_pdf.pdf",
+    "md": "test_batch_workspace/markdown/WA_Cush_NARA_2645385_Kinseh_John_Redacted_shrunk_pdf.md"
+  },
+  {
+    "name": "WA_Cush_NARA_2645385_Klinger_Eddie_shrunk_pdf",
+    "pdf": "examples/WA_Cush_NARA_2645385_Klinger_Eddie_shrunk_pdf.pdf",
+    "md": "test_batch_workspace/markdown/WA_Cush_NARA_2645385_Klinger_Eddie_shrunk_pdf.md"
+  },
+  {
+    "name": "WA_Cush_NARA_2645385_Ladderoute_Cecelia_shrunk_pdf",
+    "pdf": "examples/WA_Cush_NARA_2645385_Ladderoute_Cecelia_shrunk_pdf.pdf",
+    "md": "test_batch_workspace/markdown/WA_Cush_NARA_2645385_Ladderoute_Cecelia_shrunk_pdf.md"
+  },
+  {
+    "name": "WA_Cush_NARA_2645385_Ladderoute_Florence_Gladys_shrunk_pdf",
+    "pdf": "examples/WA_Cush_NARA_2645385_Ladderoute_Florence_Gladys_shrunk_pdf.pdf",
+    "md": "test_batch_workspace/markdown/WA_Cush_NARA_2645385_Ladderoute_Florence_Gladys_shrunk_pdf.md"
+  },
+  {
+    "name": "WA_Cush_NARA_2645385_Legard_Edwin_Joseph_Redacted_shrunk_pdf",
+    "pdf": "examples/WA_Cush_NARA_2645385_Legard_Edwin_Joseph_Redacted_shrunk_pdf.pdf",
+    "md": "test_batch_workspace/markdown/WA_Cush_NARA_2645385_Legard_Edwin_Joseph_Redacted_shrunk_pdf.md"
+  },
+  {
+    "name": "WA_Cush_NARA_2645385_Lewis_Nina_Redacted_shrunk_pdf",
+    "pdf": "examples/WA_Cush_NARA_2645385_Lewis_Nina_Redacted_shrunk_pdf.pdf",
+    "md": "test_batch_workspace/markdown/WA_Cush_NARA_2645385_Lewis_Nina_Redacted_shrunk_pdf.md"
+  },
+  {
+    "name": "WA_Cush_NARA_2645385_Louie_George_Redacted_shrunk_pdf",
+    "pdf": "examples/WA_Cush_NARA_2645385_Louie_George_Redacted_shrunk_pdf.pdf",
+    "md": "test_batch_workspace/markdown/WA_Cush_NARA_2645385_Louie_George_Redacted_shrunk_pdf.md"
+  },
+  {
+    "name": "WA_Cush_NARA_2645385_Lucei_Robert_Redacted_shrunk_pdf",
+    "pdf": "examples/WA_Cush_NARA_2645385_Lucei_Robert_Redacted_shrunk_pdf.pdf",
+    "md": "test_batch_workspace/markdown/WA_Cush_NARA_2645385_Lucei_Robert_Redacted_shrunk_pdf.md"
+  },
+  {
+    "name": "WA_Cush_NARA_2645385_Major_Hattie_Redacted_shrunk_pdf",
+    "pdf": "examples/WA_Cush_NARA_2645385_Major_Hattie_Redacted_shrunk_pdf.pdf",
+    "md": "test_batch_workspace/markdown/WA_Cush_NARA_2645385_Major_Hattie_Redacted_shrunk_pdf.md"
+  },
+  {
+    "name": "WA_Cush_NARA_2645385_Martin_Abraham_shrunk_pdf",
+    "pdf": "examples/WA_Cush_NARA_2645385_Martin_Abraham_shrunk_pdf.pdf",
+    "md": "test_batch_workspace/markdown/WA_Cush_NARA_2645385_Martin_Abraham_shrunk_pdf.md"
+  },
+  {
+    "name": "WA_Cush_NARA_2645385_Martin_Colette_Redacted_shrunk_pdf",
+    "pdf": "examples/WA_Cush_NARA_2645385_Martin_Colette_Redacted_shrunk_pdf.pdf",
+    "md": "test_batch_workspace/markdown/WA_Cush_NARA_2645385_Martin_Colette_Redacted_shrunk_pdf.md"
+  },
+  {
+    "name": "WA_Cush_NARA_2645385_Martin_Eva_shrunk_pdf",
+    "pdf": "examples/WA_Cush_NARA_2645385_Martin_Eva_shrunk_pdf.pdf",
+    "md": "test_batch_workspace/markdown/WA_Cush_NARA_2645385_Martin_Eva_shrunk_pdf.md"
+  },
+  {
+    "name": "WA_Cush_NARA_2645385_Martin_Louis_shrunk_pdf",
+    "pdf": "examples/WA_Cush_NARA_2645385_Martin_Louis_shrunk_pdf.pdf",
+    "md": "test_batch_workspace/markdown/WA_Cush_NARA_2645385_Martin_Louis_shrunk_pdf.md"
+  },
+  {
+    "name": "WA_Cush_NARA_2645385_Martin_Narcisse_Redacted_shrunk_pdf",
+    "pdf": "examples/WA_Cush_NARA_2645385_Martin_Narcisse_Redacted_shrunk_pdf.pdf",
+    "md": "test_batch_workspace/markdown/WA_Cush_NARA_2645385_Martin_Narcisse_Redacted_shrunk_pdf.md"
+  },
+  {
+    "name": "WA_Cush_NARA_2645385_Martin_William_G_Redacted_shrunk_pdf",
+    "pdf": "examples/WA_Cush_NARA_2645385_Martin_William_G_Redacted_shrunk_pdf.pdf",
+    "md": "test_batch_workspace/markdown/WA_Cush_NARA_2645385_Martin_William_G_Redacted_shrunk_pdf.md"
+  },
+  {
+    "name": "WA_Cush_NARA_2645385_Mason_Lyla_Redacted_shrunk_pdf",
+    "pdf": "examples/WA_Cush_NARA_2645385_Mason_Lyla_Redacted_shrunk_pdf.pdf",
+    "md": "test_batch_workspace/markdown/WA_Cush_NARA_2645385_Mason_Lyla_Redacted_shrunk_pdf.md"
+  },
+  {
+    "name": "WA_Cush_NARA_2645385_Matt_Christine_Redacted_shrunk_pdf",
+    "pdf": "examples/WA_Cush_NARA_2645385_Matt_Christine_Redacted_shrunk_pdf.pdf",
+    "md": "test_batch_workspace/markdown/WA_Cush_NARA_2645385_Matt_Christine_Redacted_shrunk_pdf.md"
+  },
+  {
+    "name": "WA_Cush_NARA_2645385_Matt_Davis_shrunk_pdf",
+    "pdf": "examples/WA_Cush_NARA_2645385_Matt_Davis_shrunk_pdf.pdf",
+    "md": "test_batch_workspace/markdown/WA_Cush_NARA_2645385_Matt_Davis_shrunk_pdf.md"
+  },
+  {
+    "name": "WA_Cush_NARA_2645385_Matt_Dominick_shrunk_pdf",
+    "pdf": "examples/WA_Cush_NARA_2645385_Matt_Dominick_shrunk_pdf.pdf",
+    "md": "test_batch_workspace/markdown/WA_Cush_NARA_2645385_Matt_Dominick_shrunk_pdf.md"
+  },
+  {
+    "name": "WA_Cush_NARA_2645385_Matt_Lillian_shrunk_pdf",
+    "pdf": "examples/WA_Cush_NARA_2645385_Matt_Lillian_shrunk_pdf.pdf",
+    "md": "test_batch_workspace/markdown/WA_Cush_NARA_2645385_Matt_Lillian_shrunk_pdf.md"
+  },
+  {
+    "name": "WA_Cush_NARA_2645385_Matt_Marceline_Redacted_shrunk_pdf",
+    "pdf": "examples/WA_Cush_NARA_2645385_Matt_Marceline_Redacted_shrunk_pdf.pdf",
+    "md": "test_batch_workspace/markdown/WA_Cush_NARA_2645385_Matt_Marceline_Redacted_shrunk_pdf.md"
+  },
+  {
+    "name": "WA_Cush_NARA_2645385_McAlpin_Sayres_Redacted_shrunk_pdf",
+    "pdf": "examples/WA_Cush_NARA_2645385_McAlpin_Sayres_Redacted_shrunk_pdf.pdf",
+    "md": "test_batch_workspace/markdown/WA_Cush_NARA_2645385_McAlpin_Sayres_Redacted_shrunk_pdf.md"
+  },
+  {
+    "name": "WA_Cush_NARA_2645385_McCarsey_Marie_Redacted_shrunk_pdf",
+    "pdf": "examples/WA_Cush_NARA_2645385_McCarsey_Marie_Redacted_shrunk_pdf.pdf",
+    "md": "test_batch_workspace/markdown/WA_Cush_NARA_2645385_McCarsey_Marie_Redacted_shrunk_pdf.md"
+  },
+  {
+    "name": "WA_Cush_NARA_2645385_McCarsey_Marshall_Redacted_shrunk_pdf",
+    "pdf": "examples/WA_Cush_NARA_2645385_McCarsey_Marshall_Redacted_shrunk_pdf.pdf",
+    "md": "test_batch_workspace/markdown/WA_Cush_NARA_2645385_McCarsey_Marshall_Redacted_shrunk_pdf.md"
+  },
+  {
+    "name": "WA_Cush_NARA_2645385_McCoy_Leonard_Redacted_shrunk_pdf",
+    "pdf": "examples/WA_Cush_NARA_2645385_McCoy_Leonard_Redacted_shrunk_pdf.pdf",
+    "md": "test_batch_workspace/markdown/WA_Cush_NARA_2645385_McCoy_Leonard_Redacted_shrunk_pdf.md"
+  },
+  {
+    "name": "WA_Cush_NARA_2645385_McDonald_Charley_Redacted_shrunk_pdf",
+    "pdf": "examples/WA_Cush_NARA_2645385_McDonald_Charley_Redacted_shrunk_pdf.pdf",
+    "md": "test_batch_workspace/markdown/WA_Cush_NARA_2645385_McDonald_Charley_Redacted_shrunk_pdf.md"
+  },
+  {
+    "name": "WA_Cush_NARA_2645385_McDonald_Harry_Redacted_shrunk_pdf",
+    "pdf": "examples/WA_Cush_NARA_2645385_McDonald_Harry_Redacted_shrunk_pdf.pdf",
+    "md": "test_batch_workspace/markdown/WA_Cush_NARA_2645385_McDonald_Harry_Redacted_shrunk_pdf.md"
+  },
+  {
+    "name": "WA_Cush_NARA_2645385_McDonald_Margaret_Redacted_shrunk_pdf",
+    "pdf": "examples/WA_Cush_NARA_2645385_McDonald_Margaret_Redacted_shrunk_pdf.pdf",
+    "md": "test_batch_workspace/markdown/WA_Cush_NARA_2645385_McDonald_Margaret_Redacted_shrunk_pdf.md"
+  },
+  {
+    "name": "WA_Cush_NARA_2645385_McKinney_Gertrude_Redacted_shrunk_pdf",
+    "pdf": "examples/WA_Cush_NARA_2645385_McKinney_Gertrude_Redacted_shrunk_pdf.pdf",
+    "md": "test_batch_workspace/markdown/WA_Cush_NARA_2645385_McKinney_Gertrude_Redacted_shrunk_pdf.md"
+  },
+  {
+    "name": "WA_Cush_NARA_2645385_McKinney_Margaret_Redacted_shrunk_pdf",
+    "pdf": "examples/WA_Cush_NARA_2645385_McKinney_Margaret_Redacted_shrunk_pdf.pdf",
+    "md": "test_batch_workspace/markdown/WA_Cush_NARA_2645385_McKinney_Margaret_Redacted_shrunk_pdf.md"
+  },
+  {
+    "name": "WA_Cush_NARA_2645385_Michel_Henry_Redacted_shrunk_pdf",
+    "pdf": "examples/WA_Cush_NARA_2645385_Michel_Henry_Redacted_shrunk_pdf.pdf",
+    "md": "test_batch_workspace/markdown/WA_Cush_NARA_2645385_Michel_Henry_Redacted_shrunk_pdf.md"
+  },
+  {
+    "name": "WA_Cush_NARA_2645385_Michel_Louisa_shrunk_pdf",
+    "pdf": "examples/WA_Cush_NARA_2645385_Michel_Louisa_shrunk_pdf.pdf",
+    "md": "test_batch_workspace/markdown/WA_Cush_NARA_2645385_Michel_Louisa_shrunk_pdf.md"
+  },
+  {
+    "name": "WA_Cush_NARA_2645385_Miles_Aaron_Redacted_shrunk_pdf",
+    "pdf": "examples/WA_Cush_NARA_2645385_Miles_Aaron_Redacted_shrunk_pdf.pdf",
+    "md": "test_batch_workspace/markdown/WA_Cush_NARA_2645385_Miles_Aaron_Redacted_shrunk_pdf.md"
+  },
+  {
+    "name": "WA_Cush_NARA_2645385_Miller_Moses_shrunk_pdf",
+    "pdf": "examples/WA_Cush_NARA_2645385_Miller_Moses_shrunk_pdf.pdf",
+    "md": "test_batch_workspace/markdown/WA_Cush_NARA_2645385_Miller_Moses_shrunk_pdf.md"
+  },
+  {
+    "name": "WA_Cush_NARA_2645385_Minthorn_David_Redacted_shrunk_pdf",
+    "pdf": "examples/WA_Cush_NARA_2645385_Minthorn_David_Redacted_shrunk_pdf.pdf",
+    "md": "test_batch_workspace/markdown/WA_Cush_NARA_2645385_Minthorn_David_Redacted_shrunk_pdf.md"
+  },
+  {
+    "name": "WA_Cush_NARA_2645385_Morrell_Florence_shrunk_pdf",
+    "pdf": "examples/WA_Cush_NARA_2645385_Morrell_Florence_shrunk_pdf.pdf",
+    "md": "test_batch_workspace/markdown/WA_Cush_NARA_2645385_Morrell_Florence_shrunk_pdf.md"
+  },
+  {
+    "name": "WA_Cush_NARA_2645385_Morrell_Leona_shrunk_pdf",
+    "pdf": "examples/WA_Cush_NARA_2645385_Morrell_Leona_shrunk_pdf.pdf",
+    "md": "test_batch_workspace/markdown/WA_Cush_NARA_2645385_Morrell_Leona_shrunk_pdf.md"
+  },
+  {
+    "name": "WA_Cush_NARA_2645385_Moses_Annie_Redacted_shrunk_pdf",
+    "pdf": "examples/WA_Cush_NARA_2645385_Moses_Annie_Redacted_shrunk_pdf.pdf",
+    "md": "test_batch_workspace/markdown/WA_Cush_NARA_2645385_Moses_Annie_Redacted_shrunk_pdf.md"
+  },
+  {
+    "name": "WA_Cush_NARA_2645385_Moses_Eddie_Redacted_shrunk_pdf",
+    "pdf": "examples/WA_Cush_NARA_2645385_Moses_Eddie_Redacted_shrunk_pdf.pdf",
+    "md": "test_batch_workspace/markdown/WA_Cush_NARA_2645385_Moses_Eddie_Redacted_shrunk_pdf.md"
+  },
+  {
+    "name": "WA_Cush_NARA_2645385_Moses_Lizzie_Redacted_shrunk_pdf",
+    "pdf": "examples/WA_Cush_NARA_2645385_Moses_Lizzie_Redacted_shrunk_pdf.pdf",
+    "md": "test_batch_workspace/markdown/WA_Cush_NARA_2645385_Moses_Lizzie_Redacted_shrunk_pdf.md"
+  },
+  {
+    "name": "WA_Cush_NARA_2645385_Moses_Mary_Redacted_shrunk_pdf",
+    "pdf": "examples/WA_Cush_NARA_2645385_Moses_Mary_Redacted_shrunk_pdf.pdf",
+    "md": "test_batch_workspace/markdown/WA_Cush_NARA_2645385_Moses_Mary_Redacted_shrunk_pdf.md"
+  },
+  {
+    "name": "WA_Cush_NARA_2645385_Moses_Patsy_Redacted_shrunk_pdf",
+    "pdf": "examples/WA_Cush_NARA_2645385_Moses_Patsy_Redacted_shrunk_pdf.pdf",
+    "md": "test_batch_workspace/markdown/WA_Cush_NARA_2645385_Moses_Patsy_Redacted_shrunk_pdf.md"
+  },
+  {
+    "name": "WA_Cush_NARA_2645385_Moses_Peter_Redacted_shrunk_pdf",
+    "pdf": "examples/WA_Cush_NARA_2645385_Moses_Peter_Redacted_shrunk_pdf.pdf",
+    "md": "test_batch_workspace/markdown/WA_Cush_NARA_2645385_Moses_Peter_Redacted_shrunk_pdf.md"
+  },
+  {
+    "name": "WA_Cush_NARA_2645385_Moses_William_Redacted_shrunk_pdf",
+    "pdf": "examples/WA_Cush_NARA_2645385_Moses_William_Redacted_shrunk_pdf.pdf",
+    "md": "test_batch_workspace/markdown/WA_Cush_NARA_2645385_Moses_William_Redacted_shrunk_pdf.md"
+  },
+  {
+    "name": "WA_Cush_NARA_2645385_Mullen_Thomas_Redacted_shrunk_pdf",
+    "pdf": "examples/WA_Cush_NARA_2645385_Mullen_Thomas_Redacted_shrunk_pdf.pdf",
+    "md": "test_batch_workspace/markdown/WA_Cush_NARA_2645385_Mullen_Thomas_Redacted_shrunk_pdf.md"
+  },
+  {
+    "name": "WA_Cush_NARA_2645385_Napolean_Edna_shrunk_pdf",
+    "pdf": "examples/WA_Cush_NARA_2645385_Napolean_Edna_shrunk_pdf.pdf",
+    "md": "test_batch_workspace/markdown/WA_Cush_NARA_2645385_Napolean_Edna_shrunk_pdf.md"
+  },
+  {
+    "name": "WA_Cush_NARA_2645385_Napolean_Peter_Redacted_shrunk_pdf",
+    "pdf": "examples/WA_Cush_NARA_2645385_Napolean_Peter_Redacted_shrunk_pdf.pdf",
+    "md": "test_batch_workspace/markdown/WA_Cush_NARA_2645385_Napolean_Peter_Redacted_shrunk_pdf.md"
+  },
+  {
+    "name": "WA_Cush_NARA_2645385_Napolean_Sadie_Redacted_shrunk_pdf",
+    "pdf": "examples/WA_Cush_NARA_2645385_Napolean_Sadie_Redacted_shrunk_pdf.pdf",
+    "md": "test_batch_workspace/markdown/WA_Cush_NARA_2645385_Napolean_Sadie_Redacted_shrunk_pdf.md"
+  },
+  {
+    "name": "WA_Cush_NARA_2645385_Nelson_Nellie_Redacted_shrunk_pdf",
+    "pdf": "examples/WA_Cush_NARA_2645385_Nelson_Nellie_Redacted_shrunk_pdf.pdf",
+    "md": "test_batch_workspace/markdown/WA_Cush_NARA_2645385_Nelson_Nellie_Redacted_shrunk_pdf.md"
+  },
+  {
+    "name": "WA_Cush_NARA_2645385_Nostrum_Fred_Redacted_shrunk_pdf",
+    "pdf": "examples/WA_Cush_NARA_2645385_Nostrum_Fred_Redacted_shrunk_pdf.pdf",
+    "md": "test_batch_workspace/markdown/WA_Cush_NARA_2645385_Nostrum_Fred_Redacted_shrunk_pdf.md"
+  },
+  {
+    "name": "WA_Cush_NARA_2645385_Noyes_Dora_Redacted_shrunk_pdf",
+    "pdf": "examples/WA_Cush_NARA_2645385_Noyes_Dora_Redacted_shrunk_pdf.pdf",
+    "md": "test_batch_workspace/markdown/WA_Cush_NARA_2645385_Noyes_Dora_Redacted_shrunk_pdf.md"
+  },
+  {
+    "name": "WA_Cush_NARA_2645385_Osborn_John_Redacted_shrunk_pdf",
+    "pdf": "examples/WA_Cush_NARA_2645385_Osborn_John_Redacted_shrunk_pdf.pdf",
+    "md": "test_batch_workspace/markdown/WA_Cush_NARA_2645385_Osborn_John_Redacted_shrunk_pdf.md"
+  },
+  {
+    "name": "WA_Cush_NARA_2645385_Pablo_Nora_Redacted_shrunk_pdf",
+    "pdf": "examples/WA_Cush_NARA_2645385_Pablo_Nora_Redacted_shrunk_pdf.pdf",
+    "md": "test_batch_workspace/markdown/WA_Cush_NARA_2645385_Pablo_Nora_Redacted_shrunk_pdf.md"
+  },
+  {
+    "name": "WA_Cush_NARA_2645385_Pakotas_Matthew_Redacted_shrunk_pdf",
+    "pdf": "examples/WA_Cush_NARA_2645385_Pakotas_Matthew_Redacted_shrunk_pdf.pdf",
+    "md": "test_batch_workspace/markdown/WA_Cush_NARA_2645385_Pakotas_Matthew_Redacted_shrunk_pdf.md"
+  },
+  {
+    "name": "WA_Cush_NARA_2645385_Pakotas_Susanna_Redacted_shrunk_pdf",
+    "pdf": "examples/WA_Cush_NARA_2645385_Pakotas_Susanna_Redacted_shrunk_pdf.pdf",
+    "md": "test_batch_workspace/markdown/WA_Cush_NARA_2645385_Pakotas_Susanna_Redacted_shrunk_pdf.md"
+  },
+  {
+    "name": "WA_Cush_NARA_2645385_Parriseau_Antoine_Redacted_shrunk_pdf",
+    "pdf": "examples/WA_Cush_NARA_2645385_Parriseau_Antoine_Redacted_shrunk_pdf.pdf",
+    "md": "test_batch_workspace/markdown/WA_Cush_NARA_2645385_Parriseau_Antoine_Redacted_shrunk_pdf.md"
+  },
+  {
+    "name": "WA_Cush_NARA_2645385_Parriseau_Patrick_Redacted_shrunk_pdf",
+    "pdf": "examples/WA_Cush_NARA_2645385_Parriseau_Patrick_Redacted_shrunk_pdf.pdf",
+    "md": "test_batch_workspace/markdown/WA_Cush_NARA_2645385_Parriseau_Patrick_Redacted_shrunk_pdf.md"
+  },
+  {
+    "name": "WA_Cush_NARA_2645385_Payne_Lillian_Redacted_shrunk_pdf",
+    "pdf": "examples/WA_Cush_NARA_2645385_Payne_Lillian_Redacted_shrunk_pdf.pdf",
+    "md": "test_batch_workspace/markdown/WA_Cush_NARA_2645385_Payne_Lillian_Redacted_shrunk_pdf.md"
+  },
+  {
+    "name": "WA_Cush_NARA_2645385_Payne_Lillian_Redacted_shrunk_pdf (1)",
+    "pdf": "examples/WA_Cush_NARA_2645385_Payne_Lillian_Redacted_shrunk_pdf (1).pdf",
+    "md": "test_batch_workspace/markdown/WA_Cush_NARA_2645385_Payne_Lillian_Redacted_shrunk_pdf (1).md"
+  },
+  {
+    "name": "WA_Cush_NARA_2645385_Pechette_Joe_shrunk_pdf",
+    "pdf": "examples/WA_Cush_NARA_2645385_Pechette_Joe_shrunk_pdf.pdf",
+    "md": "test_batch_workspace/markdown/WA_Cush_NARA_2645385_Pechette_Joe_shrunk_pdf.md"
+  },
+  {
+    "name": "WA_Cush_NARA_2645385_Peone_Gideon_Redacted_shrunk_pdf",
+    "pdf": "examples/WA_Cush_NARA_2645385_Peone_Gideon_Redacted_shrunk_pdf.pdf",
+    "md": "test_batch_workspace/markdown/WA_Cush_NARA_2645385_Peone_Gideon_Redacted_shrunk_pdf.md"
+  },
+  {
+    "name": "WA_Cush_NARA_2645385_Peone_Willard",
+    "pdf": "examples/WA_Cush_NARA_2645385_Peone_Willard.pdf",
+    "md": "test_batch_workspace/markdown/WA_Cush_NARA_2645385_Peone_Willard.md"
+  },
+  {
+    "name": "WA_Cush_NARA_2645385_Peone_Willard_shrunk_pdf",
+    "pdf": "examples/WA_Cush_NARA_2645385_Peone_Willard_shrunk_pdf.pdf",
+    "md": "test_batch_workspace/markdown/WA_Cush_NARA_2645385_Peone_Willard_shrunk_pdf.md"
+  },
+  {
+    "name": "WA_Cush_NARA_2645385_Peterson_Francis_Redacted_shrunk_pdf",
+    "pdf": "examples/WA_Cush_NARA_2645385_Peterson_Francis_Redacted_shrunk_pdf.pdf",
+    "md": "test_batch_workspace/markdown/WA_Cush_NARA_2645385_Peterson_Francis_Redacted_shrunk_pdf.md"
+  },
+  {
+    "name": "WA_Cush_NARA_2645385_Peterson_Grace_Redacted_shrunk_pdf",
+    "pdf": "examples/WA_Cush_NARA_2645385_Peterson_Grace_Redacted_shrunk_pdf.pdf",
+    "md": "test_batch_workspace/markdown/WA_Cush_NARA_2645385_Peterson_Grace_Redacted_shrunk_pdf.md"
+  },
+  {
+    "name": "WA_Cush_NARA_2645385_Peterson_Willard_Redacted_shrunk_pdf",
+    "pdf": "examples/WA_Cush_NARA_2645385_Peterson_Willard_Redacted_shrunk_pdf.pdf",
+    "md": "test_batch_workspace/markdown/WA_Cush_NARA_2645385_Peterson_Willard_Redacted_shrunk_pdf.md"
+  },
+  {
+    "name": "WA_Cush_NARA_2645385_Piatoate_Boyd_Eagle_Redacted_shrunk_pdf",
+    "pdf": "examples/WA_Cush_NARA_2645385_Piatoate_Boyd_Eagle_Redacted_shrunk_pdf.pdf",
+    "md": "test_batch_workspace/markdown/WA_Cush_NARA_2645385_Piatoate_Boyd_Eagle_Redacted_shrunk_pdf.md"
+  },
+  {
+    "name": "WA_Cush_NARA_2645385_Porter_Flora_Redacted_shrunk_pdf",
+    "pdf": "examples/WA_Cush_NARA_2645385_Porter_Flora_Redacted_shrunk_pdf.pdf",
+    "md": "test_batch_workspace/markdown/WA_Cush_NARA_2645385_Porter_Flora_Redacted_shrunk_pdf.md"
+  },
+  {
+    "name": "annie_harris",
+    "pdf": "examples/annie_harris.pdf",
+    "md": "test_batch_workspace/markdown/annie_harris.md"
+  },
+  {
+    "name": "daniel_varner",
+    "pdf": "examples/daniel_varner.pdf",
+    "md": "test_batch_workspace/markdown/daniel_varner.md"
+  },
+  {
+    "name": "edward_g_willig",
+    "pdf": "examples/edward_g_willig.pdf",
+    "md": "test_batch_workspace/markdown/edward_g_willig.md"
+  },
+  {
+    "name": "edward_spott",
+    "pdf": "examples/edward_spott.pdf",
+    "md": "test_batch_workspace/markdown/edward_spott.md"
+  },
+  {
+    "name": "flora_ross",
+    "pdf": "examples/flora_ross.pdf",
+    "md": "test_batch_workspace/markdown/flora_ross.md"
+  },
+  {
+    "name": "frank_andrews",
+    "pdf": "examples/frank_andrews.pdf",
+    "md": "test_batch_workspace/markdown/frank_andrews.md"
+  },
+  {
+    "name": "george_willard",
+    "pdf": "examples/george_willard.pdf",
+    "md": "test_batch_workspace/markdown/george_willard.md"
+  },
+  {
+    "name": "james_arquette",
+    "pdf": "examples/james_arquette.pdf",
+    "md": "test_batch_workspace/markdown/james_arquette.md"
+  },
+  {
+    "name": "john_arquette",
+    "pdf": "examples/john_arquette.pdf",
+    "md": "test_batch_workspace/markdown/john_arquette.md"
+  },
+  {
+    "name": "john_leslie",
+    "pdf": "examples/john_leslie.pdf",
+    "md": "test_batch_workspace/markdown/john_leslie.md"
+  },
+  {
+    "name": "john_levi_bastian",
+    "pdf": "examples/john_levi_bastian.pdf",
+    "md": "test_batch_workspace/markdown/john_levi_bastian.md"
+  },
+  {
+    "name": "john_levi_bastian2",
+    "pdf": "examples/john_levi_bastian2.pdf",
+    "md": "test_batch_workspace/markdown/john_levi_bastian2.md"
+  },
+  {
+    "name": "joseph_craig",
+    "pdf": "examples/joseph_craig.pdf",
+    "md": "test_batch_workspace/markdown/joseph_craig.md"
+  },
+  {
+    "name": "lillie_arquette",
+    "pdf": "examples/lillie_arquette.pdf",
+    "md": "test_batch_workspace/markdown/lillie_arquette.md"
+  },
+  {
+    "name": "mary_ann_napolean",
+    "pdf": "examples/mary_ann_napolean.pdf",
+    "md": "test_batch_workspace/markdown/mary_ann_napolean.md"
+  },
+  {
+    "name": "morris_dan",
+    "pdf": "examples/morris_dan.pdf",
+    "md": "test_batch_workspace/markdown/morris_dan.md"
+  },
+  {
+    "name": "nellie_odell",
+    "pdf": "examples/nellie_odell.pdf",
+    "md": "test_batch_workspace/markdown/nellie_odell.md"
+  },
+  {
+    "name": "spencer_williams",
+    "pdf": "examples/spencer_williams.pdf",
+    "md": "test_batch_workspace/markdown/spencer_williams.md"
+  }
+]
