@@ -1,8 +1,8 @@
 [
-  {
-    "name": "NARA_1324_v1_p184-185_1_0",
-    "pdf": "examples/NARA_1324_v1_p184-185_1_0.pdf",
-    "md": "test_batch_workspace/markdown/NARA_1324_v1_p184-185_1_0.md"
+    {
+    "name": "WA_Cush_NARA_2645372_Attendance_1920_PG_JT_Redacted_shrunk_pdf",
+    "pdf": "examples/WA_Cush_NARA_2645372_Attendance_1920_PG_JT_Redacted_shrunk_pdf.pdf",
+    "md": "test_batch_workspace/markdown/WA_Cush_NARA_2645372_Attendance_1920_PG_JT_Redacted_shrunk_pdf.md"
   },
   {
     "name": "NARA_1327_b001_f005",
@@ -78,6 +78,11 @@
     "name": "NARA_1327_b138_f5450",
     "pdf": "examples/NARA_1327_b138_f5450.pdf",
     "md": "test_batch_workspace/markdown/NARA_1327_b138_f5450.md"
+  },
+  {
+    "name": "NARA_1324_v1_p184-185_1_0",
+    "pdf": "examples/NARA_1324_v1_p184-185_1_0.pdf",
+    "md": "test_batch_workspace/markdown/NARA_1324_v1_p184-185_1_0.md"
   },
   {
     "name": "NARA_1327_b139_f5487",
@@ -213,11 +218,6 @@
     "name": "NARA_RG75_91_b1996_59565",
     "pdf": "examples/NARA_RG75_91_b1996_59565.pdf",
     "md": "test_batch_workspace/markdown/NARA_RG75_91_b1996_59565.md"
-  },
-  {
-    "name": "WA_Cush_NARA_2645372_Attendance_1920_PG_JT_Redacted_shrunk_pdf",
-    "pdf": "examples/WA_Cush_NARA_2645372_Attendance_1920_PG_JT_Redacted_shrunk_pdf.pdf",
-    "md": "test_batch_workspace/markdown/WA_Cush_NARA_2645372_Attendance_1920_PG_JT_Redacted_shrunk_pdf.md"
   },
   {
     "name": "WA_Cush_NARA_2645372_PupilList_1917_1918_2_shrunk_pdf",
