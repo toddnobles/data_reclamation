@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PDF vs Markdown Comparison</title>
+    <title>Data Reclamation Viewer</title>
     <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
     <style>
         body, html {
@@ -13,28 +13,83 @@
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
             display: flex;
             flex-direction: column;
+            background: #f5f5f7;
         }
         header {
-            background: #333;
+            background: #2c3e50;
             color: white;
-            padding: 10px 20px;
+            padding: 12px 20px;
             display: flex;
             align-items: center;
             justify-content: space-between;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            z-index: 100;
         }
-        .controls {
-            display: flex;
-            gap: 10px;
-            align-items: center;
-        }
-        select {
-            padding: 5px;
-            font-size: 14px;
-            max-width: 400px;
-        }
-        main {
+        .container {
             display: flex;
             flex: 1;
+            overflow: hidden;
+        }
+        /* Sidebar Styles */
+        aside {
+            width: 300px;
+            background: white;
+            border-right: 1px solid #ddd;
+            display: flex;
+            flex-direction: column;
+            box-shadow: 2px 0 5px rgba(0,0,0,0.05);
+        }
+        .search-container {
+            padding: 15px;
+            border-bottom: 1px solid #eee;
+        }
+        #search-input {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 6px;
+            font-size: 14px;
+            box-sizing: border-box;
+            outline: none;
+        }
+        #search-input:focus {
+            border-color: #3498db;
+            box-shadow: 0 0 0 2px rgba(52,152,219,0.2);
+        }
+        .file-list-container {
+            flex: 1;
+            overflow-y: auto;
+        }
+        .file-item {
+            padding: 12px 15px;
+            border-bottom: 1px solid #f0f0f0;
+            cursor: pointer;
+            font-size: 13px;
+            color: #333;
+            transition: background 0.2s;
+            word-break: break-all;
+        }
+        .file-item:hover {
+            background: #f0f7ff;
+        }
+        .file-item.active {
+            background: #e1f0ff;
+            border-left: 4px solid #3498db;
+            font-weight: 500;
+            color: #2980b9;
+        }
+        .results-count {
+            padding: 8px 15px;
+            font-size: 11px;
+            color: #888;
+            background: #fafafa;
+            border-bottom: 1px solid #eee;
+        }
+
+        /* Main Content Styles */
+        main {
+            flex: 1;
+            display: flex;
             overflow: hidden;
         }
         .pane {
@@ -44,161 +99,324 @@
             overflow: hidden;
             border-right: 1px solid #ccc;
         }
+        .pane:last-child {
+            border-right: none;
+        }
         .pane-header {
-            background: #f0f0f0;
-            padding: 5px 10px;
-            font-weight: bold;
-            border-bottom: 1px solid #ccc;
+            background: #ecf0f1;
+            padding: 8px 15px;
+            font-weight: 600;
+            font-size: 12px;
+            color: #7f8c8d;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            border-bottom: 1px solid #ddd;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
         }
         iframe {
             width: 100%;
             height: 100%;
             border: none;
+            background: #525659; /* PDF viewer background color */
         }
         #markdown-content {
-            padding: 20px;
+            padding: 30px;
             overflow-y: auto;
             height: 100%;
             box-sizing: border-box;
             background: white;
+            line-height: 1.6;
+            color: #2c3e50;
         }
-        #markdown-content img {
-            max-width: 100%;
-        }
+        
         /* Markdown Styling */
         #markdown-content h1, #markdown-content h2, #markdown-content h3 {
+            color: #2c3e50;
+            margin-top: 1.5em;
+            margin-bottom: 0.5em;
             border-bottom: 1px solid #eee;
-            padding-bottom: 5px;
+            padding-bottom: 0.3em;
         }
-        #markdown-content pre {
-            background: #f6f8fa;
-            padding: 10px;
-            border-radius: 3px;
-            overflow-x: auto;
+        #markdown-content p {
+            margin-bottom: 1em;
         }
         #markdown-content table {
             border-collapse: collapse;
             width: 100%;
+            margin-bottom: 1em;
         }
         #markdown-content th, #markdown-content td {
             border: 1px solid #dfe2e5;
-            padding: 6px 13px;
+            padding: 8px 12px;
+            font-size: 13px;
         }
-        #markdown-content tr:nth-child(2n) {
-            background-color: #f6f8fa;
+        #markdown-content tr:nth-child(even) {
+            background-color: #f8f9fa;
         }
+        #markdown-content blockquote {
+            border-left: 4px solid #3498db;
+            padding-left: 15px;
+            color: #7f8c8d;
+            font-style: italic;
+            margin: 1em 0;
+        }
+        .highlight {
+            background: yellow;
+            font-weight: bold;
+        }
+
+        /* Loading states */
+        .loading-overlay {
+            position: absolute;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background: rgba(255,255,255,0.8);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 10;
+        }
+        
+        /* Nav Buttons */
+        .nav-controls {
+            display: flex;
+            gap: 5px;
+        }
+        .btn {
+            background: #3498db;
+            color: white;
+            border: none;
+            padding: 5px 12px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 12px;
+        }
+        .btn:hover { background: #2980b9; }
+        .btn:disabled { background: #bdc3c7; cursor: not-allowed; }
     </style>
 </head>
 <body>
     <header>
         <div><strong>Data Reclamation Viewer</strong></div>
-        <div class="controls">
-            <label for="file-selector">Select File:</label>
-            <select id="file-selector">
-                <option value="">Loading...</option>
-            </select>
-            <button id="prev-btn">Previous</button>
-            <button id="next-btn">Next</button>
+        <div class="nav-controls">
+            <button id="prev-btn" class="btn">Previous</button>
+            <button id="next-btn" class="btn">Next</button>
         </div>
     </header>
-    <main>
-        <div class="pane">
-            <div class="pane-header">Original PDF</div>
-            <iframe id="pdf-viewer"></iframe>
-        </div>
-        <div class="pane">
-            <div class="pane-header">Extracted Markdown</div>
-            <div id="markdown-content"></div>
-        </div>
-    </main>
+    <div class="container">
+        <aside>
+            <div class="search-container">
+                <input type="text" id="search-input" placeholder="Search by name or content...">
+            </div>
+            <div id="results-count" class="results-count">Loading documents...</div>
+            <div id="file-list" class="file-list-container">
+                <!-- File items will be populated here -->
+            </div>
+        </aside>
+        <main>
+            <div class="pane">
+                <div class="pane-header">Original PDF</div>
+                <iframe id="pdf-viewer"></iframe>
+            </div>
+            <div class="pane">
+                <div class="pane-header">
+                    <span>Extracted Markdown</span>
+                    <span id="page-info" style="font-weight: normal; font-size: 11px;"></span>
+                </div>
+                <div id="markdown-content">
+                    <div style="color: #999; text-align: center; margin-top: 100px;">
+                        Select a document from the sidebar to view its content.
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
 
     <script>
-        const selector = document.getElementById('file-selector');
+        const fileList = document.getElementById('file-list');
+        const searchInput = document.getElementById('search-input');
+        const resultsCount = document.getElementById('results-count');
         const pdfViewer = document.getElementById('pdf-viewer');
         const mdContent = document.getElementById('markdown-content');
         const prevBtn = document.getElementById('prev-btn');
         const nextBtn = document.getElementById('next-btn');
 
         let manifest = [];
+        let filteredIndices = [];
+        let currentIndex = -1;
+        let fileContents = {};
 
         async function loadManifest() {
             try {
                 const response = await fetch('manifest.json');
                 manifest = await response.json();
+                filteredIndices = manifest.map((_, i) => i);
                 
-                selector.innerHTML = '';
-                manifest.forEach((item, index) => {
-                    const option = document.createElement('option');
-                    option.value = index;
-                    option.textContent = item.name;
-                    selector.appendChild(option);
-                });
+                renderFileList();
+                updateResultsCount();
 
-                if (manifest.length > 0) {
+                // Initial load based on hash or first item
+                const hash = window.location.hash.substring(1);
+                if (hash && !isNaN(hash)) {
+                    const idx = parseInt(hash);
+                    if (idx >= 0 && idx < manifest.length) {
+                        loadFile(idx);
+                    }
+                } else if (manifest.length > 0) {
                     loadFile(0);
                 }
+
+                // Start preloading in the background
+                preloadContents();
             } catch (error) {
                 console.error('Error loading manifest:', error);
-                mdContent.innerHTML = '<p style="color:red">Error loading manifest.json. Make sure it exists and is valid.</p>';
+                mdContent.innerHTML = '<p style="color:red">Error loading manifest.json.</p>';
+            }
+        }
+
+        function renderFileList() {
+            fileList.innerHTML = '';
+            filteredIndices.forEach(idx => {
+                const item = manifest[idx];
+                const div = document.createElement('div');
+                div.className = 'file-item' + (idx === currentIndex ? ' active' : '');
+                div.textContent = item.name;
+                div.onclick = () => loadFile(idx);
+                fileList.appendChild(div);
+            });
+        }
+
+        function updateResultsCount() {
+            resultsCount.textContent = `${filteredIndices.length} documents found`;
+        }
+
+        async function preloadContents() {
+            // Priority: load current first, then neighbors, then all
+            for (let i = 0; i < manifest.length; i++) {
+                if (!fileContents[i]) {
+                    try {
+                        const response = await fetch(manifest[i].md);
+                        fileContents[i] = await response.text();
+                        // Re-trigger search if user has typed something while we were loading
+                        if (searchInput.value.trim() !== '') {
+                            performSearch();
+                        }
+                    } catch (e) { console.error(e); }
+                }
             }
         }
 
         async function loadFile(index) {
-            const item = manifest[index];
-            if (!item) return;
-
-            selector.value = index;
+            if (index < 0 || index >= manifest.length) return;
             
-            // Load PDF
-            pdfViewer.src = item.pdf;
+            currentIndex = index;
+            const item = manifest[index];
+            
+            // Update UI
+            document.querySelectorAll('.file-item').forEach((el, i) => {
+                el.classList.toggle('active', filteredIndices[i] === index);
+            });
 
+            pdfViewer.src = item.pdf;
+            
             // Load Markdown
-            try {
-                const response = await fetch(item.md);
-                const text = await response.text();
-                mdContent.innerHTML = marked.parse(text);
-                mdContent.scrollTop = 0;
-            } catch (error) {
-                console.error('Error loading markdown:', error);
-                mdContent.innerHTML = '<p style="color:red">Error loading markdown file.</p>';
+            if (fileContents[index]) {
+                displayMarkdown(fileContents[index]);
+            } else {
+                mdContent.innerHTML = '<div style="text-align:center; padding: 20px;">Loading content...</div>';
+                try {
+                    const response = await fetch(item.md);
+                    const text = await response.text();
+                    fileContents[index] = text;
+                    displayMarkdown(text);
+                } catch (e) {
+                    mdContent.innerHTML = '<p style="color:red">Error loading markdown.</p>';
+                }
             }
 
-            // Update URL hash without jumping
+            // Sync navigation buttons
+            const filteredPos = filteredIndices.indexOf(currentIndex);
+            prevBtn.disabled = filteredPos <= 0;
+            nextBtn.disabled = filteredPos >= filteredIndices.length - 1 || filteredPos === -1;
+
             history.replaceState(null, null, `#${index}`);
         }
 
-        selector.addEventListener('change', (e) => {
-            loadFile(e.target.value);
+        function displayMarkdown(text) {
+            const query = searchInput.value.toLowerCase().trim();
+            let html = marked.parse(text);
+            
+            if (query && query.length > 2) {
+                // Highlight text outside of HTML tags
+                const regex = new RegExp(`(${query})`, 'gi');
+                const parts = html.split(/(<[^>]+>)/g);
+                html = parts.map(part => {
+                    if (part.startsWith('<')) return part;
+                    return part.replace(regex, '<span class="highlight">$1</span>');
+                }).join('');
+            }
+            
+            mdContent.innerHTML = html;
+            mdContent.scrollTop = 0;
+
+            // Scroll to first highlight
+            const firstHighlight = mdContent.querySelector('.highlight');
+            if (firstHighlight) {
+                setTimeout(() => {
+                    firstHighlight.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                }, 100);
+            }
+        }
+
+        function performSearch() {
+            const query = searchInput.value.toLowerCase().trim();
+            
+            if (!query) {
+                filteredIndices = manifest.map((_, i) => i);
+            } else {
+                filteredIndices = manifest.map((item, i) => {
+                    const nameMatch = item.name.toLowerCase().includes(query);
+                    const contentMatch = fileContents[i] && fileContents[i].toLowerCase().includes(query);
+                    return (nameMatch || contentMatch) ? i : -1;
+                }).filter(i => i !== -1);
+            }
+
+            renderFileList();
+            updateResultsCount();
+
+            // Auto-load first result if current is no longer in results
+            if (filteredIndices.length > 0 && !filteredIndices.includes(currentIndex)) {
+                loadFile(filteredIndices[0]);
+            } else {
+                // Refresh active state and nav buttons
+                const filteredPos = filteredIndices.indexOf(currentIndex);
+                prevBtn.disabled = filteredPos <= 0;
+                nextBtn.disabled = filteredPos >= filteredIndices.length - 1 || filteredPos === -1;
+            }
+        }
+
+        searchInput.addEventListener('input', () => {
+            performSearch();
         });
 
         prevBtn.addEventListener('click', () => {
-            let index = parseInt(selector.value) - 1;
-            if (index >= 0) loadFile(index);
+            const pos = filteredIndices.indexOf(currentIndex);
+            if (pos > 0) loadFile(filteredIndices[pos - 1]);
         });
 
         nextBtn.addEventListener('click', () => {
-            let index = parseInt(selector.value) + 1;
-            if (index < manifest.length) loadFile(index);
+            const pos = filteredIndices.indexOf(currentIndex);
+            if (pos >= 0 && pos < filteredIndices.length - 1) loadFile(filteredIndices[pos + 1]);
         });
 
-        // Handle URL hash for deep linking
-        window.addEventListener('load', () => {
-            loadManifest().then(() => {
-                const hash = window.location.hash.substring(1);
-                if (hash && !isNaN(hash)) {
-                    const index = parseInt(hash);
-                    if (index >= 0 && index < manifest.length) {
-                        loadFile(index);
-                    }
-                }
-            });
-        });
-
-        // Keyboard navigation
         document.addEventListener('keydown', (e) => {
+            if (e.target.tagName === 'INPUT') return;
             if (e.key === 'ArrowLeft') prevBtn.click();
             if (e.key === 'ArrowRight') nextBtn.click();
         });
+
+        window.addEventListener('load', loadManifest);
     </script>
 </body>
 </html>
