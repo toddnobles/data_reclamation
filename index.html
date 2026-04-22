@@ -56,6 +56,30 @@
             border-color: #3498db;
             box-shadow: 0 0 0 2px rgba(52,152,219,0.2);
         }
+        #list-input {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 6px;
+            font-size: 13px;
+            box-sizing: border-box;
+            outline: none;
+            margin-top: 10px;
+            resize: vertical;
+            display: none;
+        }
+        #list-input:focus {
+            border-color: #3498db;
+            box-shadow: 0 0 0 2px rgba(52,152,219,0.2);
+        }
+        .filter-toggle {
+            font-size: 11px;
+            color: #3498db;
+            cursor: pointer;
+            margin-top: 5px;
+            display: inline-block;
+            text-decoration: underline;
+        }
         .file-list-container {
             flex: 1;
             overflow-y: auto;
@@ -208,6 +232,8 @@
         <aside>
             <div class="search-container">
                 <input type="text" id="search-input" placeholder="Search by name or content...">
+                <div class="filter-toggle" id="toggle-list-filter">Filter by list of names...</div>
+                <textarea id="list-input" placeholder="Paste document names (one per line)..." rows="10"></textarea>
             </div>
             <div id="results-count" class="results-count">Loading documents...</div>
             <div id="file-list" class="file-list-container">
@@ -236,6 +262,8 @@
     <script>
         const fileList = document.getElementById('file-list');
         const searchInput = document.getElementById('search-input');
+        const listInput = document.getElementById('list-input');
+        const toggleListFilter = document.getElementById('toggle-list-filter');
         const resultsCount = document.getElementById('results-count');
         const pdfViewer = document.getElementById('pdf-viewer');
         const mdContent = document.getElementById('markdown-content');
@@ -371,16 +399,26 @@
 
         function performSearch() {
             const query = searchInput.value.toLowerCase().trim();
+            const listText = listInput.value.trim();
+            const listQuery = listText ? listText.split('\n').map(s => s.trim().toLowerCase()).filter(s => s) : null;
             
-            if (!query) {
-                filteredIndices = manifest.map((_, i) => i);
-            } else {
-                filteredIndices = manifest.map((item, i) => {
+            filteredIndices = manifest.map((item, i) => {
+                // Search query match
+                let matchesSearch = true;
+                if (query) {
                     const nameMatch = item.name.toLowerCase().includes(query);
                     const contentMatch = fileContents[i] && fileContents[i].toLowerCase().includes(query);
-                    return (nameMatch || contentMatch) ? i : -1;
-                }).filter(i => i !== -1);
-            }
+                    matchesSearch = nameMatch || contentMatch;
+                }
+
+                // List filter match
+                let matchesList = true;
+                if (listQuery) {
+                    matchesList = listQuery.some(name => item.name.toLowerCase().includes(name));
+                }
+
+                return (matchesSearch && matchesList) ? i : -1;
+            }).filter(i => i !== -1);
 
             renderFileList();
             updateResultsCount();
@@ -396,8 +434,13 @@
             }
         }
 
-        searchInput.addEventListener('input', () => {
-            performSearch();
+        searchInput.addEventListener('input', performSearch);
+        listInput.addEventListener('input', performSearch);
+
+        toggleListFilter.addEventListener('click', () => {
+            const isVisible = listInput.style.display === 'block';
+            listInput.style.display = isVisible ? 'none' : 'block';
+            toggleListFilter.textContent = isVisible ? 'Filter by list of names...' : 'Hide list filter';
         });
 
         prevBtn.addEventListener('click', () => {
@@ -411,7 +454,7 @@
         });
 
         document.addEventListener('keydown', (e) => {
-            if (e.target.tagName === 'INPUT') return;
+            if (e.target.tagName === 'INPUT' || e.target.tagName === 'TEXTAREA') return;
             if (e.key === 'ArrowLeft') prevBtn.click();
             if (e.key === 'ArrowRight') nextBtn.click();
         });
