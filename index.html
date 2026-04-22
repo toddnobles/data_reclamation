@@ -166,6 +166,7 @@
             background: white;
             line-height: 1.6;
             color: #2c3e50;
+            position: relative;
         }
         
         /* OCR Controls */
@@ -222,6 +223,29 @@
             background: yellow;
             font-weight: bold;
         }
+        .poor-ocr-mark {
+            background-color: #ffcccc;
+            border-bottom: 2px solid #e74c3c;
+            cursor: help;
+        }
+
+        /* Floating Mark Button */
+        #mark-popup {
+            position: fixed;
+            background: #2c3e50;
+            color: white;
+            padding: 6px 12px;
+            border-radius: 4px;
+            font-size: 11px;
+            font-weight: 600;
+            cursor: pointer;
+            z-index: 1000;
+            display: none;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+            pointer-events: auto;
+            user-select: none;
+        }
+        #mark-popup:hover { background: #34495e; transform: scale(1.05); }
 
         /* Nav Buttons */
         .header-controls {
@@ -246,12 +270,17 @@
         .btn:disabled { background: #bdc3c7; cursor: not-allowed; }
         .btn-export { background: #27ae60; }
         .btn-export:hover { background: #219150; }
+        .btn-danger { background: #e74c3c; }
+        .btn-danger:hover { background: #c0392b; }
     </style>
 </head>
 <body>
     <header>
         <div><strong>Data Reclamation Viewer</strong></div>
         <div class="header-controls">
+            <button id="clear-highlights-btn" class="btn btn-danger">Clear Current Highlights</button>
+            <button id="clear-all-flags-btn" class="btn btn-danger">Clear All Flags</button>
+            <button id="export-highlights-btn" class="btn" style="background: #e67e22;">Export Highlights</button>
             <button id="export-btn" class="btn btn-export">Export Flags</button>
             <div class="nav-controls">
                 <button id="prev-btn" class="btn">Previous</button>
@@ -294,6 +323,8 @@
         </main>
     </div>
 
+    <div id="mark-popup">Mark as Poor OCR</div>
+
     <script>
         const fileList = document.getElementById('file-list');
         const searchInput = document.getElementById('search-input');
@@ -305,14 +336,23 @@
         const prevBtn = document.getElementById('prev-btn');
         const nextBtn = document.getElementById('next-btn');
         const exportBtn = document.getElementById('export-btn');
+        const clearAllFlagsBtn = document.getElementById('clear-all-flags-btn');
+        const clearHighlightsBtn = document.getElementById('clear-highlights-btn');
         const ocrGoodBtn = document.getElementById('ocr-good');
         const ocrBadBtn = document.getElementById('ocr-bad');
+        const markPopup = document.getElementById('mark-popup');
 
         let manifest = [];
         let filteredIndices = [];
         let currentIndex = -1;
         let fileContents = {};
         let qualityFlags = JSON.parse(localStorage.getItem('ocrQualityFlags') || '{}');
+        let poorHighlights = JSON.parse(localStorage.getItem('ocrHighlights') || '{}');
+        let pendingHighlight = null;
+
+        function escapeRegExp(string) {
+            return string.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+        }
 
         async function loadManifest() {
             try {
@@ -323,7 +363,6 @@
                 renderFileList();
                 updateResultsCount();
 
-                // Initial load based on hash or first item
                 const hash = window.location.hash.substring(1);
                 if (hash && !isNaN(hash)) {
                     const idx = parseInt(hash);
@@ -333,8 +372,6 @@
                 } else if (manifest.length > 0) {
                     loadFile(0);
                 }
-
-                // Start preloading in the background
                 preloadContents();
             } catch (error) {
                 console.error('Error loading manifest:', error);
@@ -375,9 +412,7 @@
                     try {
                         const response = await fetch(manifest[i].md);
                         fileContents[i] = await response.text();
-                        if (searchInput.value.trim() !== '') {
-                            performSearch();
-                        }
+                        if (searchInput.value.trim() !== '') performSearch();
                     } catch (e) { console.error(e); }
                 }
             }
@@ -385,18 +420,12 @@
 
         async function loadFile(index) {
             if (index < 0 || index >= manifest.length) return;
-            
             currentIndex = index;
             const item = manifest[index];
-            
-            // Update UI
             document.querySelectorAll('.file-item').forEach((el, i) => {
                 el.classList.toggle('active', filteredIndices[i] === index);
             });
-
             pdfViewer.src = item.pdf;
-            
-            // Load Markdown
             if (fileContents[index]) {
                 displayMarkdown(fileContents[index]);
             } else {
@@ -406,20 +435,14 @@
                     const text = await response.text();
                     fileContents[index] = text;
                     displayMarkdown(text);
-                } catch (e) {
-                    mdContent.innerHTML = '<p style="color:red">Error loading markdown.</p>';
-                }
+                } catch (e) { mdContent.innerHTML = '<p style="color:red">Error loading markdown.</p>'; }
             }
-
-            // Update Quality Buttons
             updateQualityButtons();
-
-            // Sync navigation buttons
             const filteredPos = filteredIndices.indexOf(currentIndex);
             prevBtn.disabled = filteredPos <= 0;
             nextBtn.disabled = filteredPos >= filteredIndices.length - 1 || filteredPos === -1;
-
             history.replaceState(null, null, `#${index}`);
+            hideMarkPopup();
         }
 
         function updateQualityButtons() {
@@ -432,11 +455,8 @@
         function setQuality(status) {
             if (currentIndex === -1) return;
             const name = manifest[currentIndex].name;
-            if (qualityFlags[name] === status) {
-                delete qualityFlags[name]; // Toggle off
-            } else {
-                qualityFlags[name] = status;
-            }
+            if (qualityFlags[name] === status) delete qualityFlags[name];
+            else qualityFlags[name] = status;
             localStorage.setItem('ocrQualityFlags', JSON.stringify(qualityFlags));
             updateQualityButtons();
             renderFileList();
@@ -445,7 +465,46 @@
         ocrGoodBtn.onclick = () => setQuality('good');
         ocrBadBtn.onclick = () => setQuality('bad');
 
+        clearHighlightsBtn.onclick = () => {
+            if (currentIndex === -1) return;
+            delete poorHighlights[manifest[currentIndex].name];
+            localStorage.setItem('ocrHighlights', JSON.stringify(poorHighlights));
+            displayMarkdown(fileContents[currentIndex]);
+        };
+
+        clearAllFlagsBtn.onclick = () => {
+            if (confirm('Are you sure you want to clear ALL Good/Bad flags for all documents? This cannot be undone.')) {
+                qualityFlags = {};
+                localStorage.setItem('ocrQualityFlags', JSON.stringify(qualityFlags));
+                renderFileList();
+                updateQualityButtons();
+            }
+        };
+
+        const exportHighlightsBtn = document.getElementById('export-highlights-btn');
+        exportHighlightsBtn.onclick = () => {
+            const now = new Date();
+            const timestamp = now.toISOString().split('.')[0].replace('T', '_').replace(/:/g, '-');
+            const csvRows = ['document_name,incorrect_text'];
+            for (const [docName, highlights] of Object.entries(poorHighlights)) {
+                highlights.forEach(h => {
+                    const text = (typeof h === 'string' ? h : h.text).replace(/"/g, '""');
+                    csvRows.push(`${docName},"${text}"`);
+                });
+            }
+            const csvString = csvRows.join('\n');
+            const dataStr = "data:text/csv;charset=utf-8," + encodeURIComponent(csvString);
+            const downloadAnchorNode = document.createElement('a');
+            downloadAnchorNode.setAttribute("href", dataStr);
+            downloadAnchorNode.setAttribute("download", `ocr_incorrect_highlights_${timestamp}.csv`);
+            document.body.appendChild(downloadAnchorNode);
+            downloadAnchorNode.click();
+            downloadAnchorNode.remove();
+        };
+
         exportBtn.onclick = () => {
+            const now = new Date();
+            const timestamp = now.toISOString().split('.')[0].replace('T', '_').replace(/:/g, '-');
             const csvRows = ['document_name,ocr_quality'];
             for (const [name, status] of Object.entries(qualityFlags)) {
                 csvRows.push(`${name},${status}`);
@@ -454,7 +513,7 @@
             const dataStr = "data:text/csv;charset=utf-8," + encodeURIComponent(csvString);
             const downloadAnchorNode = document.createElement('a');
             downloadAnchorNode.setAttribute("href", dataStr);
-            downloadAnchorNode.setAttribute("download", "ocr_quality_flags.csv");
+            downloadAnchorNode.setAttribute("download", `ocr_quality_flags_${timestamp}.csv`);
             document.body.appendChild(downloadAnchorNode);
             downloadAnchorNode.click();
             downloadAnchorNode.remove();
@@ -462,8 +521,39 @@
 
         function displayMarkdown(text) {
             const query = searchInput.value.toLowerCase().trim();
+            const name = manifest[currentIndex].name;
+            const docHighlights = poorHighlights[name] || [];
             let html = marked.parse(text);
             
+            // Apply Poor OCR Highlights (Specific Occurrences)
+            if (docHighlights.length > 0) {
+                const groups = {};
+                docHighlights.forEach(h => {
+                    if (typeof h === 'string') return;
+                    if (!groups[h.text]) groups[h.text] = [];
+                    groups[h.text].push(h.index);
+                });
+
+                Object.keys(groups).forEach(word => {
+                    const targetIndices = groups[word];
+                    let matchCount = 0;
+                    const regex = new RegExp(`(${escapeRegExp(word)})`, 'gi');
+                    const parts = html.split(/(<[^>]+>)/g);
+                    
+                    html = parts.map(part => {
+                        if (part.startsWith('<')) return part;
+                        return part.replace(regex, (match) => {
+                            const currentIdx = matchCount++;
+                            if (targetIndices.includes(currentIdx)) {
+                                return `<span class="poor-ocr-mark" data-text="${word}" data-index="${currentIdx}" title="Click to remove highlight">${match}</span>`;
+                            }
+                            return match;
+                        });
+                    }).join('');
+                });
+            }
+
+            // Apply Search Highlighting (Global)
             if (query && query.length > 2) {
                 const regex = new RegExp(`(${query})`, 'gi');
                 const parts = html.split(/(<[^>]+>)/g);
@@ -476,6 +566,18 @@
             mdContent.innerHTML = html;
             mdContent.scrollTop = 0;
 
+            // Handle removal by clicking
+            mdContent.querySelectorAll('.poor-ocr-mark').forEach(el => {
+                el.onclick = (e) => {
+                    e.stopPropagation();
+                    const textToRemove = el.getAttribute('data-text');
+                    const indexToRemove = parseInt(el.getAttribute('data-index'));
+                    poorHighlights[name] = poorHighlights[name].filter(h => !(h.text === textToRemove && h.index === indexToRemove));
+                    localStorage.setItem('ocrHighlights', JSON.stringify(poorHighlights));
+                    displayMarkdown(fileContents[currentIndex]);
+                };
+            });
+
             const firstHighlight = mdContent.querySelector('.highlight');
             if (firstHighlight) {
                 setTimeout(() => {
@@ -484,11 +586,61 @@
             }
         }
 
+        // Floating Mark Popup Logic
+        mdContent.onmouseup = (e) => {
+            const selection = window.getSelection();
+            const text = selection.toString().trim();
+            
+            if (text.length > 0) {
+                const range = selection.getRangeAt(0);
+                
+                // Calculate occurrence index of this selection
+                const preSelectionRange = range.cloneRange();
+                preSelectionRange.setStart(mdContent, 0);
+                preSelectionRange.setEnd(range.startContainer, range.startOffset);
+                
+                const preText = preSelectionRange.toString();
+                const matches = preText.match(new RegExp(escapeRegExp(text), 'gi'));
+                const occurrenceIndex = matches ? matches.length : 0;
+
+                pendingHighlight = { text, index: occurrenceIndex };
+
+                markPopup.style.left = e.clientX + 'px';
+                markPopup.style.top = (e.clientY - 40) + 'px';
+                markPopup.style.display = 'block';
+            } else {
+                hideMarkPopup();
+            }
+        };
+
+        markPopup.onmousedown = (e) => {
+            e.preventDefault(); // CRITICAL: Prevents selection loss
+            if (pendingHighlight && currentIndex !== -1) {
+                const name = manifest[currentIndex].name;
+                if (!poorHighlights[name]) poorHighlights[name] = [];
+                
+                const exists = poorHighlights[name].some(h => 
+                    h.text === pendingHighlight.text && h.index === pendingHighlight.index
+                );
+
+                if (!exists) {
+                    poorHighlights[name].push(pendingHighlight);
+                    localStorage.setItem('ocrHighlights', JSON.stringify(poorHighlights));
+                    displayMarkdown(fileContents[currentIndex]);
+                }
+            }
+            hideMarkPopup();
+        };
+
+        function hideMarkPopup() {
+            markPopup.style.display = 'none';
+            pendingHighlight = null;
+        }
+
         function performSearch() {
             const query = searchInput.value.toLowerCase().trim();
             const listText = listInput.value.trim();
             const listQuery = listText ? listText.split('\n').map(s => s.trim().toLowerCase()).filter(s => s) : null;
-            
             filteredIndices = manifest.map((item, i) => {
                 let matchesSearch = true;
                 if (query) {
@@ -497,15 +649,11 @@
                     matchesSearch = nameMatch || contentMatch;
                 }
                 let matchesList = true;
-                if (listQuery) {
-                    matchesList = listQuery.some(name => item.name.toLowerCase().includes(name));
-                }
+                if (listQuery) matchesList = listQuery.some(name => item.name.toLowerCase().includes(name));
                 return (matchesSearch && matchesList) ? i : -1;
             }).filter(i => i !== -1);
-
             renderFileList();
             updateResultsCount();
-
             if (filteredIndices.length > 0 && !filteredIndices.includes(currentIndex)) {
                 loadFile(filteredIndices[0]);
             } else {
