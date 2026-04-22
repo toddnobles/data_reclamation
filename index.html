@@ -92,6 +92,9 @@
             color: #333;
             transition: background 0.2s;
             word-break: break-all;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
         }
         .file-item:hover {
             background: #f0f7ff;
@@ -102,6 +105,16 @@
             font-weight: 500;
             color: #2980b9;
         }
+        .file-item .status-indicator {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            margin-left: 10px;
+            flex-shrink: 0;
+        }
+        .status-good { background-color: #2ecc71; }
+        .status-bad { background-color: #e74c3c; }
+        
         .results-count {
             padding: 8px 15px;
             font-size: 11px;
@@ -155,6 +168,25 @@
             color: #2c3e50;
         }
         
+        /* OCR Controls */
+        .ocr-controls {
+            display: flex;
+            gap: 5px;
+            align-items: center;
+        }
+        .btn-status {
+            padding: 3px 8px;
+            border-radius: 4px;
+            border: 1px solid #ddd;
+            background: white;
+            cursor: pointer;
+            font-size: 10px;
+            font-weight: 600;
+            text-transform: uppercase;
+        }
+        .btn-status.active-good { background: #2ecc71; color: white; border-color: #27ae60; }
+        .btn-status.active-bad { background: #e74c3c; color: white; border-color: #c0392b; }
+        
         /* Markdown Styling */
         #markdown-content h1, #markdown-content h2, #markdown-content h3 {
             color: #2c3e50;
@@ -191,18 +223,12 @@
             font-weight: bold;
         }
 
-        /* Loading states */
-        .loading-overlay {
-            position: absolute;
-            top: 0; left: 0; right: 0; bottom: 0;
-            background: rgba(255,255,255,0.8);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            z-index: 10;
-        }
-        
         /* Nav Buttons */
+        .header-controls {
+            display: flex;
+            gap: 10px;
+            align-items: center;
+        }
         .nav-controls {
             display: flex;
             gap: 5px;
@@ -218,14 +244,19 @@
         }
         .btn:hover { background: #2980b9; }
         .btn:disabled { background: #bdc3c7; cursor: not-allowed; }
+        .btn-export { background: #27ae60; }
+        .btn-export:hover { background: #219150; }
     </style>
 </head>
 <body>
     <header>
         <div><strong>Data Reclamation Viewer</strong></div>
-        <div class="nav-controls">
-            <button id="prev-btn" class="btn">Previous</button>
-            <button id="next-btn" class="btn">Next</button>
+        <div class="header-controls">
+            <button id="export-btn" class="btn btn-export">Export Flags</button>
+            <div class="nav-controls">
+                <button id="prev-btn" class="btn">Previous</button>
+                <button id="next-btn" class="btn">Next</button>
+            </div>
         </div>
     </header>
     <div class="container">
@@ -248,7 +279,11 @@
             <div class="pane">
                 <div class="pane-header">
                     <span>Extracted Markdown</span>
-                    <span id="page-info" style="font-weight: normal; font-size: 11px;"></span>
+                    <div class="ocr-controls">
+                        <span style="font-weight: normal; font-size: 11px; margin-right: 5px;">OCR Quality:</span>
+                        <button id="ocr-good" class="btn-status">Good</button>
+                        <button id="ocr-bad" class="btn-status">Bad</button>
+                    </div>
                 </div>
                 <div id="markdown-content">
                     <div style="color: #999; text-align: center; margin-top: 100px;">
@@ -269,11 +304,15 @@
         const mdContent = document.getElementById('markdown-content');
         const prevBtn = document.getElementById('prev-btn');
         const nextBtn = document.getElementById('next-btn');
+        const exportBtn = document.getElementById('export-btn');
+        const ocrGoodBtn = document.getElementById('ocr-good');
+        const ocrBadBtn = document.getElementById('ocr-bad');
 
         let manifest = [];
         let filteredIndices = [];
         let currentIndex = -1;
         let fileContents = {};
+        let qualityFlags = JSON.parse(localStorage.getItem('ocrQualityFlags') || '{}');
 
         async function loadManifest() {
             try {
@@ -309,7 +348,18 @@
                 const item = manifest[idx];
                 const div = document.createElement('div');
                 div.className = 'file-item' + (idx === currentIndex ? ' active' : '');
-                div.textContent = item.name;
+                
+                const nameSpan = document.createElement('span');
+                nameSpan.textContent = item.name;
+                div.appendChild(nameSpan);
+
+                const status = qualityFlags[item.name];
+                if (status) {
+                    const indicator = document.createElement('div');
+                    indicator.className = 'status-indicator ' + (status === 'good' ? 'status-good' : 'status-bad');
+                    div.appendChild(indicator);
+                }
+
                 div.onclick = () => loadFile(idx);
                 fileList.appendChild(div);
             });
@@ -320,13 +370,11 @@
         }
 
         async function preloadContents() {
-            // Priority: load current first, then neighbors, then all
             for (let i = 0; i < manifest.length; i++) {
                 if (!fileContents[i]) {
                     try {
                         const response = await fetch(manifest[i].md);
                         fileContents[i] = await response.text();
-                        // Re-trigger search if user has typed something while we were loading
                         if (searchInput.value.trim() !== '') {
                             performSearch();
                         }
@@ -363,6 +411,9 @@
                 }
             }
 
+            // Update Quality Buttons
+            updateQualityButtons();
+
             // Sync navigation buttons
             const filteredPos = filteredIndices.indexOf(currentIndex);
             prevBtn.disabled = filteredPos <= 0;
@@ -371,12 +422,49 @@
             history.replaceState(null, null, `#${index}`);
         }
 
+        function updateQualityButtons() {
+            if (currentIndex === -1) return;
+            const status = qualityFlags[manifest[currentIndex].name];
+            ocrGoodBtn.className = 'btn-status' + (status === 'good' ? ' active-good' : '');
+            ocrBadBtn.className = 'btn-status' + (status === 'bad' ? ' active-bad' : '');
+        }
+
+        function setQuality(status) {
+            if (currentIndex === -1) return;
+            const name = manifest[currentIndex].name;
+            if (qualityFlags[name] === status) {
+                delete qualityFlags[name]; // Toggle off
+            } else {
+                qualityFlags[name] = status;
+            }
+            localStorage.setItem('ocrQualityFlags', JSON.stringify(qualityFlags));
+            updateQualityButtons();
+            renderFileList();
+        }
+
+        ocrGoodBtn.onclick = () => setQuality('good');
+        ocrBadBtn.onclick = () => setQuality('bad');
+
+        exportBtn.onclick = () => {
+            const csvRows = ['document_name,ocr_quality'];
+            for (const [name, status] of Object.entries(qualityFlags)) {
+                csvRows.push(`${name},${status}`);
+            }
+            const csvString = csvRows.join('\n');
+            const dataStr = "data:text/csv;charset=utf-8," + encodeURIComponent(csvString);
+            const downloadAnchorNode = document.createElement('a');
+            downloadAnchorNode.setAttribute("href", dataStr);
+            downloadAnchorNode.setAttribute("download", "ocr_quality_flags.csv");
+            document.body.appendChild(downloadAnchorNode);
+            downloadAnchorNode.click();
+            downloadAnchorNode.remove();
+        };
+
         function displayMarkdown(text) {
             const query = searchInput.value.toLowerCase().trim();
             let html = marked.parse(text);
             
             if (query && query.length > 2) {
-                // Highlight text outside of HTML tags
                 const regex = new RegExp(`(${query})`, 'gi');
                 const parts = html.split(/(<[^>]+>)/g);
                 html = parts.map(part => {
@@ -388,7 +476,6 @@
             mdContent.innerHTML = html;
             mdContent.scrollTop = 0;
 
-            // Scroll to first highlight
             const firstHighlight = mdContent.querySelector('.highlight');
             if (firstHighlight) {
                 setTimeout(() => {
@@ -403,31 +490,25 @@
             const listQuery = listText ? listText.split('\n').map(s => s.trim().toLowerCase()).filter(s => s) : null;
             
             filteredIndices = manifest.map((item, i) => {
-                // Search query match
                 let matchesSearch = true;
                 if (query) {
                     const nameMatch = item.name.toLowerCase().includes(query);
                     const contentMatch = fileContents[i] && fileContents[i].toLowerCase().includes(query);
                     matchesSearch = nameMatch || contentMatch;
                 }
-
-                // List filter match
                 let matchesList = true;
                 if (listQuery) {
                     matchesList = listQuery.some(name => item.name.toLowerCase().includes(name));
                 }
-
                 return (matchesSearch && matchesList) ? i : -1;
             }).filter(i => i !== -1);
 
             renderFileList();
             updateResultsCount();
 
-            // Auto-load first result if current is no longer in results
             if (filteredIndices.length > 0 && !filteredIndices.includes(currentIndex)) {
                 loadFile(filteredIndices[0]);
             } else {
-                // Refresh active state and nav buttons
                 const filteredPos = filteredIndices.indexOf(currentIndex);
                 prevBtn.disabled = filteredPos <= 0;
                 nextBtn.disabled = filteredPos >= filteredIndices.length - 1 || filteredPos === -1;
