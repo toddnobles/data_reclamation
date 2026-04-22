@@ -447,7 +447,8 @@
 
         function updateQualityButtons() {
             if (currentIndex === -1) return;
-            const status = qualityFlags[manifest[currentIndex].name];
+            const entry = qualityFlags[manifest[currentIndex].name];
+            const status = typeof entry === 'string' ? entry : (entry ? entry.status : null);
             ocrGoodBtn.className = 'btn-status' + (status === 'good' ? ' active-good' : '');
             ocrBadBtn.className = 'btn-status' + (status === 'bad' ? ' active-bad' : '');
         }
@@ -455,8 +456,19 @@
         function setQuality(status) {
             if (currentIndex === -1) return;
             const name = manifest[currentIndex].name;
-            if (qualityFlags[name] === status) delete qualityFlags[name];
-            else qualityFlags[name] = status;
+            const currentEntry = qualityFlags[name];
+            const currentStatus = typeof currentEntry === 'string' ? currentEntry : (currentEntry ? currentEntry.status : null);
+
+            if (currentStatus === status) {
+                delete qualityFlags[name];
+            } else {
+                let note = "";
+                if (status === 'bad') {
+                    note = prompt("Enter a brief note about what was done poorly in the OCR:", "");
+                    if (note === null) return; // User cancelled
+                }
+                qualityFlags[name] = { status, note };
+            }
             localStorage.setItem('ocrQualityFlags', JSON.stringify(qualityFlags));
             updateQualityButtons();
             renderFileList();
@@ -505,9 +517,11 @@
         exportBtn.onclick = () => {
             const now = new Date();
             const timestamp = now.toISOString().split('.')[0].replace('T', '_').replace(/:/g, '-');
-            const csvRows = ['document_name,ocr_quality'];
-            for (const [name, status] of Object.entries(qualityFlags)) {
-                csvRows.push(`${name},${status}`);
+            const csvRows = ['document_name,ocr_quality,note'];
+            for (const [name, entry] of Object.entries(qualityFlags)) {
+                const status = typeof entry === 'string' ? entry : entry.status;
+                const note = (typeof entry === 'object' && entry.note) ? entry.note.replace(/"/g, '""') : "";
+                csvRows.push(`${name},${status},"${note}"`);
             }
             const csvString = csvRows.join('\n');
             const dataStr = "data:text/csv;charset=utf-8," + encodeURIComponent(csvString);
