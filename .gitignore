@@ -1,3 +1,9 @@
 nibsda_examples/
 carlisle_examples/
 .DS_Store
+.Rproj.user
+.positai
+.env
+.venv/
+*.pyc
+__pycache__/
