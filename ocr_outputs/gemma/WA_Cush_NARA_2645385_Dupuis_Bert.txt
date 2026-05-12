@@ -1,0 +1,66 @@
+**Page 1**
+
+5-254. CASE RECORD.
+
+**NAME:** Bert Denjis
+**Sex:** Male
+**Tribe:** Flathead (Full)
+**State:** Montana
+**Date:** Sept. 20, 1919
+
+**Age:** 16 years
+**Respiration:** 22
+**Condition of Eyes:** neg.
+**Height:** 5 ft. 6 1/4 ins.
+**Mensuration:** 
+*   Insp. 36 1/2
+*   Exp. 38 1/2
+**Ears:** //
+**Weight:** 118 3/4 lbs.
+**Vaccination:** yes
+**Throat:** "
+**Temperature:** 98
+**Vision:** normal
+**Cervical glands:** //
+**Pulse:** 84
+**Skin:** "
+**Inspection:** neg.
+**Palpation:** //
+**Percussion:** //
+**Auscultation:** //
+**Heart:** //
+**(Menstruation):** [blank]
+
+**FAMILY HISTORY**
+| | LIVING | CONDITION OF HEALTH | DEAD | CAUSE OF DEATH |
+| :--- | :--- | :--- | :--- | :--- |
+| Father | ✓ | | | |
+| Mother | ✓ | | | |
+| Brothers | 4 | | | |
+| Sisters | 4 | | 1 | Flu. |
+
+**Personal history:** Had flu at home 1918.
+**Present condition:** Good.
+
+**Signature:** Claude W. Kinner, M.D.
+
+**Footer:**
+This form is for the record of the physical condition of pupils of boarding or nonreservation Indian schools. It should be filled in by the school physician at the time of the admission of the pupil. Physicians in the field should use this form to record the examination of pupils for transfer to nonreservation schools. It should accompany the pupils' transfer blanks.
+The reverse side is intended as a card-index case-record for use by all Service physicians.
+6-1955
+Reproduced at the National Archives at Seattle
+
+***
+
+**Page 2**
+
+**NAME:** \_\_\_\_\_\_\_\_\_\_ **AGE:** \_\_\_\_ **SEX:** \_\_\_\_ **ENTRANCE DATE:** \_\_\_\_\_\_\_\_\_\_ **DISEASE:** \_\_\_\_\_\_\_\_\_\_
+
+**Table Headers:**
+DATE | PULSE | RESP. | TEMPERATURE (96, 97, 98, 99, 100, 101, 102, 103, 104, 105, 106) | Time of Day / Defecation / Urination | SYMPTOMS | TREATMENT | REMARKS
+
+[The table body is blank]
+
+**Footer:**
+6-1955
+Reproduced at the National Archives at Seattle
