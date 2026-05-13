@@ -3,7 +3,7 @@ import json
 
 def generate_manifest():
     pdf_dir = 'examples'
-    md_dir = 'hyak_outputs'
+    md_dir = 'ocr_outputs/hyak_outputs'
     
     pdfs = [f for f in os.listdir(pdf_dir) if f.endswith('.pdf')]
     mds = [f for f in os.listdir(md_dir) if f.endswith('.md')]
