@@ -1,10 +1,5 @@
 [
   {
-    "name": "NARA_1324_v1_p184-185_1_0",
-    "pdf": "examples/NARA_1324_v1_p184-185_1_0.pdf",
-    "md": "ocr_outputs/hyak_outputs/NARA_1324_v1_p184-185_1_0.md"
-  },
-  {
     "name": "NARA_1327_b001_f005",
     "pdf": "examples/NARA_1327_b001_f005.pdf",
     "md": "ocr_outputs/hyak_outputs/NARA_1327_b001_f005.md"
@@ -108,6 +103,11 @@
     "name": "NARA_1328_b006_c00o_0001",
     "pdf": "examples/NARA_1328_b006_c00o_0001.pdf",
     "md": "ocr_outputs/hyak_outputs/NARA_1328_b006_c00o_0001.md"
+  },
+  {
+    "name": "NARA_1324_v1_p184-185_1_0",
+    "pdf": "examples/NARA_1324_v1_p184-185_1_0.pdf",
+    "md": "ocr_outputs/hyak_outputs/NARA_1324_v1_p184-185_1_0.md"
   },
   {
     "name": "NARA_1329_b001_c00b_0017",
