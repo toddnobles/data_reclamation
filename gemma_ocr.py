@@ -8,12 +8,18 @@ from google.genai import types
 # Try to load environment variables from .env file for project-specific config
 try:
     from dotenv import load_dotenv
-    load_dotenv()
+    load_dotenv(override=True)
 except ImportError:
     pass
 
-def process_single_pdf(file_path, client, model_id, output_dir, output_format):
+def process_single_pdf(file_path, client, model_id, output_dir, output_format, overwrite=False):
     """Worker function to process a single PDF file."""
+    ocr_file = output_dir / f"{file_path.stem}.{output_format}"
+    
+    if ocr_file.exists() and not overwrite:
+        print(f"  Skipping {file_path.name}: Output already exists.")
+        return True
+
     print(f"\nProcessing: {file_path.name}")
     try:
         # Upload the file to the Gemini API
@@ -38,7 +44,6 @@ def process_single_pdf(file_path, client, model_id, output_dir, output_format):
         full_text = response.text.strip()
 
         # Save OCR result
-        ocr_file = output_dir / f"{file_path.stem}.{output_format}"
         with open(ocr_file, "w", encoding="utf-8") as f:
             f.write(full_text)
         print(f"  Success! OCR saved: {file_path.name}")
@@ -47,12 +52,13 @@ def process_single_pdf(file_path, client, model_id, output_dir, output_format):
         print(f"  Error processing {file_path.name}: {e}")
         return False
 
-def extract_pdf_text(input_folder, output_folder, output_format="txt", max_workers=5):
+def extract_pdf_text(input_folder, output_folder, output_format="txt", max_workers=5, overwrite=False):
     """
     Processes PDF files from a folder in parallel.
     """
     print(f"--- Starting Parallel PDF Text Extraction ({output_format}) ---")
     print(f"--- Max Workers: {max_workers} ---")
+    print(f"--- Overwrite Existing: {overwrite} ---")
     
     # Load API Key (will be loaded from .env if present)
     api_key = os.environ.get("GOOGLE_API_KEY")
@@ -80,7 +86,7 @@ def extract_pdf_text(input_folder, output_folder, output_format="txt", max_worke
     with concurrent.futures.ThreadPoolExecutor(max_workers=max_workers) as executor:
         # Pass the client and other args to the worker function
         futures = [
-            executor.submit(process_single_pdf, pdf, client, model_id, output_dir, output_format) 
+            executor.submit(process_single_pdf, pdf, client, model_id, output_dir, output_format, overwrite) 
             for pdf in pdf_files
         ]
         
@@ -98,7 +104,8 @@ if __name__ == "__main__":
     parser.add_argument("-o", "--output", default="ocr_outputs/gemma", help="Output directory for OCR text")
     parser.add_argument("-f", "--format", choices=["txt", "jsonl", "md"], default="txt", help="OCR output format (default: txt)")
     parser.add_argument("-w", "--workers", type=int, default=5, help="Number of parallel workers (default: 5)")
+    parser.add_argument("--overwrite", action="store_true", help="Overwrite existing output files (default: False)")
 
     args = parser.parse_args()
     
-    extract_pdf_text(args.input, args.output, output_format=args.format, max_workers=args.workers)
+    extract_pdf_text(args.input, args.output, output_format=args.format, max_workers=args.workers, overwrite=args.overwrite)
