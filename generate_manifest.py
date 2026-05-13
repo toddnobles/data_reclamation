@@ -18,8 +18,8 @@ def generate_manifest():
         if md_base in pdf_map:
             manifest.append({
                 'name': md_base,
-                'pdf': os.path.join(pdf_dir, pdf_map[md_base]),
-                'md': os.path.join(md_dir, md_file)
+                'pdf': os.path.join(pdf_dir, pdf_map[md_base]).replace('\\', '/'),
+                'md': os.path.join(md_dir, md_file).replace('\\', '/')
             })
         elif md_base.endswith('_shrunk_pdf') and md_base[:-len('_shrunk_pdf')] in pdf_map:
              # Handle cases where md might have extra suffix but pdf doesn't (though looking at the list they seem to match well)
