@@ -1,9 +1,11 @@
 import os
 import argparse
 import concurrent.futures
+import tempfile
 from pathlib import Path
 from google import genai
 from google.genai import types
+from pypdf import PdfReader, PdfWriter
 
 # Try to load environment variables from .env file for project-specific config
 try:
@@ -12,8 +14,24 @@ try:
 except ImportError:
     pass
 
-def process_single_pdf(file_path, client, model_id, output_dir, output_format, overwrite=False):
-    """Worker function to process a single PDF file."""
+def generate_ocr_for_file(client, model_id, uploaded_file):
+    """Helper to call Gemini API for a given uploaded file."""
+    prompt = """
+    Extract all text from the provided PDF image accurately.
+    Capture all names, dates, handwritten notes, and tabular data without summarization or commentary.
+    """
+
+    response = client.models.generate_content(
+        model=model_id,
+        contents=[uploaded_file, prompt],
+        config=types.GenerateContentConfig(
+            system_instruction="You are a high-accuracy OCR assistant.",
+        )
+    )
+    return response.text.strip()
+
+def process_single_pdf(file_path, client, model_id, output_dir, output_format, overwrite=False, chunk_size=15):
+    """Worker function to process a single PDF file, with chunking for large documents."""
     ocr_file = output_dir / f"{file_path.stem}.{output_format}"
     
     if ocr_file.exists() and not overwrite:
@@ -22,42 +40,55 @@ def process_single_pdf(file_path, client, model_id, output_dir, output_format, o
 
     print(f"\nProcessing: {file_path.name}")
     try:
-        # Upload the file to the Gemini API
-        print(f"  Uploading {file_path.name}...")
-        uploaded_file = client.files.upload(file=file_path)
+        reader = PdfReader(file_path)
+        num_pages = len(reader.pages)
         
-        # Construct the prompt for OCR only
-        prompt = """
-        Extract all text from the provided PDF image accurately.
-        Capture all names, dates, handwritten notes, and tabular data without summarization or commentary.
-        """
-
-        print(f"  Generating content for {file_path.name}...")
-        response = client.models.generate_content(
-            model=model_id,
-            contents=[uploaded_file, prompt],
-            config=types.GenerateContentConfig(
-                system_instruction="You are a high-accuracy OCR assistant.",
-            )
-        )
+        full_text = ""
         
-        full_text = response.text.strip()
-
+        if num_pages <= chunk_size:
+            # Process as a single file
+            print(f"  Uploading {file_path.name} ({num_pages} pages)...")
+            uploaded_file = client.files.upload(file=file_path)
+            full_text = generate_ocr_for_file(client, model_id, uploaded_file)
+        else:
+            # Process in chunks
+            print(f"  Large document detected: {num_pages} pages. Processing in chunks of {chunk_size}...")
+            for i in range(0, num_pages, chunk_size):
+                chunk_end = min(i + chunk_size, num_pages)
+                print(f"    Processing pages {i+1} to {chunk_end}...")
+                
+                writer = PdfWriter()
+                for page_num in range(i, chunk_end):
+                    writer.add_page(reader.pages[page_num])
+                
+                with tempfile.NamedTemporaryFile(suffix=".pdf", delete=False) as temp_pdf:
+                    writer.write(temp_pdf)
+                    temp_pdf_path = Path(temp_pdf.name)
+                
+                try:
+                    uploaded_chunk = client.files.upload(file=temp_pdf_path)
+                    chunk_text = generate_ocr_for_file(client, model_id, uploaded_chunk)
+                    full_text += chunk_text + "\n\n"
+                finally:
+                    if temp_pdf_path.exists():
+                        os.remove(temp_pdf_path)
+        
         # Save OCR result
         with open(ocr_file, "w", encoding="utf-8") as f:
-            f.write(full_text)
+            f.write(full_text.strip())
         print(f"  Success! OCR saved: {file_path.name}")
         return True
     except Exception as e:
         print(f"  Error processing {file_path.name}: {e}")
         return False
 
-def extract_pdf_text(input_folder, output_folder, output_format="txt", max_workers=5, overwrite=False):
+def extract_pdf_text(input_folder, output_folder, output_format="txt", max_workers=5, overwrite=False, chunk_size=15):
     """
     Processes PDF files from a folder in parallel.
     """
     print(f"--- Starting Parallel PDF Text Extraction ({output_format}) ---")
     print(f"--- Max Workers: {max_workers} ---")
+    print(f"--- Chunk Size: {chunk_size} ---")
     print(f"--- Overwrite Existing: {overwrite} ---")
     
     # Load API Key (will be loaded from .env if present)
@@ -86,7 +117,7 @@ def extract_pdf_text(input_folder, output_folder, output_format="txt", max_worke
     with concurrent.futures.ThreadPoolExecutor(max_workers=max_workers) as executor:
         # Pass the client and other args to the worker function
         futures = [
-            executor.submit(process_single_pdf, pdf, client, model_id, output_dir, output_format, overwrite) 
+            executor.submit(process_single_pdf, pdf, client, model_id, output_dir, output_format, overwrite, chunk_size) 
             for pdf in pdf_files
         ]
         
@@ -104,8 +135,16 @@ if __name__ == "__main__":
     parser.add_argument("-o", "--output", default="ocr_outputs/gemma", help="Output directory for OCR text")
     parser.add_argument("-f", "--format", choices=["txt", "jsonl", "md"], default="txt", help="OCR output format (default: txt)")
     parser.add_argument("-w", "--workers", type=int, default=5, help="Number of parallel workers (default: 5)")
+    parser.add_argument("-c", "--chunk-size", type=int, default=15, help="Number of pages per chunk for large documents (default: 15)")
     parser.add_argument("--overwrite", action="store_true", help="Overwrite existing output files (default: False)")
 
     args = parser.parse_args()
     
-    extract_pdf_text(args.input, args.output, output_format=args.format, max_workers=args.workers, overwrite=args.overwrite)
+    extract_pdf_text(
+        args.input, 
+        args.output, 
+        output_format=args.format, 
+        max_workers=args.workers, 
+        overwrite=args.overwrite,
+        chunk_size=args.chunk_size
+    )
