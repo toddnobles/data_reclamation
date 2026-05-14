@@ -1,0 +1,373 @@
+**Page 1**
+
+5-354.
+CASE RECORD.
+
+NAME: Emily Jerry
+Sex: [Male. $\checkmark$ Female.]
+Tribe: {Full 1/1} Muckleshoot
+State: Wash.
+Date: Oct 1st, 1919
+Diagnosis: trachoma
+
+Age: 12 years
+Respiration: 20
+Condition of, Eyes: neg.
+
+Height: 4 ft. 6 ins.
+Mensuration:
+  Insp. 31
+  Exp. 25 1/2
+Ears: "
+Weight: 79 lbs.
+Throat: "
+Temperature: 98
+Cervical glands: "
+Pulse: 72
+Vaccination: yes
+Skin: "
+Vision: normal
+
+Inspection: Neg.
+Palpation: "
+Percussion: "
+Auscultation: "
+Heart: "
+(Menstruation): [blank]
+
+FAMILY HISTORY.
+| Relative | LIVING | CONDITION OF HEALTH | DEAD | CAUSE OF DEATH |
+| :--- | :---: | :---: | :---: | :---: |
+| Father | | | $\checkmark$ | |
+| Mother | | | $\checkmark$ | |
+| Brothers | 2 | | | |
+| Sisters | 1 | | | |
+
+Personal history: always well.
+Present condition: Operated on for Trachoma Jan. 27-1920
+
+Signature: C. Claud H. Kinner..., M. D.
+
+[Footer text]:
+This form is for the record of the physical condition of pupils of boarding or nonreservation Indian schools. It should be filled in by the school physician at the time of the admission of the pupil.
+Physicians in the field should use this form to record the examination of pupils for transfer to nonreservation schools. It should accompany the pupils' transfer blanks.
+The reverse side is intended as a card-index case-record for use by all Service physicians.
+6-1955
+Reproduced at the National Archives at Seattle
+
+---
+
+**Page 2**
+
+NAME: Emily Jerry AGE: 12 SEX: [Fem.] ENTRANCE DATE: [blank] DISEASE: [blank]
+
+| DATE | PULSE | RESP. | TEMPERATURE (96 97 98 99 100 101 102 103 104 105 106) | SYMPTOMS | TREATMENT | REMARKS |
+| :--- | :--- | :--- | :---: | :--- | :--- | :--- |
+| 8 | | | $\cdot$ (at 98) | Bad Boil on | Laxative | |
+| 9 | | | $\cdot$ (at 98) | Buttocks very | morning & | |
+| 10 | | | $\cdot$ (at 98) | large and | night salts | |
+| 11 | | | $\cdot$ (at 98) | badly in-flanked. | A.M. Licoric Powder P.m. | Seems much softer. has discharge freely. Says it does not hurt. discharge by Dr. Kinner Oct-11-1919 |
+
+[Footer]:
+Reproduced at the National Archives at Seattle
+6-1955
+
+---
+
+**Page 3**
+
+5-354.
+CASE RECORD.
+
+NAME: Emily Jerry
+Sex: [Male. $\checkmark$ Female.]
+Tribe: {Full 1/1} Muckleshoot
+State: Wash.
+Date: May 22, 1919
+
+Age: [blank] years
+Respiration: 20
+Condition of, Eyes: neg.
+
+Height: 4 ft. 5 ins.
+Mensuration:
+  Insp. 29
+  Exp. 25
+Ears: "
+Weight: 80 1/2 lbs.
+Throat: "
+Temperature: 98.6
+Cervical glands: "
+Pulse: 84
+Vaccination: yes
+Skin: "
+Vision: normal
+
+Inspection: neg
+Palpation: "
+Percussion: "
+Auscultation: "
+Heart: O'K
+(Menstruation): [blank]
+
+FAMILY HISTORY: [blank]
+Personal history: [blank]
+Present condition: [blank]
+
+Signature: C. Claud H. Kinner..., M. D.
+
+[Footer]: Same as Page 1.
+
+---
+
+**Page 4**
+
+[Empty Temperature/Symptom/Treatment Chart]
+Reproduced at the National Archives at Seattle
+6-1955
+
+---
+
+**Page 5**
+
+5-354.
+CASE RECORD.
+
+NAME: Emily Jerry
+Sex: [Male. $\checkmark$ Female.]
+Tribe: Muckleshoot
+State: Wash.
+Date: April 20, 1919.
+
+Age: 9 years
+Respiration: 20
+Condition of, Eyes: negative
+
+Height: 4 ft. 5 ins.
+Mensuration:
+  Insp. 28
+  Exp. 24
+Ears: "
+Weight: 80 1/2 lbs.
+Throat: "
+Temperature: 98-6
+Cervical glands: "
+Pulse: 72
+Vaccination: yes
+Skin: "
+Vision: normal
+
+Inspection: negative
+Palpation: "
+Percussion: "
+Auscultation: "
+Heart: "
+(Menstruation): [blank]
+
+FAMILY HISTORY.
+| Relative | LIVING | CONDITION OF HEALTH | DEAD | CAUSE OF DEATH |
+| :--- | :---: | :---: | :---: | :---: |
+| Father | $\checkmark$ | | | |
+| Mother | $\checkmark$ | | | |
+| Brothers | 1 | | | |
+| Sisters | 1 | | | |
+
+Personal history: [blank]
+Present condition: [blank]
+
+[Footer]: Same as Page 1.
+
+---
+
+**Page 6**
+
+[Empty Temperature/Symptom/Treatment Chart]
+Reproduced at the National Archives at Seattle
+6-1955
+
+---
+
+**Page 7**
+
+[Top Right]: See Ernest Wilson
+
+[Middle Left]:
+C. A. Reynolds
+Auburn
+Wash.
+
+[Main Note]:
+Send appl. for E. Wilson
+Emily and Agatha Jerry for
+completion.
+
+Reproduced at the National Archives at Seattle
+
+---
+
+**Page 8**
+
+5-297 c
+LAUNDERING.
+RECORD CARD—PREVOCATIONAL DIVISION.
+
+[Instructional text about ratings and recording requirements]
+
+NAME: Emily Jerry
+DATE OF ENTRY IN DEPARTMENT: Sept 18-1919
+DATE OF LEAVING DEPARTMENT: Nov 15-1919
+NUMBER OF WEEKS IN DEPARTMENT: 10 weeks
+Grade: Gr 3
+
+FINAL RATINGS.
+| Date | Grade | LAUNDERING | REMARKS |
+| :--- | :---: | :--- | :--- |
+| 4/12 19 | 75 | Sorting clothes... Cue 70 | |
+| | | Removing stains... Insp 78 | |
+| | | Setting color... [blank] | |
+| | | Softening of water... [blank] | |
+| | | Washing, sterilizing, and rinsing... [blank] | |
+| | | Bleaching... [blank] | |
+| | 75 | Bluing... | |
+| | 75 | Starching... | |
+| | 80 | Drying clothes... | |
+| | 80 | Sprinkling and folding for ironing... | |
+| | 80 | Ironing of unstarched clothing... | |
+| | 75 | Ironing starched clothing... | |
+| | 80 | Folding... | |
+| | 75 | Care of laundry... | |
+| | | Making soap... [blank] | |
+
+Reproduced at the National Archives at Seattle
+6-4878
+
+---
+
+**Page 9**
+
+5-186
+RECORD OF PUPIL IN SCHOOL
+
+RECORD OF: Emily Jerry at Cushman Trades School, Tacoma, Wash.
+
+Date of birth: 1908
+Mother: Mary Jerry
+Tribe: Muckleshoot
+Father: Chas. Jerry Dominich
+Reservation: Muckleshoot
+Guardian: [blank]
+Date entered: Sept. 18, 1917
+Church preference: Catholic
+Grade entered: 1st
+Home post office: Auburn, Wash.
+Home railroad point: " (boat)
+
+PHYSICAL CONDITION.
+| Item | Current | ON DATE OF ENTRANCE: First Year |
+| :--- | :--- | :--- |
+| Height | 4 ft. 5" | 3 grade 4 ft. 6" |
+| Weight | 80 1/2 | 79 |
+| Vision | normal | normal |
+| Respiration | 20 | 20 |
+| Pulse | 72 | 72 |
+
+[Other physical and training fields are blank]
+
+Reproduced at the National Archives at Seattle
+6-2063
+
+---
+
+**Page 10**
+
+PROGRESS FROM Sept. 18, 1917, to [blank]
+
+First Year in this School (Grade 1):
+| Subject | Sept. | Oct. | Nov. | Dec. | Jan. | Feb. | Mar. | Apr. | May. | June. 1918 |
+| :--- | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+| Academic | G | G | G | G | G | G | G | G | G | G |
+| Effort | G | G | G | G | G | G | G | G | G | G |
+| Deportment | G | G | G | G | G | G | G | G | G | G |
+Remarks: promoted to Grade 2 On leave 4/14/1918 Returned 7/3/1918
+
+Second Year in this School (Grade 2):
+| Subject | Sept. | Oct. | Nov. | Dec. | Jan. | Feb. | Mar. | Apr. | May. | June. |
+| :--- | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+| Academic | G | G | G | | | | | | | |
+| Effort | G | F | F | | | | | | | |
+| Deportment | F | F | F | | | | | | | |
+
+Third Year in this School:
+| Subject | Sept. | Oct. | Nov. | Dec. | Jan. | Feb. | Mar. | Apr. | May. | June. |
+| :--- | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+| Academic | | G | G | G | G | G | G | G | G | |
+| Effort | | G | G | G | G | G | G | G | G | |
+| Deportment | | G | G | G | G | G | G | G | G | |
+Remarks: Promoted to 4th on trial.
+
+Reproduced at the National Archives at Seattle
+6-2063
+
+---
+
+**Page 11**
+
+[Top Left]: Catholic
+[Top Middle]: Enrolled Sep. 18, 1917 / On leave 1918 / Returned Sept. 3, 1918
+
+5-192 a
+APPLICATION FOR ENROLLMENT IN A NONRESERVATION SCHOOL
+OF A CHILD ENROLLED AT AN AGENCY.
+BRIEF.
+
+APPLICATION OF [blank] FOR THE ENROLLMENT OF Emily Jerry
+IN THE INDIAN SCHOOL AT CUSHMAN AGENCY TACOMA, WASHINGTON
+
+NAME OF AGENCY FROM WHICH PUPIL CAME: Cushman
+Date of enrollment: Sept. 18, 1917
+Term of enrollment: (2) years.
+
+Reproduced at the National Archives at Seattle
+6-870
+
+---
+
+**Page 12**
+
+5-192a
+APPLICATION FOR ENROLLMENT IN A NONRESERVATION SCHOOL
+(For a child enrolled at an Agency.)
+
+... United States Indian School at CUSHMAN AGENCY TACOMA, WASHINGTON
+of Emily Jerry female; age 9; date of birth 1908;
+
+NAME OF FATHER: Chas Jerry, Chas Dominich. TRIBE: Muckleshoot.
+NAME OF MOTHER: Mary Jerry, Lothe Dominich. TRIBE: Muckleshoot.
+
+I, Jerry Dominich, do hereby voluntarily consent and agree to her enrollment in said school for a period of 3 years...
+Signature: Jerry Dominich (Parent, guardian, or next of kin)
+P.O. address: Auburn, Wash.
+Witness: Chas. A Reynolds.
+Note: Enrolled sep. 18-1917
+
+CERTIFICATE OF AGENT OR BONDED SUPERINTENDENT.
+"...Lives 1 1/2 miles from public school. Cushman Indian - parent wants govt - unable to pay tuition. Says children need treatment for kidney trouble."
+This 18 day of Sept, 1918.
+
+CERTIFICATE OF SCHOOL PHYSICIAN.
+I hereby certify that on May 30th 1919 I made a careful examination of the physical condition of Emily Jerry... and found her to be in proper physical condition to attend school.
+This 26th day of May, 1919. Signed C. Claud H. Kinner, M.D.
+Reexam: Oct 1st 1919 S.E.C.
+
+Reproduced at the National Archives at Seattle
+6-870
+
+---
+
+**Page 13**
+
+INDORSEMENTS.
+[Contains legal text regarding the transfer of Indian children from reservations, citing 28 Stats. p. 906, 29 Stats. p. 348, and 35 Stat. L., 781.]
+
+Reproduced at the National Archives at Seattle
+6-870
