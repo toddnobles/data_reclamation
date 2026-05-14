@@ -28,7 +28,10 @@ def generate_ocr_for_file(client, model_id, uploaded_file):
             system_instruction="You are a high-accuracy OCR assistant.",
         )
     )
-    return response.text.strip()
+    
+    if response.text:
+        return response.text.strip()
+    return ""
 
 def process_single_pdf(file_path, client, model_id, output_dir, output_format, overwrite=False, chunk_size=15):
     """Worker function to process a single PDF file, with chunking for large documents."""
@@ -84,7 +87,7 @@ def process_single_pdf(file_path, client, model_id, output_dir, output_format, o
 
 def extract_pdf_text(input_folder, output_folder, output_format="txt", max_workers=5, overwrite=False, chunk_size=15):
     """
-    Processes PDF files from a folder in parallel.
+    Processes PDF files from a folder in parallel, with a retry pass for failures.
     """
     print(f"--- Starting Parallel PDF Text Extraction ({output_format}) ---")
     print(f"--- Max Workers: {max_workers} ---")
@@ -114,20 +117,45 @@ def extract_pdf_text(input_folder, output_folder, output_format="txt", max_worke
 
     print(f"Found {len(pdf_files)} PDF files. Starting parallel execution...")
 
-    with concurrent.futures.ThreadPoolExecutor(max_workers=max_workers) as executor:
-        # Pass the client and other args to the worker function
-        futures = [
-            executor.submit(process_single_pdf, pdf, client, model_id, output_dir, output_format, overwrite, chunk_size) 
-            for pdf in pdf_files
-        ]
+    def run_processing_pass(files_to_process, is_retry=False):
+        if is_retry:
+            print(f"\n--- Starting Retry Pass for {len(files_to_process)} failed files ---")
         
-        results = []
-        for future in concurrent.futures.as_completed(futures):
-            results.append(future.result())
+        failed = []
+        with concurrent.futures.ThreadPoolExecutor(max_workers=max_workers) as executor:
+            # Map futures to their file paths
+            future_to_pdf = {
+                executor.submit(process_single_pdf, pdf, client, model_id, output_dir, output_format, overwrite, chunk_size): pdf 
+                for pdf in files_to_process
+            }
+            
+            for future in concurrent.futures.as_completed(future_to_pdf):
+                pdf = future_to_pdf[future]
+                try:
+                    success = future.result()
+                    if not success:
+                        failed.append(pdf)
+                except Exception as e:
+                    print(f"  Critical error in future for {pdf.name}: {e}")
+                    failed.append(pdf)
+        return failed
 
-    success_count = sum(1 for r in results if r)
+    # First Pass
+    failed_files = run_processing_pass(pdf_files)
+
+    # Retry Pass (only if there are failures)
+    if failed_files:
+        print(f"\nPhase 1 complete. {len(failed_files)} files failed.")
+        final_failed = run_processing_pass(failed_files, is_retry=True)
+        success_count = len(pdf_files) - len(final_failed)
+    else:
+        success_count = len(pdf_files)
+        final_failed = []
+
     print(f"\n--- Extraction Complete ---")
     print(f"Successfully processed {success_count} out of {len(pdf_files)} files.")
+    if final_failed:
+        print(f"The following files failed after retry: {[f.name for f in final_failed]}")
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="Extract text from PDFs using Gemma in parallel.")
