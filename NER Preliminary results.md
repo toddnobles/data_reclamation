@@ -1,6 +1,8 @@
 # NER Preliminary results
 
-## Flair
+## Using OLMOCR Outputs 
+
+### Flair
 --- RapidFuzz NER Evaluation: flair_test ---
 Ground Truth: ner_tests/undergrad_ground_truths/eden_gts
 Distance Threshold: 2
@@ -66,8 +68,7 @@ Average F1-Score (Doc):    50.55%
 
 
 
-
-## Gemma using olmocr OCR text
+### Gemma using olmocr OCR text
 --- RapidFuzz NER Evaluation: gemma_test ---
 Ground Truth: ner_tests/undergrad_ground_truths/eden_gts
 Distance Threshold: 2
@@ -132,7 +133,7 @@ Overall F1-Score (Corpus): 46.61%
 Average F1-Score (Doc):    55.90%
 
 
-## NER STacked BERT
+### NER Stacked BERT using olmocr text 
 --- RapidFuzz NER Evaluation: ner_stacked_bert_test ---
 Ground Truth: ner_tests/undergrad_ground_truths/eden_gts
 Distance Threshold: 2
@@ -241,7 +242,141 @@ Overall F1-Score (Corpus): 77.36%
 Average F1-Score (Doc):    85.48%
 
 
-# Using Gemma as ground truth versus flair 
+
+## Using OCR outputs from Gemma 
+
+### Using OCR outputs from Gemma and Flair NER
+--- RapidFuzz NER Evaluation: flair_test_gemma_ocr ---
+Ground Truth: ner_tests/undergrad_ground_truths/eden_gts
+Distance Threshold: 2
+-------------------------------------------------------------------------------------------------------------------------------------------------
+FILE                                                                        | MATCH (TP)   | MISS (FN)    | ERROR (FP)   | RECALL   | PRECISION
+-------------------------------------------------------------------------------------------------------------------------------------------------
+NARA_1324_v1_p184-185_1_0                                                   | 41           | 16           | 65           |    71.9% |    38.7%
+NARA_1327_b032_f1516                                                        | 2            | 1            | 2            |    66.7% |    50.0%
+NARA_1327_b059_f2943                                                        | 2            | 1            | 2            |    66.7% |    50.0%
+NARA_1329_b011_c00_0052                                                     | 2            | 0            | 0            |   100.0% |   100.0%
+NARA_1329_b011_c00_0087                                                     | 2            | 0            | 0            |   100.0% |   100.0%
+NARA_1329_b011_c00_0088                                                     | 2            | 0            | 0            |   100.0% |   100.0%
+NARA_1329_b011_c00_0585                                                     | 2            | 0            | 0            |   100.0% |   100.0%
+NARA_1329_b011_c00_0633                                                     | 1            | 0            | 1            |   100.0% |    50.0%
+NARA_1329_b014_c00_0440                                                     | 1            | 0            | 0            |   100.0% |   100.0%
+WA_Cush_NARA_2645385_Agapith_Johnnie_Redacted_shrunk_pdf                    | 17           | 7            | 13           |    70.8% |    56.7%
+WA_Cush_NARA_2645385_Allen_Fray_Redacted_shrunk_pdf                         | 6            | 2            | 4            |    75.0% |    60.0%
+WA_Cush_NARA_2645385_Atkins_Joseph_Redacted_shrunk_pdf                      | 8            | 9            | 12           |    47.1% |    40.0%
+WA_Cush_NARA_2645385_Bernard_Mary_shrunk_pdf                                | 0            | 2            | 4            |     0.0% |     0.0%
+WA_Cush_NARA_2645385_Boyd_Hazel_Redacted_shrunk_pdf                         | 7            | 5            | 8            |    58.3% |    46.7%
+WA_Cush_NARA_2645385_Boyd_Samuel_Redacted_shrunk_pdf                        | 14           | 9            | 10           |    60.9% |    58.3%
+WA_Cush_NARA_2645385_Brooks_Dick_Simon_Redacted_shrunk_pdf                  | 8            | 7            | 5            |    53.3% |    61.5%
+WA_Cush_NARA_2645385_Chamberlain_Wallace_shrunk_pdf                         | 0            | 1            | 3            |     0.0% |     0.0%
+WA_Cush_NARA_2645385_Charley_Benjamin_Redacted_shrunk_pdf                   | 12           | 5            | 8            |    70.6% |    60.0%
+WA_Cush_NARA_2645385_Charley_Grace_Redacted_shrunk_pdf                      | 6            | 2            | 2            |    75.0% |    75.0%
+WA_Cush_NARA_2645385_Chenois_Rose_Redacted_shrunk_pdf                       | 8            | 7            | 11           |    53.3% |    42.1%
+WA_Cush_NARA_2645385_Clark_Emma_shrunk_pdf                                  | 4            | 4            | 5            |    50.0% |    44.4%
+WA_Cush_NARA_2645385_Clark_Faustine                                         | 2            | 1            | 1            |    66.7% |    66.7%
+WA_Cush_NARA_2645385_Crofoot_Earl_Redacted_shrunk_pdf                       | 19           | 19           | 19           |    50.0% |    50.0%
+WA_Cush_NARA_2645385_Dave_Willie_Redacted_shrunk_pdf                        | 15           | 16           | 12           |    48.4% |    55.6%
+WA_Cush_NARA_2645385_Dupuis_Bert_shrunk_pdf                                 | 0            | 0            | 3            |     0.0% |     0.0%
+WA_Cush_NARA_2645385_Frank_Margaret_Redacted_shrunk_pdf                     | 5            | 7            | 6            |    41.7% |    45.5%
+WA_Cush_NARA_2645385_Goodman_Alfred_Redacted_shrunk_pdf                     | 7            | 6            | 7            |    53.8% |    50.0%
+WA_Cush_NARA_2645385_Gunnier_Bessie_shrunk_pdf                              | 1            | 0            | 3            |   100.0% |    25.0%
+WA_Cush_NARA_2645385_Hammer_Leo_Paul_Redacted_shrunk_pdf                    | 15           | 15           | 16           |    50.0% |    48.4%
+WA_Cush_NARA_2645385_Henry_Ethel_E_Redacted_shrunk_pdf                      | 13           | 11           | 8            |    54.2% |    61.9%
+WA_Cush_NARA_2645385_Henry_John_Redacted_shrunk_pdf                         | 10           | 1            | 1            |    90.9% |    90.9%
+WA_Cush_NARA_2645385_Horn_Adeline_Redacted_shrunk_pdf                       | 1            | 1            | 1            |    50.0% |    50.0%
+WA_Cush_NARA_2645385_Hunt_William_Redacted_shrunk_pdf                       | 20           | 22           | 27           |    47.6% |    42.6%
+WA_Cush_NARA_2645385_James_Nancy_Redacted_shrunk_pdf                        | 7            | 6            | 8            |    53.8% |    46.7%
+WA_Cush_NARA_2645385_Joseph_Joseph_Redacted_shrunk_pdf                      | 8            | 13           | 14           |    38.1% |    36.4%
+WA_Cush_NARA_2645385_KingGeorge_Anita_Redacted_shrunk_pdf                   | 6            | 2            | 0            |    75.0% |   100.0%
+WA_Cush_NARA_2645385_Legard_Edwin_Joseph_Redacted_shrunk_pdf                | 5            | 3            | 3            |    62.5% |    62.5%
+WA_Cush_NARA_2645385_Lewis_Nina_Redacted_shrunk_pdf                         | 10           | 11           | 8            |    47.6% |    55.6%
+WA_Cush_NARA_2645385_Martin_Eva_shrunk_pdf                                  | 0            | 1            | 2            |     0.0% |     0.0%
+WA_Cush_NARA_2645385_Martin_Narcisse_Redacted_shrunk_pdf                    | 10           | 16           | 14           |    38.5% |    41.7%
+WA_Cush_NARA_2645385_Martin_William_G_Redacted_shrunk_pdf                   | 15           | 7            | 14           |    68.2% |    51.7%
+WA_Cush_NARA_2645385_McDonald_Harry_Redacted_shrunk_pdf                     | 9            | 11           | 10           |    45.0% |    47.4%
+WA_Cush_NARA_2645385_McDonald_Margaret_Redacted_shrunk_pdf                  | 7            | 10           | 5            |    41.2% |    58.3%
+WA_Cush_NARA_2645385_Michel_Henry_Redacted_shrunk_pdf                       | 19           | 18           | 17           |    51.4% |    52.8%
+WA_Cush_NARA_2645385_Moses_Patsy_Redacted_shrunk_pdf                        | 33           | 20           | 31           |    62.3% |    51.6%
+WA_Cush_NARA_2645385_Napolean_Edna_shrunk_pdf                               | 0            | 1            | 2            |     0.0% |     0.0%
+WA_Cush_NARA_2645385_Nostrum_Fred_Redacted_shrunk_pdf                       | 13           | 11           | 23           |    54.2% |    36.1%
+WA_Cush_NARA_2645385_Parriseau_Antoine_Redacted_shrunk_pdf                  | 13           | 18           | 15           |    41.9% |    46.4%
+WA_Cush_NARA_2645385_Parriseau_Patrick_Redacted_shrunk_pdf                  | 30           | 24           | 20           |    55.6% |    60.0%
+james_arquette                                                              | 2            | 0            | 0            |   100.0% |   100.0%
+-------------------------------------------------------------------------------------------------------------------------------------------------
+OVERALL CORPUS TOTALS                                                       | 440          | 349          | 445          |    55.8% |    49.7%
+AVERAGE DOCUMENT SCORES                                                     | -            | -            | -            |    58.2% |    53.3%
+-------------------------------------------------------------------------------------------------------------------------------------------------
+Overall F1-Score (Corpus): 52.57%
+Average F1-Score (Doc):    55.65%
+
+
+### Using Gemma OCR outputs and Gemma OCR
+--- RapidFuzz NER Evaluation: gemma_test_gemma_ocr ---
+Ground Truth: ner_tests/undergrad_ground_truths/eden_gts
+Distance Threshold: 2
+-------------------------------------------------------------------------------------------------------------------------------------------------
+FILE                                                                        | MATCH (TP)   | MISS (FN)    | ERROR (FP)   | RECALL   | PRECISION
+-------------------------------------------------------------------------------------------------------------------------------------------------
+NARA_1324_v1_p184-185_1_0                                                   | 44           | 13           | 60           |    77.2% |    42.3%
+NARA_1327_b032_f1516                                                        | 2            | 1            | 2            |    66.7% |    50.0%
+NARA_1327_b059_f2943                                                        | 2            | 1            | 1            |    66.7% |    66.7%
+NARA_1329_b011_c00_0052                                                     | 2            | 0            | 0            |   100.0% |   100.0%
+NARA_1329_b011_c00_0087                                                     | 2            | 0            | 0            |   100.0% |   100.0%
+NARA_1329_b011_c00_0088                                                     | 2            | 0            | 0            |   100.0% |   100.0%
+NARA_1329_b011_c00_0585                                                     | 2            | 0            | 0            |   100.0% |   100.0%
+NARA_1329_b011_c00_0633                                                     | 1            | 0            | 1            |   100.0% |    50.0%
+NARA_1329_b014_c00_0440                                                     | 1            | 0            | 0            |   100.0% |   100.0%
+WA_Cush_NARA_2645385_Agapith_Johnnie_Redacted_shrunk_pdf                    | 12           | 12           | 9            |    50.0% |    57.1%
+WA_Cush_NARA_2645385_Allen_Fray_Redacted_shrunk_pdf                         | 6            | 2            | 1            |    75.0% |    85.7%
+WA_Cush_NARA_2645385_Atkins_Joseph_Redacted_shrunk_pdf                      | 9            | 8            | 3            |    52.9% |    75.0%
+WA_Cush_NARA_2645385_Bernard_Mary_shrunk_pdf                                | 1            | 1            | 2            |    50.0% |    33.3%
+WA_Cush_NARA_2645385_Boyd_Hazel_Redacted_shrunk_pdf                         | 5            | 7            | 6            |    41.7% |    45.5%
+WA_Cush_NARA_2645385_Boyd_Samuel_Redacted_shrunk_pdf                        | 9            | 14           | 4            |    39.1% |    69.2%
+WA_Cush_NARA_2645385_Brooks_Dick_Simon_Redacted_shrunk_pdf                  | 8            | 7            | 1            |    53.3% |    88.9%
+WA_Cush_NARA_2645385_Chamberlain_Wallace_shrunk_pdf                         | 1            | 0            | 0            |   100.0% |   100.0%
+WA_Cush_NARA_2645385_Charley_Benjamin_Redacted_shrunk_pdf                   | 9            | 8            | 3            |    52.9% |    75.0%
+WA_Cush_NARA_2645385_Charley_Grace_Redacted_shrunk_pdf                      | 4            | 4            | 1            |    50.0% |    80.0%
+WA_Cush_NARA_2645385_Chenois_Rose_Redacted_shrunk_pdf                       | 9            | 6            | 2            |    60.0% |    81.8%
+WA_Cush_NARA_2645385_Clark_Emma_shrunk_pdf                                  | 3            | 5            | 3            |    37.5% |    50.0%
+WA_Cush_NARA_2645385_Clark_Faustine                                         | 2            | 1            | 0            |    66.7% |   100.0%
+WA_Cush_NARA_2645385_Crofoot_Earl_Redacted_shrunk_pdf                       | 19           | 19           | 6            |    50.0% |    76.0%
+WA_Cush_NARA_2645385_Dave_Willie_Redacted_shrunk_pdf                        | 14           | 17           | 4            |    45.2% |    77.8%
+WA_Cush_NARA_2645385_Dupuis_Bert_shrunk_pdf                                 | 0            | 0            | 2            |     0.0% |     0.0%
+WA_Cush_NARA_2645385_Frank_Margaret_Redacted_shrunk_pdf                     | 4            | 8            | 6            |    33.3% |    40.0%
+WA_Cush_NARA_2645385_Goodman_Alfred_Redacted_shrunk_pdf                     | 7            | 6            | 1            |    53.8% |    87.5%
+WA_Cush_NARA_2645385_Gunnier_Bessie_shrunk_pdf                              | 1            | 0            | 1            |   100.0% |    50.0%
+WA_Cush_NARA_2645385_Hammer_Leo_Paul_Redacted_shrunk_pdf                    | 13           | 17           | 5            |    43.3% |    72.2%
+WA_Cush_NARA_2645385_Henry_Ethel_E_Redacted_shrunk_pdf                      | 13           | 11           | 4            |    54.2% |    76.5%
+WA_Cush_NARA_2645385_Henry_John_Redacted_shrunk_pdf                         | 10           | 1            | 0            |    90.9% |   100.0%
+WA_Cush_NARA_2645385_Horn_Adeline_Redacted_shrunk_pdf                       | 1            | 1            | 1            |    50.0% |    50.0%
+WA_Cush_NARA_2645385_Hunt_William_Redacted_shrunk_pdf                       | 17           | 25           | 14           |    40.5% |    54.8%
+WA_Cush_NARA_2645385_James_Nancy_Redacted_shrunk_pdf                        | 7            | 6            | 2            |    53.8% |    77.8%
+WA_Cush_NARA_2645385_Joseph_Joseph_Redacted_shrunk_pdf                      | 5            | 16           | 5            |    23.8% |    50.0%
+WA_Cush_NARA_2645385_KingGeorge_Anita_Redacted_shrunk_pdf                   | 6            | 2            | 0            |    75.0% |   100.0%
+WA_Cush_NARA_2645385_Legard_Edwin_Joseph_Redacted_shrunk_pdf                | 5            | 3            | 1            |    62.5% |    83.3%
+WA_Cush_NARA_2645385_Lewis_Nina_Redacted_shrunk_pdf                         | 9            | 12           | 3            |    42.9% |    75.0%
+WA_Cush_NARA_2645385_Martin_Eva_shrunk_pdf                                  | 0            | 1            | 1            |     0.0% |     0.0%
+WA_Cush_NARA_2645385_Martin_Narcisse_Redacted_shrunk_pdf                    | 6            | 20           | 7            |    23.1% |    46.2%
+WA_Cush_NARA_2645385_Martin_William_G_Redacted_shrunk_pdf                   | 14           | 8            | 1            |    63.6% |    93.3%
+WA_Cush_NARA_2645385_McDonald_Harry_Redacted_shrunk_pdf                     | 8            | 12           | 4            |    40.0% |    66.7%
+WA_Cush_NARA_2645385_McDonald_Margaret_Redacted_shrunk_pdf                  | 8            | 9            | 2            |    47.1% |    80.0%
+WA_Cush_NARA_2645385_Michel_Henry_Redacted_shrunk_pdf                       | 13           | 24           | 6            |    35.1% |    68.4%
+WA_Cush_NARA_2645385_Moses_Patsy_Redacted_shrunk_pdf                        | 29           | 24           | 10           |    54.7% |    74.4%
+WA_Cush_NARA_2645385_Napolean_Edna_shrunk_pdf                               | 0            | 1            | 1            |     0.0% |     0.0%
+WA_Cush_NARA_2645385_Nostrum_Fred_Redacted_shrunk_pdf                       | 11           | 13           | 10           |    45.8% |    52.4%
+WA_Cush_NARA_2645385_Parriseau_Antoine_Redacted_shrunk_pdf                  | 10           | 21           | 4            |    32.3% |    71.4%
+WA_Cush_NARA_2645385_Parriseau_Patrick_Redacted_shrunk_pdf                  | 24           | 30           | 6            |    44.4% |    80.0%
+james_arquette                                                              | 2            | 0            | 0            |   100.0% |   100.0%
+-------------------------------------------------------------------------------------------------------------------------------------------------
+OVERALL CORPUS TOTALS                                                       | 392          | 397          | 206          |    49.7% |    65.6%
+AVERAGE DOCUMENT SCORES                                                     | -            | -            | -            |    56.9% |    69.1%
+-------------------------------------------------------------------------------------------------------------------------------------------------
+Overall F1-Score (Corpus): 56.52%
+Average F1-Score (Doc):    62.40%
+
+
+
+## Using Gemma as ground truth versus flair 
 --- RapidFuzz NER Evaluation: flair_test ---
 Ground Truth: ner_tests/outputs/gemma_test
 Distance Threshold: 2
