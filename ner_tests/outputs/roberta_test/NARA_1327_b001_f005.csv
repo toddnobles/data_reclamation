@@ -1,9 +1,13 @@
 PERSON NAME,CONFIDENCE
-Beck,0.9996
-C. Bond,0.8669
+Beck,0.9993
+Bond,0.9989
+C. Bond,0.8721
 Chas. Wise,0.9995
-Fred Burr,0.9787
-H. Satterthwaite,0.9427
-Janny Half,0.9963
-Puyallup,0.9913
-Sidney Burr,0.9997
+Fred Burr,0.9997
+H. Satterthwaite,0.9449
+J. Beck,0.9991
+Janny Half,0.9961
+Puyallup,0.9973
+Satterthweite,0.9974
+Sidney Burr,0.9998
+Squ,0.3603

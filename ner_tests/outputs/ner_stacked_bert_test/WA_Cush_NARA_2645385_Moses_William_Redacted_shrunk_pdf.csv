@@ -1,0 +1,42 @@
+PERSON NAME,CONFIDENCE
+AFFIDAVIT,0.8103
+Aged,0.6174
+Agent,0.5053
+BRIEF,0.8034
+"C. V. Pell, supt",0.7903
+Charge,0.3443
+Charles Moses,0.9390
+"Claude McKinney, M. D. School Physician",0.9166
+Cushman,0.4173
+Fredy Nashim,0.9591
+Harwood Hall HARWOOD HALL Superintendent,0.7532
+Hoonah,0.7438
+Indian,0.4004
+M. D. VOUCHER,0.9596
+MG Enc,0.4750
+Mary Moses,0.9481
+Moses William,0.7493
+Mr. Charlie Moses,0.9761
+Mr. Charlie Mosses,0.9797
+Mr. Keller,0.9708
+"Mr. O. H. Keller, Clerk in Charge, Indian School",0.8193
+Mr. William Moses Port Gamble,0.9743
+Mrs. Mary Moses Sitka,0.9546
+PERSON,0.7723
+Parent,0.5106
+"Parent, guardian",0.6293
+SBC Matter,0.5281
+Thomas W. Moses,0.9619
+Umu Moses,0.4204
+Voucher,0.4738
+William C. Morris,0.9674
+William C. Moses,0.9683
+"William C. Moses ( Parent, guardian",0.8319
+William C. Nashim,0.9689
+William Moses,0.9772
+William Mosses,0.9692
+Wm. Moses,0.9817
+condition : [ Signature,0.6316
+"father, Chas. Moses, Indian of the Thlingkot Tribe",0.8254
+"mother, Mary Moses, Indian of the Thlingkot Tribe",0.7441
+son William,0.7575
