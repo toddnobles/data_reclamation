@@ -8,3 +8,5 @@ carlisle_examples/
 *.pyc
 __pycache__/
 *.xlsx
+ner_tests/undergrad_ground_truth_test_docs/*
+ner_tests/undergrad_ground_truths/blanks/*
