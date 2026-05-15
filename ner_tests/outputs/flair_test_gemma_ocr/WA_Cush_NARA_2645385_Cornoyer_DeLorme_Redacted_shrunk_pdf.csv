@@ -1,0 +1,39 @@
+PERSON NAME,CONFIDENCE
+348,0.9444
+Bill,1.0000
+Claude N Kumar,0.9978
+Claude N. Kumar,0.9927
+Cornoyer,0.9972
+DeLorme,1.0000
+DeLorme Cornoyer,1.0000
+DeLorme Joseph Cornoyer,1.0000
+DeLormie,0.9999
+E. H. Hammond,0.9999
+E. L. Swartzlander,0.9834
+Eddie,1.0000
+Edward,0.9995
+Edward Cornoyer,1.0000
+Eugene,0.9889
+Eugene Cornoyer,1.0000
+George,1.0000
+George Cornoyer,1.0000
+Gilman,0.9993
+Gus Cornoyer,1.0000
+Hammond,0.9935
+Joseph Cornoyer,0.8625
+LIVING,0.9794
+Leona,0.9937
+Leona Cornoyer,1.0000
+Leona George De Lorme Eugene,1.0000
+Lorme,0.9929
+Mrs,0.9052
+Mrs.,0.9998
+PULSE,0.9865
+Robert Gilman,1.0000
+Robt Gilman,0.9995
+Robt. Gilman,0.5638
+Rose Cornoyer,1.0000
+Rose Gilman,1.0000
+Smith,0.5256
+Swartzlander,0.6453
+warn,0.9296
