@@ -54,8 +54,8 @@ def run_flair_ner(input_path):
                 # Clean name: remove markdown artifacts
                 clean_name = name.strip().replace("#", "").replace("*", "")
                 # requires at least 2 characters after cleaning to be considered a valid name. Handles things like just a single J.
-                #if len(clean_name.replace(".", "")) <= 1:
-                #    continue
+                if len(clean_name.replace(".", "")) <= 1:
+                   continue
                     
                 if clean_name not in unique_results or score > unique_results[clean_name]:
                     unique_results[clean_name] = score
@@ -75,5 +75,5 @@ def run_flair_ner(input_path):
             print(f"Results saved to {output_csv}")
 
 if __name__ == "__main__":
-    target = input("Enter file or folder path: ").strip()
+    target = input("Enter file or folder path: ").strip().strip("'\"")
     run_flair_ner(target)
