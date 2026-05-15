@@ -103,11 +103,13 @@ def run_evaluation(model_name, threshold, gt_dir):
     print(f"\n--- RapidFuzz NER Evaluation: {model_name} ---")
     print(f"Ground Truth: {gt_dir}")
     print(f"Distance Threshold: {threshold}")
-    print("-" * 130)
-    print(f"{'FILE':<75} | {'MATCH':<7} | {'MISS':<7} | {'ERROR':<7} | {'RECALL':<7} | {'PRECISION':<7}")
-    print("-" * 130)
+    print("-" * 145)
+    print(f"{'FILE':<75} | {'MATCH (TP)':<12} | {'MISS (FN)':<12} | {'ERROR (FP)':<12} | {'RECALL':<8} | {'PRECISION':<8}")
+    print("-" * 145)
 
     total_tp, total_fn, total_fp = 0, 0, 0
+    doc_recalls = []
+    doc_precisions = []
 
     for gt_file in gt_files:
         out_file = out_dir / gt_file.name
@@ -127,15 +129,25 @@ def run_evaluation(model_name, threshold, gt_dir):
         recall = tp / (tp + fn) if (tp + fn) > 0 else 0
         precision = tp / (tp + fp) if (tp + fp) > 0 else 0
         
-        print(f"{gt_file.stem:<75} | {tp:<7} | {fn:<7} | {fp:<7} | {recall:>7.1%} | {precision:>7.1%}")
+        doc_recalls.append(recall)
+        doc_precisions.append(precision)
+        
+        print(f"{gt_file.stem:<75} | {tp:<12} | {fn:<12} | {fp:<12} | {recall:>8.1%} | {precision:>8.1%}")
 
-    print("-" * 130)
+    print("-" * 145)
     overall_recall = total_tp / (total_tp + total_fn) if (total_tp + total_fn) > 0 else 0
     overall_precision = total_tp / (total_tp + total_fp) if (total_tp + total_fp) > 0 else 0
-    f1 = 2 * (overall_precision * overall_recall) / (overall_precision + overall_recall) if (overall_precision + overall_recall) > 0 else 0
+    overall_f1 = 2 * (overall_precision * overall_recall) / (overall_precision + overall_recall) if (overall_precision + overall_recall) > 0 else 0
 
-    print(f"{'OVERALL TOTALS':<75} | {total_tp:<7} | {total_fn:<7} | {total_fp:<7} | {overall_recall:>7.1%} | {overall_precision:>7.1%}")
-    print(f"\nOverall F1-Score: {f1:.2%}")
+    avg_doc_recall = sum(doc_recalls) / len(doc_recalls) if doc_recalls else 0
+    avg_doc_precision = sum(doc_precisions) / len(doc_precisions) if doc_precisions else 0
+    avg_f1 = 2 * (avg_doc_precision * avg_doc_recall) / (avg_doc_precision + avg_doc_recall) if (avg_doc_precision + avg_doc_recall) > 0 else 0
+
+    print(f"{'OVERALL CORPUS TOTALS':<75} | {total_tp:<12} | {total_fn:<12} | {total_fp:<12} | {overall_recall:>8.1%} | {overall_precision:>8.1%}")
+    print(f"{'AVERAGE DOCUMENT SCORES':<75} | {'-':<12} | {'-':<12} | {'-':<12} | {avg_doc_recall:>8.1%} | {avg_doc_precision:>8.1%}")
+    print("-" * 145)
+    print(f"Overall F1-Score (Corpus): {overall_f1:.2%}")
+    print(f"Average F1-Score (Doc):    {avg_f1:.2%}")
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="NER Evaluation using RapidFuzz")
