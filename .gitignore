@@ -10,3 +10,5 @@ __pycache__/
 *.xlsx
 ner_tests/undergrad_ground_truth_test_docs/*
 ner_tests/undergrad_ground_truths/blanks/*
+ocr_test_pdfs/*
+ner_tests/test_docs/*
