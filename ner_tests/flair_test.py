@@ -13,12 +13,12 @@ def run_flair_ner(input_path):
     tagger = Classifier.load('ner-large')
     
     # Ensure output directory exists
-    output_dir = Path("ner_tests/outputs/flair_test")
+    output_dir = Path("ner_tests/outputs/flair_test_gemma_ocr")
     output_dir.mkdir(parents=True, exist_ok=True)
     
     path = Path(input_path)
     # take single file or list of files to process
-    files = [path] if path.is_file() else list(path.glob("*.md"))
+    files = [path] if path.is_file() else list(path.glob("*.txt"))
 
     
     if not files:

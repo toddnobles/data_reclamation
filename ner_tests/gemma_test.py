@@ -169,11 +169,11 @@ def run_gemma_ner(input_path, max_workers=5, overwrite=False, gt_filter_dir=None
     model_id = "gemma-4-31b-it"
 
     # Ensure output directory exists
-    output_dir = Path("ner_tests/outputs/gemma_test")
+    output_dir = Path("ner_tests/outputs/gemma_test_gemma_ocr")
     output_dir.mkdir(parents=True, exist_ok=True)
 
     path = Path(input_path)
-    files = [path] if path.is_file() else sorted(list(path.glob("*.md")))
+    files = [path] if path.is_file() else sorted(list(path.glob("*.txt")))
 
     if not files:
         print(f"No files found in {input_path}")
