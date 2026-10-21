@@ -87,21 +87,25 @@ def calculate_matches(gt_names, out_names, threshold):
     
     return tp_count, fn_count, fp_count
 
-def run_evaluation(model_name, threshold, gt_dir):
+def run_evaluation(gt_dir, out_dir, threshold, title):
     gt_dir = Path(gt_dir)
-    out_dir = Path("ner_tests/outputs") / model_name
+    out_dir = Path(out_dir)
     
+    if not gt_dir.exists():
+        print(f"Error: Ground truth directory {gt_dir} not found.")
+        return
     if not out_dir.exists():
-        print(f"Error: Output directory {out_dir} not found.")
+        print(f"Error: Comparison directory {out_dir} not found.")
         return
 
     gt_files = sorted(list(gt_dir.glob("*.csv")))
     if not gt_files:
-        print(f"No ground truth files found in {gt_dir}")
+        print(f"No CSV files found in {gt_dir}")
         return
 
-    print(f"\n--- RapidFuzz NER Evaluation: {model_name} ---")
-    print(f"Ground Truth: {gt_dir}")
+    print(f"\n--- {title} ---")
+    print(f"Reference:  {gt_dir}")
+    print(f"Comparison: {out_dir}")
     print(f"Distance Threshold: {threshold}")
     print("-" * 145)
     print(f"{'FILE':<75} | {'MATCH (TP)':<12} | {'MISS (FN)':<12} | {'ERROR (FP)':<12} | {'RECALL':<8} | {'PRECISION':<8}")
@@ -143,42 +147,72 @@ def run_evaluation(model_name, threshold, gt_dir):
     avg_doc_precision = sum(doc_precisions) / len(doc_precisions) if doc_precisions else 0
     avg_f1 = 2 * (avg_doc_precision * avg_doc_recall) / (avg_doc_precision + avg_doc_recall) if (avg_doc_precision + avg_doc_recall) > 0 else 0
 
-    print(f"{'OVERALL CORPUS TOTALS':<75} | {total_tp:<12} | {total_fn:<12} | {total_fp:<12} | {overall_recall:>8.1%} | {overall_precision:>8.1%}")
+    print(f"{'OVERALL TOTALS':<75} | {total_tp:<12} | {total_fn:<12} | {total_fp:<12} | {overall_recall:>8.1%} | {overall_precision:>8.1%}")
     print(f"{'AVERAGE DOCUMENT SCORES':<75} | {'-':<12} | {'-':<12} | {'-':<12} | {avg_doc_recall:>8.1%} | {avg_doc_precision:>8.1%}")
     print("-" * 145)
     print(f"Overall F1-Score (Corpus): {overall_f1:.2%}")
     print(f"Average F1-Score (Doc):    {avg_f1:.2%}")
 
+def select_from_list(items, title, prompt):
+    if not items:
+        return None
+    print(f"\n{title}:")
+    for idx, item in enumerate(items):
+        print(f" {idx+1}. {item}")
+    
+    choice = input(f"\n{prompt}: ").strip()
+    if choice.isdigit() and 1 <= int(choice) <= len(items):
+        return items[int(choice)-1]
+    return choice
+
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="NER Evaluation using RapidFuzz")
     parser.add_argument("-m", "--model", help="Model name (e.g., gemma_test)")
-    parser.add_argument("--gt-dir", default="ner_tests/undergrad_ground_truths/eden_gts", help="Ground truth directory (default: ner_tests/undergrad_ground_truths/eden_gts)")
+    parser.add_argument("-g", "--gt", help="Ground truth subfolder (e.g., eden_gts)")
+    parser.add_argument("--compare", action="store_true", help="Compare two ground truth sets instead of model vs GT")
     parser.add_argument("--threshold", type=int, default=2, help="Levenshtein distance threshold (default: 2)")
     
     args = parser.parse_args()
 
-    selected_model = args.model
-    if not selected_model:
-        # Automatically find available models if not provided
-        outputs_path = Path("ner_tests/outputs")
-        available_models = sorted([d.name for d in outputs_path.iterdir() if d.is_dir()])
-        
-        if not available_models:
-            print("No model outputs found in ner_tests/outputs/")
-            exit(1)
-        else:
-            print("Available models:")
-            for idx, m in enumerate(available_models):
-                print(f" {idx+1}. {m}")
-            
-            choice = input("\nSelect a model number or type the name: ").strip()
-            if choice.isdigit() and 1 <= int(choice) <= len(available_models):
-                selected_model = available_models[int(choice)-1]
-            else:
-                selected_model = choice
-    
-    if not selected_model:
-        print("Error: No model selected.")
-        exit(1)
+    gt_base_path = Path("ner_tests/undergrad_ground_truths")
+    outputs_path = Path("ner_tests/outputs")
 
-    run_evaluation(selected_model, args.threshold, args.gt_dir)
+    if args.compare:
+        # Inter-Annotator Agreement Mode
+        available_gts = sorted([d.name for d in gt_base_path.iterdir() if d.is_dir()])
+        
+        gt1 = args.gt or select_from_list(available_gts, "Select Ground Truth Set 1 (Reference)", "Select number or type name")
+        if not gt1:
+            print("Error: No reference ground truth selected.")
+            exit(1)
+            
+        gt2 = args.model or select_from_list(available_gts, "Select Ground Truth Set 2 (Comparison)", "Select number or type name")
+        if not gt2:
+            print("Error: No comparison ground truth selected.")
+            exit(1)
+
+        run_evaluation(gt_base_path / gt1, gt_base_path / gt2, args.threshold, f"Inter-Annotator Agreement: {gt1} vs {gt2}")
+    
+    else:
+        # Standard Model vs GT Mode
+        # 1. Select Model
+        selected_model = args.model
+        if not selected_model:
+            available_models = sorted([d.name for d in outputs_path.iterdir() if d.is_dir()])
+            selected_model = select_from_list(available_models, "Available Models", "Select a model number or type the name")
+        
+        if not selected_model:
+            print("Error: No model selected.")
+            exit(1)
+
+        # 2. Select Ground Truth
+        selected_gt = args.gt
+        if not selected_gt:
+            available_gts = sorted([d.name for d in gt_base_path.iterdir() if d.is_dir()])
+            selected_gt = select_from_list(available_gts, "Available Ground Truth Sets", "Select a ground truth set number or type the name")
+
+        if not selected_gt:
+            print("Error: No ground truth set selected.")
+            exit(1)
+
+        run_evaluation(gt_base_path / selected_gt, outputs_path / selected_model, args.threshold, f"RapidFuzz NER Evaluation: {selected_model}")
