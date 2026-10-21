@@ -15,13 +15,13 @@ def load_names(file_path):
         reader = csv.DictReader(f)
         for row in reader:
             # Normalize: lowercase, strip whitespace, and remove punctuation
-            name = row["PERSON NAME"].strip().lower().translate(translator)
+            name = row["person_name"].strip().lower().translate(translator)
             if name:
                 names.add(name)
     return names
 
 def evaluate(model_folder):
-    gt_dir = Path("ner_tests/ground_truth")
+    gt_dir = Path("ner_tests/undergrad_ground_truths/eden_gts")
     out_dir = Path("ner_tests/outputs") / model_folder
     
     if not out_dir.exists():
@@ -31,7 +31,7 @@ def evaluate(model_folder):
     gt_files = list(gt_dir.glob("*.csv"))
     
     if not gt_files:
-        print("No ground truth files found in ner_tests/ground_truth.")
+        print(f"No ground truth files found in '{gt_dir}'.")
         return
 
     print(f"\nEvaluating: {model_folder}")
